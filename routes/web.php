@@ -34,6 +34,22 @@ Route::get('/dry-ration', function () {
     return view('home.dry-ration');
 });
 
+Route::get('/donar', function () {
+    return view('home.donar');
+});
+
+Route::get('/event', function () {
+    return view('home.event');
+});
+
+Route::get('/left-over-food', function () {
+    return view('home.left-over-food');
+});
+
+Route::get('/time-contribution', function () {
+    return view('home.time-contribution');
+});
+
 // Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/order-now',[HomeController::class,'orderPage']);
 Route::get('/blog-page',[HomeController::class,'blog']);

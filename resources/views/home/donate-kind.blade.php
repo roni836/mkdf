@@ -7,45 +7,6 @@
         Donate Money to the Needy
     </h2>
 
-    <!-- Donation Amount Selection -->
-    {{-- <div class="mb-6">
-        <div class="flex items-center mb-4">
-            <span class="text-xl font-semibold mr-2">₹</span>
-            <input type="text" value="6,000.00" class="border border-gray-300 rounded p-2 w-32 focus:ring-2 focus:ring-blue-500">
-        </div>
-
-        <div class="space-y-2">
-            <label class="flex items-center">
-                <input type="radio" name="donation_amount" class="form-radio text-blue-500">
-                <span class="ml-2">Donate Rs. 1500 to provide food supply for 1 person</span>
-            </label>
-            <label class="flex items-center">
-                <input type="radio" name="donation_amount" class="form-radio text-blue-500">
-                <span class="ml-2">Donate Rs. 3000 to provide food supply for 2 person</span>
-            </label>
-            <label class="flex items-center">
-                <input type="radio" name="donation_amount" checked class="form-radio text-blue-500">
-                <span class="ml-2">Donate Rs. 6000 to provide food supply for 4 person</span>
-            </label>
-            <label class="flex items-center">
-                <input type="radio" name="donation_amount" class="form-radio text-blue-500">
-                <span class="ml-2">Donate Rs. 9000 to provide food supply for 6 person</span>
-            </label>
-            <label class="flex items-center">
-                <input type="radio" name="donation_amount" class="form-radio text-blue-500">
-                <span class="ml-2">Donate Rs. 12000 to provide food supply for 8 person</span>
-            </label>
-            <label class="flex items-center">
-                <input type="radio" name="donation_amount" class="form-radio text-blue-500">
-                <span class="ml-2">Donate Rs. 15000 to provide food supply for 10 person</span>
-            </label>
-            <label class="flex items-center">
-                <input type="radio" name="donation_amount" class="form-radio text-blue-500">
-                <span class="ml-2">Custom Amount</span>
-            </label>
-        </div>
-    </div> --}}
-
     <!-- Personal Info -->
     <h3 class="text-lg font-semibold text-gray-700 mb-2">Personal Info</h3>
     <div class="grid grid-cols-2 gap-4 mb-6">

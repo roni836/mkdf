@@ -15,6 +15,17 @@
         }
     </style>
 
+<div class="relative">
+    <!-- Background Image -->
+    <img src="{{ asset('images/breadcrum-image.jpg') }}" alt="Background" class="w-full h-80 object-cover">
+
+    <!-- Overlay with Text -->
+    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <h1 class="text-white text-4xl font-bold">About Us</h1>
+    </div>
+</div>
+
+
     <div class="bg-white mt-20">
         <h2 class="text-2xl font-bold mb-6 px-10 py-12">SHORT STORY BEHIND UDAY FOUNDATION</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

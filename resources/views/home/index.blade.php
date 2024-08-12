@@ -126,68 +126,7 @@
     </div>
 </div>
 
-<div class="max-w-6xl mx-auto py-12 ">
-    <div class="bg-white shadow-lg rounded-lg flex flex-col md:flex-row h-[400px]">
-        
-        <!-- Image Section -->
-        <div class="md:w-1/2 p-10 ">
-            <img src="images/don3.webp" alt="Feeding the Hungry" class="w-full h-full object-cover rounded-l-lg">
-        </div>
-        
-        <!-- Content Section -->
-        <div class="md:w-1/2 p-6 flex flex-col justify-center">
-            <h2 class="text-2xl md:text-2xl font-bold text-black mb-4">Feeding the Hungry: Donate Food and Support Uday Foundation, an NGO Making a Difference</h2>
-            <p class="text-base md:text-base text-gray-700 mb-4">
-                At Uday Foundation, our mission is to provide free and nutritious meals to underprivileged families of hospital patients and children. Support our cause by donating food to feed the hungry. Join our food drive and make a difference in the lives of those in need. Contribute to Uday Foundation, an NGO near you, and help give food to the poor and homeless. Together, we can create a positive impact on society.
-            </p>
-            <div>
-                <a href="#" class="text-blue-500 font-semibold mr-4">Learn More</a>
-                <a href="#" class="text-white bg-blue-500 font-semibold px-4 py-2 rounded">Donate Now</a>
-            </div>
-        </div>
-        
-    </div>
-    <div class="bg-white shadow-lg rounded-lg flex flex-col md:flex-row h-[400px]">
-        
-        <!-- Image Section -->
-        <div class="md:w-1/2 p-10 ">
-            <img src="images/don3.webp" alt="Feeding the Hungry" class="w-full h-full object-cover rounded-l-lg">
-        </div>
-        
-        <!-- Content Section -->
-        <div class="md:w-1/2 p-6 flex flex-col justify-center">
-            <h2 class="text-2xl md:text-2xl font-bold text-black mb-4">Feeding the Hungry: Donate Food and Support Uday Foundation, an NGO Making a Difference</h2>
-            <p class="text-base md:text-base text-gray-700 mb-4">
-                At Uday Foundation, our mission is to provide free and nutritious meals to underprivileged families of hospital patients and children. Support our cause by donating food to feed the hungry. Join our food drive and make a difference in the lives of those in need. Contribute to Uday Foundation, an NGO near you, and help give food to the poor and homeless. Together, we can create a positive impact on society.
-            </p>
-            <div>
-                <a href="#" class="text-blue-500 font-semibold mr-4">Learn More</a>
-                <a href="#" class="text-white bg-blue-500 font-semibold px-4 py-2 rounded">Donate Now</a>
-            </div>
-        </div>
-        
-    </div>
-    <div class="bg-white shadow-lg rounded-lg flex flex-col md:flex-row h-[400px]">
-        
-        <!-- Image Section -->
-        <div class="md:w-1/2 p-10 ">
-            <img src="images/don3.webp" alt="Feeding the Hungry" class="w-full h-full object-cover rounded-l-lg">
-        </div>
-        
-        <!-- Content Section -->
-        <div class="md:w-1/2 p-6 flex flex-col justify-center">
-            <h2 class="text-2xl md:text-2xl font-bold text-black mb-4">Feeding the Hungry: Donate Food and Support Uday Foundation, an NGO Making a Difference</h2>
-            <p class="text-base md:text-base text-gray-700 mb-4">
-                At Uday Foundation, our mission is to provide free and nutritious meals to underprivileged families of hospital patients and children. Support our cause by donating food to feed the hungry. Join our food drive and make a difference in the lives of those in need. Contribute to Uday Foundation, an NGO near you, and help give food to the poor and homeless. Together, we can create a positive impact on society.
-            </p>
-            <div>
-                <a href="#" class="text-blue-500 font-semibold mr-4">Learn More</a>
-                <a href="#" class="text-white bg-blue-500 font-semibold px-4 py-2 rounded">Donate Now</a>
-            </div>
-        </div>
-        
-    </div>
-</div>
+
 
 
 
@@ -289,6 +228,79 @@
         </div>
     </div>
 </div>
+
+<div class="container mx-auto py-8">
+    <h2 class="text-3xl font-bold text-center mb-4">Come to our events for more info</h2>
+    <p class="text-center text-gray-500 mb-8">
+        Donec pellentesque nunc sed neque congue, ut lobortis odio sollicitudin.
+        Curabitur orci orci, maximus nec sodales vitae, tristique.
+    </p>
+    
+    <!-- Event Section -->
+    <div class="bg-blue-900 text-white p-4 mb-8">
+        <div class="flex justify-between items-center">
+            <h3 class="text-lg font-semibold">EVENTS</h3>
+            {{-- <h3 class="text-lg font-semibold">IN DETAILS</h3> --}}
+            <div>
+                <button class="text-white bg-blue-700 px-3 py-1 rounded">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v10M12 7v10m4-10v10M5 12h14" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Events List -->
+    <div class="bg-white shadow-md rounded-lg">
+        <!-- Event Item -->
+        <div class="flex p-4 border-b border-gray-200">
+            <img src="{{ asset('images/pimg2.jpg') }}" alt="Event 1" class="w-24 h-24 rounded-lg mr-4">
+            <div class="flex-1">
+                <h4 class="text-xl font-bold mb-1">Live testimonials</h4>
+                <p class="text-gray-500 mb-2">01 May 2025</p>
+                <p class="text-gray-600">
+                    Nulla molestie et nisi nec scelerisque. Mauris felis erat, sodales in pellentesque sit amet, elementum ac mi. Nulla volutpat id lorem id tempor.
+                </p>
+            </div>
+            <div class="self-center">
+                <button class="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600">VIEW DETAILS</button>
+            </div>
+        </div>
+
+        <!-- Event Item -->
+        <div class="flex p-4 border-b border-gray-200">
+            <img src="{{ asset('images/pimg.jpg') }}" alt="Event 2" class="w-24 h-24 rounded-lg mr-4">
+            <div class="flex-1">
+                <h4 class="text-xl font-bold mb-1">Presentation</h4>
+                <p class="text-gray-500 mb-2">29 May 2025</p>
+                <p class="text-gray-600">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra, risus ac hendrerit consectetur, elit nisl luctus est, sit amet vehicula ligula diam sit amet risus.
+                </p>
+            </div>
+            <div class="self-center">
+                <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">VIEW DETAILS</button>
+            </div>
+        </div>
+
+        <!-- Event Item -->
+        <div class="flex p-4">
+            <img src="{{ asset('images/pimg2.jpg') }}" alt="Event 3" class="w-24 h-24 rounded-lg mr-4">
+            <div class="flex-1">
+                <h4 class="text-xl font-bold mb-1">Funds research</h4>
+                <p class="text-gray-500 mb-2">15 May 2025</p>
+                <p class="text-gray-600">
+                    Fusce lacinia sodales gravida. Pellentesque pellentesque tristique bibendum. Morbi sagittis porttitor congue.
+                </p>
+            </div>
+            <div class="self-center">
+                <button class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">VIEW DETAILS</button>
+            </div>
+        </div>
+        <!-- Event Item -->
+    </div>
+</div>
+
 
 <!-- Support a Cause Section -->
 <section class="bg-white py-12">
