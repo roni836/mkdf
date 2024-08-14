@@ -7,9 +7,6 @@
         Donate One Month’s Worth of Dry Ration to the Needy
     </h2>
 
-    <!-- Donation Amount Selection -->
-    
-
     <!-- Personal Info -->
     <h3 class="text-lg font-semibold text-gray-700 mb-2">Personal Info</h3>
     <div class="grid grid-cols-2 gap-4 mb-6">

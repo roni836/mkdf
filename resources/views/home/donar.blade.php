@@ -53,7 +53,7 @@
     </div>
 </div> --}}
 
-<div class="max-w-7xl mx-auto bg-white shadow-md rounded-lg p-8 mt-5">
+<div class="max-w-7xl mx-auto bg-white shadow-md rounded-lg p-8 mt-5 mb-10">
     <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Recent Donors</h2>
     
     <!-- Search Box -->

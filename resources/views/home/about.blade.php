@@ -57,7 +57,7 @@
         </div>
     </div>
 
-    <div class="max-w-2xl mx-auto bg-white p-10 rounded-lg shadow-lg mt-20">
+    <div class="max-w-6xl mx-auto bg-white p-10 rounded-lg shadow-lg mt-20 mb-20">
         <h2 class="text-2xl font-bold mb-4">FAQ Answered by Rahul Verma, Founder, Uday Foundation</h2>
 
         <div class="faq-item border-b border-gray-300 py-4">

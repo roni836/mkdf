@@ -46,8 +46,20 @@ Route::get('/left-over-food', function () {
     return view('home.left-over-food');
 });
 
+Route::get('/left-over-medicine', function () {
+    return view('home.left-over-medicine');
+});
+
 Route::get('/time-contribution', function () {
     return view('home.time-contribution');
+});
+
+Route::get('/medical-equipment', function () {
+    return view('home.medical-equipment');
+});
+
+Route::get('/gallery', function () {
+    return view('home.gallery');
 });
 
 // Route::get('/',[HomeController::class,'index'])->name('home');

@@ -2,15 +2,12 @@
 @section('content')
 
 
-<div class="relative">
-    <!-- Background Image -->
+{{-- <div class="relative">
     <img src="{{ asset('images/breadcrum-image.jpg') }}" alt="Background" class="w-full h-80 object-cover">
-
-    <!-- Overlay with Text -->
     <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
         <h1 class="text-white text-4xl font-bold">Our Events</h1>
     </div>
-</div>
+</div> --}}
 
 
 <div class="container mx-auto py-8">

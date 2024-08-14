@@ -240,7 +240,7 @@
     <div class="bg-blue-900 text-white p-4 mb-8">
         <div class="flex justify-between items-center">
             <h3 class="text-lg font-semibold">EVENTS</h3>
-            {{-- <h3 class="text-lg font-semibold">IN DETAILS</h3> --}}
+            <h3 class="text-lg font-semibold uppercase">Upcoming Events</h3>
             <div>
                 <button class="text-white bg-blue-700 px-3 py-1 rounded">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

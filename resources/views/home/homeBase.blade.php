@@ -39,6 +39,19 @@
             transform: translateX(20px);
             transition: opacity 0.5s ease-in, transform 0.5s ease-in;
         }
+        .modal {
+            transition: opacity 0.25s ease;
+        }
+
+        body.modal-active {
+            overflow-x: hidden;
+            overflow-y: visible !important;
+        }
+
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
     </style>
 
 </head>
@@ -48,7 +61,7 @@
         <div class="container mx-auto flex justify-center items-center p-2">
             <nav>
                 <ul class="flex space-x-4">
-                    <li><a href="/" class="text-gray-800 hover:text-white text-center text-sm font-semibold">Left
+                    <li><a href="{{ url('left-over-medicine') }}" class="text-gray-800 hover:text-white text-center text-sm font-semibold">Left
                             Over Medicine</a></li>
                     <span class="border-r"></span>
                     <li><a href="{{ url('left-over-food') }}" class="text-gray-800 hover:text-white text-center text-sm font-semibold">Left
@@ -58,12 +71,9 @@
                             class="text-gray-800 hover:text-white text-center text-sm font-semibold">Unused Books</a>
                     </li>
                     <span class="border-r"></span>
-                    <li><a href="/"
-                            class="text-gray-800 hover:text-white text-center text-sm font-semibold">Medical Equipments
-                            or Medicine</a></li>
+                    <li><a href="{{ url('medical-equipment') }}" class="text-gray-800 hover:text-white text-center text-sm font-semibold">Medical Equipments or Medicine</a></li>
                     <span class="border-r"></span>
-                    <li><a href="{{ url('time-contribution') }}" class="text-gray-800 hover:text-white text-center text-sm font-semibold">Time
-                            Contribution</a></li>
+                    <li><a href="{{ url('time-contribution') }}" class="text-gray-800 hover:text-white text-center text-sm font-semibold">Time Contribution</a></li>
                     <span class="border-r"></span>
                 </ul>
             </nav>
@@ -82,7 +92,7 @@
                 <a href="/" class="text-white hover:underline hover:text-yellow-200  uppercase">
                     HOME
                 </a>
-                <a href="#" class="text-white hover:underline hover:text-yellow-200  uppercase">
+                <a href="{{ url('about') }}" class="text-white hover:underline hover:text-yellow-200  uppercase">
                     ABOUT US
                 </a>
                 <a href="/what-we-do" class="text-white hover:underline hover:text-yellow-200  uppercase">
@@ -97,9 +107,12 @@
                 <a href="{{ url('event') }}" class="text-white hover:underline hover:text-yellow-200  uppercase">
                     Events
                 </a>
-                <a href="#" class="text-white hover:underline hover:text-yellow-200  uppercase">
-                    CONTACT US
+                <a href="{{ url('gallery') }}" class="text-white hover:underline hover:text-yellow-200  uppercase">
+                    Gallery
                 </a>
+                {{-- <button id="rateBtn" class="text-white hover:underline hover:text-yellow-200  uppercase">
+                    CONTACT US
+                </button> --}}
             </nav>
             {{-- <a href="" class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded ">Donate Now</a> --}}
             <a href="javascript:void(0)" id="donate-btn"
@@ -131,6 +144,142 @@
         </ul>
     </div>
 
+
+    <div class="fixed top-1/2 left-0 transform -translate-y-1/2 z-20">
+        <button id="rateUsButton" class="bg-teal-400 hover:bg-teal-500 hover:text-white text-black font-semibold px-2 py-6 rounded-l-lg shadow vertical-text">
+            Need Help ?
+        </button>
+    </div>
+
+    <div id="rateUsModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 z-30 flex items-center justify-center modal">
+        <div class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all max-w-lg w-full p-4">
+            <div class="text-right">
+                <button id="closeModal" class="text-gray-500 text-4xl">&times;</button>
+            </div>
+            <h2 class="text-lg text-green-500 mb-4  font-semibold">Note : If You Know Someone Who needy any type of help. Please contact us</h2>
+            <form id="rateUsForm" class="">
+                <div>
+                    <label for="name" class="block mb-2 text-gray-700 text-base">Helper's Name:</label>
+                    <input type="text" id="name" name="name" class="w-full border rounded p-1">
+                    <p id="error-name" class="text-red-500 text-xs font-semibold error-message"></p>
+                </div>
+                <div>
+                    <label for="mobile" class="block mb-2 text-gray-700 text-base">Helper's Mobile:</label>
+                    <input type="tel" id="mobile" name="mobile" class="w-full border rounded p-1">
+                    <p id="error-mobile" class="text-red-500 text-xs font-semibold error-message"></p>
+                </div>
+                <div>
+                    <label for="mobile" class="block mb-2 text-gray-700 text-base">Needy Person's Name (if available):</label>
+                    <input type="text" id="mobile" name="mobile" class="w-full border rounded p-1">
+                    <p id="error-mobile" class="text-red-500 text-xs font-semibold error-message"></p>
+                </div>
+                <div>
+                    <label for="mobile" class="block mb-2 text-gray-700 text-base">Needy Person's Mobile (Optional):</label>
+                    <input type="tel" id="mobile" name="mobile" class="w-full border rounded p-1">
+                    <p id="error-mobile" class="text-red-500 text-xs font-semibold error-message"></p>
+                </div>
+                <div>
+                    <label for="mobile" class="block mb-2 text-gray-700 text-base">Needy Person's Location :</label>
+                    <input type="text" id="mobile" name="mobile" class="w-full border rounded p-1">
+                    <p id="error-mobile" class="text-red-500 text-xs font-semibold error-message"></p>
+                </div>
+                <div class="flex gap-2 mt-2">
+
+                <div class="">
+                    <label for="mobile" class="block mb-2 text-gray-700 text-base">Help Type :</label>
+                    <select name="" id="" class=" border rounded p-1">
+                        <option value="">Select Help type required</option>
+                        <option value="">Financial Help</option>
+                        <option value="">Moral Support</option>
+                        <option value="">Educational Support</option>
+                        <option value="">Other</option>
+                    </select>
+                </div>
+                <div class="">
+                    <label for="mobile" class="block mb-2 text-gray-700 text-base">Any Images (if available):</label>
+                    <input type="file" id="mobile" name="mobile" class="">
+                    <p id="error-mobile" class="text-red-500 text-xs font-semibold error-message"></p>
+                </div>
+                </div>
+                <div class="mt-2">
+                    <label for="comment" class="block mb-2 text-gray-700 text-base">Message (Optional) :</label>
+                    <textarea id="comment" name="comment" rows="2" class="w-full border rounded p-1"></textarea>
+                </div>
+    
+                <div class="text-right">
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded shadow">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        // Get elements
+        const rateUsButton = document.getElementById('rateUsButton');
+        const rateUsModal = document.getElementById('rateUsModal');
+        const closeModal = document.getElementById('closeModal');
+        const ratingStars = document.querySelectorAll('.rating-star');
+        let selectedRating = 0;
+    
+        // Show modal
+        rateUsButton.addEventListener('click', () => {
+            rateUsModal.classList.remove('hidden');
+            document.body.classList.add('modal-active');
+        });
+    
+        // Hide modal
+        closeModal.addEventListener('click', () => {
+            rateUsModal.classList.add('hidden');
+            document.body.classList.remove('modal-active');
+        });
+    
+        // Select rating
+        ratingStars.forEach(star => {
+            star.addEventListener('click', () => {
+                selectedRating = star.getAttribute('data-rating');
+                ratingStars.forEach(s => s.classList.remove('text-yellow-500'));
+                for (let i = 0; i < selectedRating; i++) {
+                    ratingStars[i].classList.add('text-yellow-500');
+                }
+            });
+        });
+    
+        // Submit form
+        document.getElementById('rateUsForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let formData = new FormData(this);
+            formData.append('rate', selectedRating);
+            $.ajax({
+                type: "POST",
+                url: "{{ route('rate.store') }}",
+                data: formData,
+                dataType: "JSON",
+                contentType: false,
+                cache: false,
+                processData: false,
+                success: function(response) {
+                    swal("Thanking So Much", response.message, "success");
+                    $("#rateUsForm").trigger("reset");
+                    setTimeout(function() {
+                        window.open("/", "_self");
+                    }, 4000);
+                },
+                error: function(xhr) {
+                    $('.error-message').html('');
+                    if (xhr.status === 422) {
+                        var errors = xhr.responseJSON.errors;
+                        $('.error-message').html(''); // Clear previous error messages
+                        $.each(errors, function(key, value) {
+                            $('#error-' + key).html(value[0]).show();
+                        });
+                    } else {
+                        alert('An error occurred. Please try again.');
+                    }
+                }
+            });
+        });
+    </script>
+
     <script>
         document.getElementById('donate-btn').addEventListener('click', function() {
             var listContainer = document.getElementById('list-container');
@@ -156,7 +305,7 @@
             <p>&copy; 2024 MKDF Foundation. All rights reserved.</p>
         </div>
     </footer> --}}
-    <footer class="w-full px-5 mx-auto shadow-lg bg-gray-200">
+    <footer class="w-full mt-10 px-5 mx-auto shadow-lg bg-gray-200">
         <div class=" p-8 rounded-lg flex flex-col md:flex-row justify-between  px-16">
             <div class="md:w-1/4 flex flex-col mb-8 md:mb-0">
                 <h1 class="text-2xl font-bold">MKDF</h1>
@@ -165,21 +314,21 @@
                     A compassionate NGO dedicated to creating a positive impact by supporting and empowering communities
                     in need. Join our journey to bring positive change.
                 </p>
-                <div class="flex space-x-8">
+                <div class="flex space-x-12">
                     <a href="#" class="text-gray-600 hover:text-black">
-                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-facebook-f fa-xl"></i>
                     </a>
                     <a href="#" class="text-gray-600 hover:text-black">
-                        <i class="fab fa-linkedin-in"></i>
+                        <i class="fab fa-linkedin-in fa-xl"></i>
                     </a>
                     <a href="#" class="text-gray-600 hover:text-black">
-                        <i class="fab fa-youtube"></i>
+                        <i class="fab fa-youtube fa-xl"></i>
                     </a>
                     <a href="#" class="text-gray-600 hover:text-black">
-                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-instagram fa-xl"></i>
                     </a>
                     <a href="#" class="text-gray-600 hover:text-black">
-                        <i class="fab fa-whatsapp"></i>
+                        <i class="fab fa-whatsapp fa-xl"></i>
                     </a>
                 </div>
                 <div class="mt-4 flex gap-8">
@@ -235,12 +384,7 @@
 
     <a href="https://wa.me/9128528958" target="_blank" class="fixed bottom-10 right-10 z-20">
         <div class="bg-green-600 rounded-full p-5 shadow-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 24 24"
-                fill="currentColor">
-                <path fill-rule="evenodd"
-                    d="M20.66 3.34A12 12 0 1012 24a12 12 0 008.66-20.66zM12 22a9.94 9.94 0 01-7.07-2.93 9.94 9.94 0 01-2.93-7.07c0-2.68 1.05-5.2 2.93-7.07a9.94 9.94 0 017.07-2.93c2.68 0 5.2 1.05 7.07 2.93a9.94 9.94 0 012.93 7.07c0 2.68-1.05 5.2-2.93 7.07A9.94 9.94 0 0112 22zM12 2C6.48 2 2 6.48 2 12c0 2.34.78 4.47 2.08 6.18l-1.45 5.3a1 1 0 001.2 1.2l5.31-1.45A9.96 9.96 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm-.4 16.55a1 1 0 00.44-.1l.63-.28c.27-.13.65-.27 1.05-.43 1.12-.44 2.48-1.13 3.15-1.46a2 2 0 00.85-.83c.16-.32.15-.65.14-.88a1.17 1.17 0 00-.1-.27c-.15-.29-.32-.66-.52-1.08-.42-.88-.88-1.8-1.07-2.09-.04-.06-.08-.09-.14-.13a1 1 0 00-.31-.15 1 1 0 00-.82.07c-.18.1-.39.2-.62.31-.29.15-.58.31-.83.45a1 1 0 00-.3.24c-.05.06-.09.12-.13.18a1 1 0 00-.14.44c0 .1-.01.22-.03.34-.05.33-.1.7-.24 1.11-.1.3-.34.69-.58 1.06a5.76 5.76 0 00-.64 1.35c-.09.32-.09.54-.02.7.05.13.2.21.43.24.21.03.54.1 1 .2.69.16 1.16.24 1.3.24a1 1 0 00.48-.12zM7 10a5 5 0 115 5H7a5 5 0 010-10z"
-                    clip-rule="evenodd" />
-            </svg>
+            <i class="fa-brands fa-whatsapp fa-2xl"></i>
         </div>
     </a>
 
@@ -319,6 +463,20 @@
                 popupContainer.classList.remove('popup-exit', 'popup-exit-active');
             }, 1000); // Match the duration of the transition
         }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+        const button1 = document.getElementById('rateBtn');
+        const button2 = document.getElementById('rateUsButton');
+
+        button1.addEventListener('click', () => {
+            button2.click();  // Trigger click event on button2 when button1 is clicked
+        });
+
+        button2.addEventListener('click', () => {
+            console.log('Rate Us button  clicked!');
+            // Add any other logic for button2 click event here
+        });
+    });
     </script>
 </body>
 

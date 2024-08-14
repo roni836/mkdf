@@ -13,7 +13,7 @@
 </div>
 
 <!-- What We Do Section -->
-<section class="py-12 bg-gray-200">
+{{-- <section class="py-12 bg-gray-200">
     <div class="container mx-auto px-4 text-center">
         <h2 class="text-3xl font-bold mb-4">What We Do</h2>
         <p class="text-lg mb-8">Smile Foundation’s flagship programme Mission Education works with the objective of empowering underprivileged children by providing education, nutrition, and wellness support. The programme is well aligned to the New Education Policy (2020), and the SDG Goal 4 (Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all). Mission Education works with children (3-18 years) living in difficult circumstances, children from poor families, differently abled children, disaster-struck children, abandoned and street children, and children living in tribal belts, remote villages and hard to reach areas.</p>
@@ -32,7 +32,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 
 <div class="bg-blue-200 p-6">
@@ -99,7 +99,7 @@
 
 
 <!-- Reach & Presence Section -->
-<section class="py-12 bg-white">
+{{-- <section class="py-12 bg-white">
     <div class="container mx-auto px-4 text-center">
         <h2 class="text-3xl font-bold mb-4">Reach & Presence</h2>
         <div class="flex flex-wrap justify-center gap-8">
@@ -121,33 +121,9 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 <!-- Stories of Change Section -->
-<section class="py-12 bg-gray-200">
-    <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-4">Stories of Change</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="p-4 bg-white rounded shadow">
-                <img src="{{ asset('images/debasmita.jpg') }}" alt="Debasmita" class="rounded mb-4">
-                <h3 class="text-xl font-bold">Debasmita</h3>
-                <p class="text-lg">In the slum where I live, many parents are worried about their children's education.</p>
-                <a href="#" class="text-blue-500 hover:underline">Read more ></a>
-            </div>
-            <div class="p-4 bg-white rounded shadow">
-                <img src="{{ asset('images/lavanaya.jpg') }}" alt="Lavanaya" class="rounded mb-4">
-                <h3 class="text-xl font-bold">Lavanaya</h3>
-                <p class="text-lg">Some people say I am unlucky. My father went away when I was born, and later my mother died in an accident.</p>
-                <a href="#" class="text-blue-500 hover:underline">Read more ></a>
-            </div>
-            <div class="p-4 bg-white rounded shadow">
-                <img src="{{ asset('images/neha.jpg') }}" alt="Neha" class="rounded mb-4">
-                <h3 class="text-xl font-bold">Neha</h3>
-                <p class="text-lg">My father used to sell vegetables, but during the pandemic everything closed down.</p>
-                <a href="#" class="text-blue-500 hover:underline">Read more ></a>
-            </div>
-        </div>
-    </div>
-</section>
+
 
 @endsection

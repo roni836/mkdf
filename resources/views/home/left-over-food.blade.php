@@ -1,14 +1,15 @@
 @extends('home.homeBase')
 @section('content')
 
+<div class="bg-gray-50 p-8 px-32">
+    <!-- Heading Section -->
+    <h1 class="text-3xl font-normal text-blue-600">
+        Donate Left-over Food in Purnea / Donate <br> Foods Rations
+    </h1>
 
-<div class="relative">
-    <!-- Background Image -->
-    <img src="{{ asset('images/breadcrum-image.jpg') }}" alt="Background" class="w-full h-80 object-cover">
-
-    <!-- Overlay with Text -->
-    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
-        <h1 class="text-white text-4xl font-bold">Left Over Food</h1>
+    <!-- Image Section -->
+    <div class="mt-8 flex justify-center">
+        <img src="{{ asset('images/don11.webp') }}" alt="Donation Event" class="w-full max-w-4xl rounded-lg shadow-lg">
     </div>
 </div>
 
