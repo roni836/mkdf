@@ -57,57 +57,57 @@
 </head>
 
 <body class="bg-gray-100">
-    <header class="bg-teal-500 shadow-md">
-        <div class="container mx-auto flex justify-center items-center p-2">
+    <header class="bg-teal-600 shadow-md">
+        <div class="container mx-auto flex justify-center items-center p-2 shadow-sm">
             <nav>
                 <ul class="flex space-x-4">
-                    <li><a href="{{ url('left-over-medicine') }}" class="text-gray-800 hover:text-white text-center text-sm font-semibold">Left
+                    <li><a href="{{ url('left-over-medicine') }}" class="text-white hover:text-white text-center text-sm font-semibold">Left
                             Over Medicine</a></li>
                     <span class="border-r"></span>
-                    <li><a href="{{ url('left-over-food') }}" class="text-gray-800 hover:text-white text-center text-sm font-semibold">Left
+                    <li><a href="{{ url('left-over-food') }}" class="text-white hover:text-white text-center text-sm font-semibold">Left
                             over Food</a></li>
                     <span class="border-r"></span>
                     <li><a href="/"
-                            class="text-gray-800 hover:text-white text-center text-sm font-semibold">Unused Books</a>
+                            class="text-white hover:text-white text-center text-sm font-semibold">Unused Books</a>
                     </li>
                     <span class="border-r"></span>
-                    <li><a href="{{ url('medical-equipment') }}" class="text-gray-800 hover:text-white text-center text-sm font-semibold">Medical Equipments or Medicine</a></li>
+                    <li><a href="{{ url('medical-equipment') }}" class="text-white hover:text-white text-center text-sm font-semibold">Medical Equipments or Medicine</a></li>
                     <span class="border-r"></span>
-                    <li><a href="{{ url('time-contribution') }}" class="text-gray-800 hover:text-white text-center text-sm font-semibold">Time Contribution</a></li>
+                    <li><a href="{{ url('time-contribution') }}" class="text-white hover:text-white text-center text-sm font-semibold">Time Contribution</a></li>
                     <span class="border-r"></span>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <header class="bg-blue-600 p-4">
+    <header class=" p-4 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
             <!-- Logo -->
             <div class="text-white font-bold text-xl">
-                <div class="text-xl font-bold">MKDF Foundation</div>
+                <div class="text-2xl font-bold flex"><span class="text-teal-500">MKDF </span><span class="text-orange-500 ml-2"> Foundation</span></div>
             </div>
 
             <!-- Navigation -->
             <nav class="flex space-x-6">
-                <a href="/" class="text-white hover:underline hover:text-yellow-200  uppercase">
+                <a href="/" class=" hover:underline  uppercase font-semibold">
                     HOME
                 </a>
-                <a href="{{ url('about') }}" class="text-white hover:underline hover:text-yellow-200  uppercase">
+                <a href="{{ url('about') }}" class=" hover:underline  uppercase font-semibold">
                     ABOUT US
                 </a>
-                <a href="/what-we-do" class="text-white hover:underline hover:text-yellow-200  uppercase">
+                <a href="/what-we-do" class=" hover:underline  uppercase font-semibold">
                     WHAT WE DO
                 </a>
-                <a href="/our-work" class="text-white hover:underline hover:text-yellow-200  uppercase">
+                <a href="/our-work" class=" hover:underline  uppercase font-semibold">
                     Our Work
                 </a>
-                <a href="/donar" class="text-white hover:underline hover:text-yellow-200  uppercase">
+                <a href="/donar" class=" hover:underline  uppercase font-semibold">
                     Donar
                 </a>
-                <a href="{{ url('event') }}" class="text-white hover:underline hover:text-yellow-200  uppercase">
+                <a href="{{ url('event') }}" class=" hover:underline  uppercase font-semibold">
                     Events
                 </a>
-                <a href="{{ url('gallery') }}" class="text-white hover:underline hover:text-yellow-200  uppercase">
+                <a href="{{ url('gallery') }}" class=" hover:underline  uppercase font-semibold">
                     Gallery
                 </a>
                 {{-- <button id="rateBtn" class="text-white hover:underline hover:text-yellow-200  uppercase">
@@ -116,7 +116,7 @@
             </nav>
             {{-- <a href="" class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded ">Donate Now</a> --}}
             <a href="javascript:void(0)" id="donate-btn"
-                class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded mr-16">Donate Now</a>
+                class="bg-orange-500 hover:bg-orange-600 text-white py-3 px-5 font-bold text-xl mr-16">Donate Now</a>
         </div>
 
     </header>
@@ -383,8 +383,8 @@
     </footer>
 
     <a href="https://wa.me/9128528958" target="_blank" class="fixed bottom-10 right-10 z-20">
-        <div class="bg-green-600 rounded-full p-5 shadow-lg">
-            <i class="fa-brands fa-whatsapp fa-2xl"></i>
+        <div class="bg-green-500 rounded-full p-5 shadow-lg text-white hover:text-gray-100 hover:bg-green-600">
+            <i class="fa-brands fa-whatsapp fa-2xl "></i>
         </div>
     </a>
 
