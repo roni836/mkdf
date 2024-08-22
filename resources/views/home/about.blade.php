@@ -15,7 +15,7 @@
         }
     </style>
 
-{{-- <div class="relative">
+    {{-- <div class="relative">
     <!-- Background Image -->
     <img src="{{ asset('images/breadcrum-image.jpg') }}" alt="Background" class="w-full h-80 object-cover">
 
@@ -26,55 +26,63 @@
 </div> --}}
 
 
-    
 
-     <!-- Carousel Container -->
-  <div class="max-w-7xl mx-auto mt-10">
-    <h1 class="text-center text-3xl font-bold text-gray-800 mb-6">Our Story of Happiness through <span
-            class="text-yellow-500">your support</span></h1>
 
-    <div class="relative overflow-hidden">
-        <!-- Carousel Wrapper -->
-        <div id="carousel" class="flex transition-transform duration-500">
+    <!-- Carousel Container -->
+    <div class="max-w-7xl mx-auto mt-10">
+        <h1 class="text-center text-3xl font-bold text-gray-800 mb-6">Our Story of Happiness through <span
+                class="text-yellow-500">your support</span></h1>
 
-            <!-- View 1 (set of cards) -->
-            <div class="flex flex-nowrap ">
-                <div class="w-1/3 flex-shrink-0 p-4  ">
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden h-[420px]">
-                        <img src="{{ asset('images/sp-1.webp') }}" alt="Kothandaraman" class="h-48 w-full object-cover">
-                        <div class="p-6 bg-yellow-500 h-full">
-                            <h2 class="text-xl font-bold text-black">Kothandaraman, 66 years</h2>
-                            <p class="text-black pt-2">Used to work in Cuddalore district and suddenly lost vision in both of his eyes.</p>
-                            <a href="#" class="text-blue-700 hover:text-blue-600 mt-4 inline-block">+ Read More</a>
+        <div class="relative overflow-hidden">
+            <!-- Carousel Wrapper -->
+            <div id="carousel" class="flex transition-transform duration-500">
+
+                <!-- View 1 (set of cards) -->
+                <div class="flex flex-nowrap ">
+                    <div class="w-1/3 flex-shrink-0 p-4  ">
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden h-[420px]">
+                            <img src="{{ asset('images/sp-1.webp') }}" alt="Kothandaraman" class="h-48 w-full object-cover">
+                            <div class="p-6 bg-yellow-500 h-full">
+                                <h2 class="text-xl font-bold text-black">Kothandaraman, 66 years</h2>
+                                <p class="text-black pt-2">Used to work in Cuddalore district and suddenly lost vision in
+                                    both of his eyes.</p>
+                                <a href="#" class="text-blue-700 hover:text-blue-600 mt-4 inline-block">+ Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-1/3 flex-shrink-0 p-4">
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden h-[420px]">
+                            <img src="{{ asset('images/sp-2.webp') }}" alt="COVID19 Response"
+                                class="h-48 w-full object-cover">
+                            <div class="p-6 bg-yellow-500 h-full">
+                                <h2 class="text-xl font-bold text-black">COVID19 Response</h2>
+                                <p class="text-black pt-2">With Elderly at a higher risk, our covid-19 response team ensures
+                                    our elders are Essential Commodities Distribution.</p>
+                                <a href="#" class="text-blue-700 hover:text-blue-600 mt-4 inline-block">+ Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-1/3 flex-shrink-0 p-4">
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden  h-[420px]">
+                            <img src="{{ asset('images/sp-3.webp') }}" alt="COVID19 Response"
+                                class="h-48 w-full object-cover">
+                            <div class="p-6 bg-yellow-500 h-full">
+                                <h2 class="text-xl font-bold text-black">COVID19 Response</h2>
+                                <p class="text-black pt-2">With Elderly at a higher risk, our covid-19 response team ensures
+                                    our elders are Essential Commodities Distribution.</p>
+                                <a href="#" class="text-blue-700 hover:text-blue-600 mt-4 inline-block">+ Read
+                                    More</a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="w-1/3 flex-shrink-0 p-4">
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden h-[420px]">
-                        <img src="{{ asset('images/sp-2.webp') }}" alt="COVID19 Response" class="h-48 w-full object-cover">
-                        <div class="p-6 bg-yellow-500 h-full">
-                            <h2 class="text-xl font-bold text-black">COVID19 Response</h2>
-                            <p class="text-black pt-2">With Elderly at a higher risk, our covid-19 response team ensures our elders are Essential Commodities Distribution.</p>
-                            <a href="#" class="text-blue-700 hover:text-blue-600 mt-4 inline-block">+ Read More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="w-1/3 flex-shrink-0 p-4">
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden  h-[420px]">
-                        <img src="{{ asset('images/sp-3.webp') }}" alt="COVID19 Response" class="h-48 w-full object-cover">
-                        <div class="p-6 bg-yellow-500 h-full">
-                            <h2 class="text-xl font-bold text-black">COVID19 Response</h2>
-                            <p class="text-black pt-2">With Elderly at a higher risk, our covid-19 response team ensures our elders are Essential Commodities Distribution.</p>
-                            <a href="#" class="text-blue-700 hover:text-blue-600 mt-4 inline-block">+ Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- View 2 (set of cards) -->
-            {{-- <div class="flex flex-nowrap">
+                <!-- View 2 (set of cards) -->
+                {{-- <div class="flex flex-nowrap">
                 <!-- Add more cards for the second view -->
                 <div class="w-1/3 flex-shrink-0 p-4">
                     <div class="bg-white rounded-lg shadow-md overflow-hidden">
@@ -110,9 +118,9 @@
                 </div>
             </div> --}}
 
-        </div>
+            </div>
 
-        {{-- <!-- Previous Button -->
+            {{-- <!-- Previous Button -->
         <button id="prev"
             class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-red-600 text-white p-2 rounded-full">
             &#10094;
@@ -123,8 +131,8 @@
             class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-red-600 text-white p-2 rounded-full">
             &#10095;
         </button> --}}
+        </div>
     </div>
-</div>
 
     <div class="max-w-6xl mx-auto bg-white p-10 rounded-lg shadow-lg mt-20 mb-20">
         <h2 class="text-2xl font-bold mb-4">FAQ Answered by Rahul Verma, Founder, Uday Foundation</h2>
@@ -172,14 +180,18 @@
         <h2 class="text-2xl font-bold mb-6 px-10 py-12">SHORT STORY BEHIND UDAY FOUNDATION</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="text-left px-10">
-                <p class="mb-4">Sometimes when you are dealing with a serious problem you watch the world wandering happily
+                <p class="mb-4">Sometimes when you are dealing with a serious problem you watch the world wandering
+                    happily
                     by and want to either a) cry b) <em>drown your sorrows</em> c) <em>say some rude words</em> or d)
                     <em>all of the above</em>, because it seems you are the only one in this sorry situation. Well, you are
-                    not. Although there will be ups and downs you will come out the other side.</p>
-                <p class="mb-4">In 2006 Arjunuday was born as a sibling to a healthy sister Lavanya. Tulika and Rahul Verma
+                    not. Although there will be ups and downs you will come out the other side.
+                </p>
+                <p class="mb-4">In 2006 Arjunuday was born as a sibling to a healthy sister Lavanya. Tulika and Rahul
+                    Verma
                     planned a second baby to give company to their daughter. It was a full term pregnancy without any
                     complications.</p>
-                <p class="mb-4">The minute Arjunuday was born, the doctors found multiple congenital defects that shattered
+                <p class="mb-4">The minute Arjunuday was born, the doctors found multiple congenital defects that
+                    shattered
                     the dreams of the parents. They were devastated and could not understand why they were being punished in
                     this way. They had no choice but to accept the inevitable reality and decided to give him the best
                     possible medical care.</p>

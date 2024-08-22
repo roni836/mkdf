@@ -62,6 +62,10 @@ Route::get('/gallery', function () {
     return view('home.gallery');
 });
 
+Route::get('/about-needy', function () {
+    return view('home.about-needy');
+});
+
 // Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/order-now',[HomeController::class,'orderPage']);
 Route::get('/blog-page',[HomeController::class,'blog']);
