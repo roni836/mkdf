@@ -48,7 +48,7 @@
     </div>
 
     <!-- Our Programmes Section -->
-    <section class="container mx-auto my-12 px-4 mt-20">
+    <section class="container mx-auto my-12 px-12 mt-20">
         <h2 class="text-4xl font-bold text-center mb-8">Our Programmes</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="flex items-center">
@@ -184,7 +184,7 @@
             <div class="p-4">
                 <h2 class="text-xl font-bold mb-2">Provide Food to Hungry</h2>
                 <p class="text-gray-700 mb-4">With just Rs.550/- you can provide food to 50 persons.</p>
-                <a href="#" class="text-red-500 font-semibold">Donate Now</a>
+                <a href="/about-needy" class="text-red-500 font-semibold">Donate Now</a>
             </div>
         </div>
         <div class="bg-white shadow-md rounded-lg overflow-hidden">
@@ -192,7 +192,7 @@
             <div class="p-4">
                 <h2 class="text-xl font-bold mb-2">Donate Hygiene Kit</h2>
                 <p class="text-gray-700 mb-4">With just Rs.500/- you can provide a hygiene kit to a woman.</p>
-                <a href="#" class="text-red-500 font-semibold">Donate Now</a>
+                <a href="/about-needy" class="text-red-500 font-semibold">Donate Now</a>
             </div>
         </div>
         <div class="bg-white shadow-md rounded-lg overflow-hidden">
@@ -245,7 +245,7 @@
         </div>
     </div>
 
-    <div class="container mx-auto py-8">
+    <div class="container mx-auto px-12 py-8">
         <h2 class="text-3xl font-bold text-center mb-4">Come to our events for more info</h2>
         <p class="text-center text-gray-500 mb-8">
             Donec pellentesque nunc sed neque congue, ut lobortis odio sollicitudin.
@@ -376,7 +376,7 @@
 
     <!-- Support a Cause Section -->
     <section class="bg-white py-12">
-        
+
 
         {{-- <div class="bg-[#2980b9] mt-10">
             <div class="max-w-4xl mx-auto  text-white p-16 rounded-lg ">
@@ -504,7 +504,7 @@
         </div>
 
 
-        <div class="container mx-auto text-center">
+        {{-- <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold mb-8">Support a Cause</h2>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="bg-gray-100 p-4 rounded-lg shadow-md">
@@ -532,7 +532,7 @@
                     <a href="#" class="text-blue-500 hover:underline">know more ></a>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         <script>
             document.addEventListener('DOMContentLoaded', function() {
