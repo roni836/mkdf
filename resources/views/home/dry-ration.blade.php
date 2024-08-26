@@ -2,7 +2,7 @@
 @section('content')
 
 
-<div class="max-w-4xl mx-auto p-8 bg-white shadow-lg mt-4">
+<div class="max-w-4xl mx-auto p-8 bg-white shadow-lg  mt-[8rem]">
     <h2 class="text-2xl font-bold text-blue-700 mb-4">
         Donate One Month’s Worth of Dry Ration to the Needy
     </h2>

@@ -1,6 +1,6 @@
 @extends('home.homeBase')
 @section('content')
-    <div class="w-full px-10 mx-auto p-4">
+    <div class="w-full px-10 mx-auto p-4  mt-[8.5rem]">
         <!-- Header -->
         <div class="text-center bg-red-100 p-2 rounded-3xl max-w-lg mx-auto">
             <p class="text-red-600 font-semibold mx-auto "><i

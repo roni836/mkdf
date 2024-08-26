@@ -1,7 +1,7 @@
 @extends('home.homeBase')
 @section('content')
     <!-- Hero Section -->
-    <section class="relative">
+    <section class="relative  mt-[7.5rem] z-0">
         <img src="{{ asset('logo/cimg1.jpg') }}" alt="Hero Image" class="w-full h-[500px] object-cover">
         <div
             class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white">

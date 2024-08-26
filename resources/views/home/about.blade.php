@@ -29,9 +29,9 @@
 
 
     <!-- Carousel Container -->
-    <div class="max-w-7xl mx-auto mt-10">
+    <div class="max-w-7xl mx-auto  mt-[8.5rem]">
         <h1 class="text-center text-3xl font-bold text-gray-800 mb-6">Our Story of Happiness through <span
-                class="text-yellow-500">your support</span></h1>
+                class="text-yellow-400">your support</span></h1>
 
         <div class="relative overflow-hidden">
             <!-- Carousel Wrapper -->
@@ -42,7 +42,7 @@
                     <div class="w-1/3 flex-shrink-0 p-4  ">
                         <div class="bg-white rounded-lg shadow-md overflow-hidden h-[420px]">
                             <img src="{{ asset('images/sp-1.webp') }}" alt="Kothandaraman" class="h-48 w-full object-cover">
-                            <div class="p-6 bg-yellow-500 h-full">
+                            <div class="p-6 bg-yellow-400 h-full">
                                 <h2 class="text-xl font-bold text-black">Kothandaraman, 66 years</h2>
                                 <p class="text-black pt-2">Used to work in Cuddalore district and suddenly lost vision in
                                     both of his eyes.</p>
@@ -56,7 +56,7 @@
                         <div class="bg-white rounded-lg shadow-md overflow-hidden h-[420px]">
                             <img src="{{ asset('images/sp-2.webp') }}" alt="COVID19 Response"
                                 class="h-48 w-full object-cover">
-                            <div class="p-6 bg-yellow-500 h-full">
+                            <div class="p-6 bg-yellow-400 h-full">
                                 <h2 class="text-xl font-bold text-black">COVID19 Response</h2>
                                 <p class="text-black pt-2">With Elderly at a higher risk, our covid-19 response team ensures
                                     our elders are Essential Commodities Distribution.</p>
@@ -70,7 +70,7 @@
                         <div class="bg-white rounded-lg shadow-md overflow-hidden  h-[420px]">
                             <img src="{{ asset('images/sp-3.webp') }}" alt="COVID19 Response"
                                 class="h-48 w-full object-cover">
-                            <div class="p-6 bg-yellow-500 h-full">
+                            <div class="p-6 bg-yellow-400 h-full">
                                 <h2 class="text-xl font-bold text-black">COVID19 Response</h2>
                                 <p class="text-black pt-2">With Elderly at a higher risk, our covid-19 response team ensures
                                     our elders are Essential Commodities Distribution.</p>

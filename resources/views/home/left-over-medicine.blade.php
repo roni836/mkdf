@@ -2,7 +2,7 @@
 @section('content')
 
 
-<div class="bg-gray-50 p-8 px-32">
+<div class="bg-gray-50 p-8 px-32  mt-[8.5rem]">
     <!-- Heading Section -->
     <h1 class="text-3xl font-normal text-blue-600">
         Donate Medicines in Purnea / Donate <br> Medical Equipment

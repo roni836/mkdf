@@ -1,6 +1,6 @@
 @extends('home.homeBase')
 @section('content')
-    <div class="relative">
+    <div class="relative  mt-[8.5rem]">
         <!-- Background Image -->
         <img src="{{ asset('images/breadcrum-image.jpg') }}" alt="Background" class="w-full h-80 object-cover">
 

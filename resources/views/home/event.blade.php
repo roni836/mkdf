@@ -10,7 +10,7 @@
 </div> --}}
 
 
-<div class="container mx-auto py-8">
+<div class="container mx-auto py-8  mt-[8.5rem]">
     <h2 class="text-3xl font-bold text-center mb-4">Come to our events for more info</h2>
     <p class="text-center text-gray-500 mb-8">
         Donec pellentesque nunc sed neque congue, ut lobortis odio sollicitudin.

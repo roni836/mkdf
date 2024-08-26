@@ -83,7 +83,7 @@
     </p>
 </div> --}}
 
-<div class="h-screen">
+<div class="h-screen  mt-[8.5rem]">
     
 <div class="w-full px-10 bg-white p-6 rounded-lg shadow-lg">
     <div class="flex flex-col lg:flex-row">

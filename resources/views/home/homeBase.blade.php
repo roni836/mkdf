@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -57,8 +58,8 @@
 </head>
 
 <body class="bg-gray-100">
-    <header class="bg-teal-600 shadow-md">
-        <div class="container mx-auto flex justify-center items-center p-2 shadow-sm">
+    <header class=" ">
+        <div class="container mx-auto flex justify-center items-center p-2 shadow-md fixed top-0 z-20 bg-teal-600 max-w-full">
             <nav>
                 <ul class="flex space-x-4">
                     <li><a href="{{ url('left-over-medicine') }}" class="text-white hover:text-white text-center text-sm font-semibold">Left
@@ -80,8 +81,8 @@
         </div>
     </header>
 
-    <header class=" p-4 shadow-lg">
-        <div class="container mx-auto flex justify-between items-center">
+    <header class=" ">
+        <div class="container w-full mx-auto flex justify-between items-center fixed top-10 z-20 p-3 shadow-lg max-w-full bg-white">
             <!-- Logo -->
             <div class="text-white font-bold text-xl">
                 <div class="text-2xl font-bold flex"><span class="text-teal-500">MKDF </span><span class="text-orange-500 ml-2"> Foundation</span></div>
@@ -122,7 +123,7 @@
     </header>
 
     <div id="list-container"
-        class="w-1/6 fixed right-10 z-10 hidden transition-opacity duration-500 transform translate-y-4">
+        class="w-1/6 fixed right-10 top-36 z-10 hidden transition-opacity duration-500 transform translate-y-4">
         <ul class="w-full">
             <a href="/donate-kind">
                 <li class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded mt-2 cursor-pointer">
@@ -478,6 +479,10 @@
         });
     });
     </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+
 </body>
 
 </html>
