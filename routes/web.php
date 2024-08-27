@@ -93,6 +93,8 @@ Route::get('/admin/manage-job-form',[AdminController::class,'manageJobForm']);
 Route::get('/admin/manage-job-form/insert',[AdminController::class,'insertJobForm']);
 Route::get('/admin/manage-rating',[AdminController::class,'viewRating']);
 
+Route::get('/admin/login',[AdminController::class,'login'])->name('admin.login');
+
 
 Route::group(['middleware' => ['auth', 'admin']], function() {
     Route::get('/admin', [AdminController::class, 'index'])->name('admin.dashboard');

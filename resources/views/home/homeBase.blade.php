@@ -62,19 +62,19 @@
         <div class="container mx-auto flex justify-center items-center p-2 shadow-md fixed top-0 z-20 bg-teal-600 max-w-full">
             <nav>
                 <ul class="flex space-x-4">
-                    <li><a href="{{ url('left-over-medicine') }}" class="text-white hover:text-white text-center text-sm font-semibold">Left
+                    <li><a href="{{ url('left-over-medicine') }}" class="text-white hover:text-black text-center text-sm font-semibold">Left
                             Over Medicine</a></li>
                     <span class="border-r"></span>
-                    <li><a href="{{ url('left-over-food') }}" class="text-white hover:text-white text-center text-sm font-semibold">Left
+                    <li><a href="{{ url('left-over-food') }}" class="text-white hover:text-black text-center text-sm font-semibold">Left
                             over Food</a></li>
                     <span class="border-r"></span>
                     <li><a href="/"
-                            class="text-white hover:text-white text-center text-sm font-semibold">Unused Books</a>
+                            class="text-white hover:text-black text-center text-sm font-semibold">Unused Books</a>
                     </li>
                     <span class="border-r"></span>
-                    <li><a href="{{ url('medical-equipment') }}" class="text-white hover:text-white text-center text-sm font-semibold">Medical Equipments or Medicine</a></li>
+                    <li><a href="{{ url('medical-equipment') }}" class="text-white hover:text-black text-center text-sm font-semibold">Medical Equipments or Medicine</a></li>
                     <span class="border-r"></span>
-                    <li><a href="{{ url('time-contribution') }}" class="text-white hover:text-white text-center text-sm font-semibold">Time Contribution</a></li>
+                    <li><a href="{{ url('time-contribution') }}" class="text-white hover:text-black text-center text-sm font-semibold">Time Contribution</a></li>
                     <span class="border-r"></span>
                 </ul>
             </nav>

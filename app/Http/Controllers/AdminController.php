@@ -26,40 +26,10 @@ class AdminController extends Controller
         return view('admin.insertFranchise');
     }
 
-    public function manageEvent(){
-        return view('admin.manageEvent');
+    public function login(){
+        return view('admin.auth.login');
     }
 
-    public function insertEvent(){
-        return view('admin.insertEvent');
-    }
-
-    public function manageBlog(){
-        return view('admin.manageBlog');
-    }
-
-    public function insertBlog(){
-        return view('admin.insertBlog');
-    }
-
-    public function manageCareer(){
-        return view('admin.manageCareer');
-    }
-
-    public function insertCareer(){
-        return view('admin.insertCareer');
-    }
-
-    public function manageJobForm(){
-        return view('admin.manageJobForm');
-    }
-
-    public function insertJobForm(){
-        return view('admin.insertJobForm');
-    }
-
-    public function viewRating(){
-        return view('admin.viewRating');
-    }
+    
     
 }

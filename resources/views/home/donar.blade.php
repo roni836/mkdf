@@ -2,7 +2,7 @@
 @section('content')
 
 
-<div class="relative  mt-[8.5rem]">
+{{-- <div class="relative  mt-[8.5rem]">
     <!-- Background Image -->
     <img src="{{ asset('images/breadcrum-image.jpg') }}" alt="Background" class="w-full h-80 object-cover">
 
@@ -10,10 +10,10 @@
     <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
         <h1 class="text-white text-4xl font-bold">Thankful Donars</h1>
     </div>
-</div>
+</div> --}}
 
 
-<div class="max-w-lg mx-auto bg-white shadow-md rounded-lg p-8 mt-10">
+<div class="max-w-lg mx-auto bg-white shadow-md rounded-lg p-8 mt-[9rem]">
     <h1 class="text-3xl font-semibold text-center text-green-600 mb-4">Thank You!</h1>
     <p class="text-lg text-gray-700 mb-4">Your generous donation has been received successfully. We are truly grateful for your support and commitment to our cause.</p>
     <p class="text-gray-600 mb-6">Your contribution will help us make a significant impact. We couldn’t do it without supporters like you.</p>
