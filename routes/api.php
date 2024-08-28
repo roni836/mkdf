@@ -60,6 +60,12 @@ Route::get('/career',[CareerController::class,'careerIndex'])->name('career.inde
 Route::post('/job-applied',[CareerController::class,'jobAppliedStore'])->name('job.applied.store');
 Route::get('/job-applied',[CareerController::class,'jobAppliedIndex'])->name('job.applied.index');
 
+Route::post('/needy',[CommonController::class,'needyStore'])->name('needy.store');
+Route::get('/needy',[CommonController::class,'needyIndex'])->name('needy.index');
+
+Route::post('/donation',[CommonController::class,'donationStore'])->name('donation.store');
+Route::get('/donation',[CommonController::class,'donationIndex'])->name('donation.index');
+
 // auth work
 
 // Route::post('login', [AuthController::class, 'login']);

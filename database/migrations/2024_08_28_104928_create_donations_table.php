@@ -13,13 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ratings', function (Blueprint $table) {
+        Schema::create('donations', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('mobile');
-            $table->string('comment')->nullable();
-            $table->string('rate');
-            $table->tinyInteger('status')->nullable();
+            $table->string('amount');
+            $table->string('address');
+            $table->string('donating_for');
+            $table->string('isverified');
+            $table->string('status');
+            $table->longText('message');
             $table->timestamps();
         });
     }
@@ -31,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ratings');
+        Schema::dropIfExists('donations');
     }
 };

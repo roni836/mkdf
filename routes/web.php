@@ -79,7 +79,6 @@ Route::get('/career-applied/{id}',[HomeController::class,'appliedCareer']);
 
 
 Route::get('/admin/dashboard',[AdminController::class,'dashboard']);
-Route::get('/admin',[AdminController::class,'manageOrder']);
 Route::get('/admin/manage-order/insert',[AdminController::class,'insertOrder']);
 Route::get('/admin/manage-franchise',[AdminController::class,'manageFranchise']);
 Route::get('/admin/manage-franchise/insert',[AdminController::class,'insertFranchise']);
@@ -94,10 +93,14 @@ Route::get('/admin/manage-job-form/insert',[AdminController::class,'insertJobFor
 Route::get('/admin/manage-rating',[AdminController::class,'viewRating']);
 
 Route::get('/admin/login',[AdminController::class,'login'])->name('admin.login');
+Route::get('/admin',[AdminController::class,'manageNeedy']);
+Route::get('/admin/manage-needy/insert',[AdminController::class,'insertNeedy']);
+Route::get('/admin/manage-donation/insert',[AdminController::class,'insertDonation']);
+Route::get('/admin/manage-donation',[AdminController::class,'manageDonation']);
 
 
 Route::group(['middleware' => ['auth', 'admin']], function() {
-    Route::get('/admin', [AdminController::class, 'index'])->name('admin.dashboard');
+    // Route::get('/admin', [AdminController::class, 'index'])->name('admin.dashboard');
     // Other admin routes
 });
 

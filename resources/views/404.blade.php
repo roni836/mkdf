@@ -1,7 +1,6 @@
 @extends('home.homeBase')
 @section('content')
 
-<body class="bg-gray-100 dark:bg-gray-900">
     <div class="flex items-center justify-center min-h-screen">
         <div class="text-center">
             <h1 class="text-6xl font-bold text-blue-700 dark:text-blue-400">404</h1>

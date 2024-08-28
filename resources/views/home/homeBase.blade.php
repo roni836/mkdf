@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -40,6 +40,7 @@
             transform: translateX(20px);
             transition: opacity 0.5s ease-in, transform 0.5s ease-in;
         }
+
         .modal {
             transition: opacity 0.25s ease;
         }
@@ -59,22 +60,29 @@
 
 <body class="bg-gray-100">
     <header class=" ">
-        <div class="container mx-auto flex justify-center items-center p-2 shadow-md fixed top-0 z-20 bg-teal-600 max-w-full">
+        <div
+            class="container mx-auto flex justify-center items-center p-2 shadow-md fixed top-0 z-20 bg-teal-600 max-w-full">
             <nav>
                 <ul class="flex space-x-4">
-                    <li><a href="{{ url('left-over-medicine') }}" class="text-white hover:text-black text-center text-sm font-semibold">Left
+                    <li><a href="{{ url('left-over-medicine') }}"
+                            class="text-white hover:text-black text-center text-sm font-semibold">Left
                             Over Medicine</a></li>
                     <span class="border-r"></span>
-                    <li><a href="{{ url('left-over-food') }}" class="text-white hover:text-black text-center text-sm font-semibold">Left
+                    <li><a href="{{ url('left-over-food') }}"
+                            class="text-white hover:text-black text-center text-sm font-semibold">Left
                             over Food</a></li>
                     <span class="border-r"></span>
-                    <li><a href="/"
-                            class="text-white hover:text-black text-center text-sm font-semibold">Unused Books</a>
+                    <li><a href="/" class="text-white hover:text-black text-center text-sm font-semibold">Unused
+                            Books</a>
                     </li>
                     <span class="border-r"></span>
-                    <li><a href="{{ url('medical-equipment') }}" class="text-white hover:text-black text-center text-sm font-semibold">Medical Equipments or Medicine</a></li>
+                    <li><a href="{{ url('medical-equipment') }}"
+                            class="text-white hover:text-black text-center text-sm font-semibold">Medical Equipments or
+                            Medicine</a></li>
                     <span class="border-r"></span>
-                    <li><a href="{{ url('time-contribution') }}" class="text-white hover:text-black text-center text-sm font-semibold">Time Contribution</a></li>
+                    <li><a href="{{ url('time-contribution') }}"
+                            class="text-white hover:text-black text-center text-sm font-semibold">Time Contribution</a>
+                    </li>
                     <span class="border-r"></span>
                 </ul>
             </nav>
@@ -82,10 +90,12 @@
     </header>
 
     <header class=" ">
-        <div class="container w-full mx-auto flex justify-between items-center fixed top-10 z-20 p-3 shadow-lg max-w-full bg-white">
+        <div
+            class="container w-full mx-auto flex justify-between items-center fixed top-10 z-20 p-3 shadow-lg max-w-full bg-white">
             <!-- Logo -->
             <div class="text-white font-bold text-xl">
-                <div class="text-2xl font-bold flex"><span class="text-teal-500">MKDF </span><span class="text-orange-500 ml-2"> Foundation</span></div>
+                <div class="text-2xl font-bold flex"><span class="text-teal-500">MKDF </span><span
+                        class="text-orange-500 ml-2"> Foundation</span></div>
             </div>
 
             <!-- Navigation -->
@@ -97,16 +107,19 @@
                     ABOUT US
                 </a>
                 <a href="/what-we-do" class=" hover:underline  uppercase font-semibold">
-                    WHAT WE DO
+                    Volunteer
                 </a>
                 <a href="/our-work" class=" hover:underline  uppercase font-semibold">
-                    Our Work
+                    Our Team
                 </a>
                 <a href="/donar" class=" hover:underline  uppercase font-semibold">
                     Donar
                 </a>
                 <a href="{{ url('event') }}" class=" hover:underline  uppercase font-semibold">
                     Events
+                </a>
+                <a href="{{ url('event') }}" class=" hover:underline  uppercase font-semibold">
+                    Career
                 </a>
                 <a href="{{ url('gallery') }}" class=" hover:underline  uppercase font-semibold">
                     Gallery
@@ -117,13 +130,14 @@
             </nav>
             {{-- <a href="" class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded ">Donate Now</a> --}}
             <a href="javascript:void(0)" id="donate-btn"
-                class="bg-orange-500 hover:bg-orange-600 text-white py-3 px-5 font-bold text-xl mr-16">Donate Now</a>
+                class="bg-orange-500 hover:bg-orange-600 text-white py-3 px-5 font-bold text-xl mr-16 hover:outline-blue-600">Donate
+                Now</a>
         </div>
 
     </header>
 
     <div id="list-container"
-        class="w-1/6 fixed right-10 top-36 z-10 hidden transition-opacity duration-500 transform translate-y-4">
+        class="w-1/6 fixed right-10 top-36 z-10 hidden transition-opacity duration-500 transform translate-y-4 bg-white p-4 rounded-lg">
         <ul class="w-full">
             <a href="/donate-kind">
                 <li class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded mt-2 cursor-pointer">
@@ -147,18 +161,21 @@
 
 
     <div class="fixed top-1/2 left-0 transform -translate-y-1/2 z-20">
-        <button id="rateUsButton" class="bg-teal-400 hover:bg-teal-500 hover:text-white text-black font-semibold px-2 py-6 rounded-l-lg shadow vertical-text">
+        <button id="rateUsButton"
+            class="bg-teal-400 hover:bg-teal-500 hover:text-white text-black font-semibold px-2 py-6 rounded-l-lg shadow vertical-text">
             Need Help ?
         </button>
     </div>
 
-    <div id="rateUsModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 z-30 flex items-center justify-center modal">
+    <div id="rateUsModal"
+        class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 z-30 flex items-center justify-center modal">
         <div class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all max-w-lg w-full p-4">
             <div class="text-right">
                 <button id="closeModal" class="text-gray-500 text-4xl">&times;</button>
             </div>
-            <h2 class="text-lg text-green-500 mb-4  font-semibold">Note : If You Know Someone Who needy any type of help. Please contact us</h2>
-            <form id="rateUsForm" class="">
+            <h2 class="text-lg text-green-500 mb-4  font-semibold">Note : If You Know Someone Who needy any type of
+                help. Please contact us</h2>
+            <form id="addNeedyData" class="">
                 <div>
                     <label for="name" class="block mb-2 text-gray-700 text-base">Helper's Name:</label>
                     <input type="text" id="name" name="name" class="w-full border rounded p-1">
@@ -170,50 +187,54 @@
                     <p id="error-mobile" class="text-red-500 text-xs font-semibold error-message"></p>
                 </div>
                 <div>
-                    <label for="mobile" class="block mb-2 text-gray-700 text-base">Needy Person's Name (if available):</label>
-                    <input type="text" id="mobile" name="mobile" class="w-full border rounded p-1">
+                    <label for="needy_name" class="block mb-2 text-gray-700 text-base">Needy Person's Name (if
+                        available):</label>
+                    <input type="text" id="needy_name" name="needy_name" class="w-full border rounded p-1">
                     <p id="error-mobile" class="text-red-500 text-xs font-semibold error-message"></p>
                 </div>
                 <div>
-                    <label for="mobile" class="block mb-2 text-gray-700 text-base">Needy Person's Mobile (Optional):</label>
-                    <input type="tel" id="mobile" name="mobile" class="w-full border rounded p-1">
+                    <label for="mobile" class="block mb-2 text-gray-700 text-base">Needy Person's Mobile
+                        (Optional):</label>
+                    <input type="tel" id="needy_mobile" name="needy_mobile" class="w-full border rounded p-1">
                     <p id="error-mobile" class="text-red-500 text-xs font-semibold error-message"></p>
                 </div>
                 <div>
-                    <label for="mobile" class="block mb-2 text-gray-700 text-base">Needy Person's Location :</label>
-                    <input type="text" id="mobile" name="mobile" class="w-full border rounded p-1">
+                    <label for="location" class="block mb-2 text-gray-700 text-base">Needy Person's Location :</label>
+                    <input type="text" id="location" name="location" class="w-full border rounded p-1">
                     <p id="error-mobile" class="text-red-500 text-xs font-semibold error-message"></p>
                 </div>
                 <div class="flex gap-2 mt-2">
 
-                <div class="">
-                    <label for="mobile" class="block mb-2 text-gray-700 text-base">Help Type :</label>
-                    <select name="" id="" class=" border rounded p-1">
-                        <option value="">Select Help type required</option>
-                        <option value="">Financial Help</option>
-                        <option value="">Moral Support</option>
-                        <option value="">Educational Support</option>
-                        <option value="">Other</option>
-                    </select>
-                </div>
-                <div class="">
-                    <label for="mobile" class="block mb-2 text-gray-700 text-base">Any Images (if available):</label>
-                    <input type="file" id="mobile" name="mobile" class="">
-                    <p id="error-mobile" class="text-red-500 text-xs font-semibold error-message"></p>
-                </div>
+                    <div class="">
+                        <label for="help_type" class="block mb-2 text-gray-700 text-base">Help Type :</label>
+                        <select name="help_type" id="help_type" class=" border rounded p-1">
+                            <option value="">Select Help type required</option>
+                            <option value="Financial Help">Financial Help</option>
+                            <option value="Moral Support">Moral Support</option>
+                            <option value="Educational Support">Educational Support</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="">
+                        <label for="image" class="block mb-2 text-gray-700 text-base">Any Images (if
+                            available):</label>
+                        <input type="file" id="image" name="image" class="">
+                        <p id="error-mobile" class="text-red-500 text-xs font-semibold error-message"></p>
+                    </div>
                 </div>
                 <div class="mt-2">
-                    <label for="comment" class="block mb-2 text-gray-700 text-base">Message (Optional) :</label>
-                    <textarea id="comment" name="comment" rows="2" class="w-full border rounded p-1"></textarea>
+                    <label for="message" class="block mb-2 text-gray-700 text-base">Message (Optional) :</label>
+                    <textarea id="message" name="message" rows="2" class="w-full border rounded p-1"></textarea>
                 </div>
-    
+
                 <div class="text-right">
-                    <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded shadow">Submit</button>
+                    <button type="submit"
+                        class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded shadow">Submit</button>
                 </div>
             </form>
         </div>
     </div>
-    
+
     <script>
         // Get elements
         const rateUsButton = document.getElementById('rateUsButton');
@@ -221,19 +242,19 @@
         const closeModal = document.getElementById('closeModal');
         const ratingStars = document.querySelectorAll('.rating-star');
         let selectedRating = 0;
-    
+
         // Show modal
         rateUsButton.addEventListener('click', () => {
             rateUsModal.classList.remove('hidden');
             document.body.classList.add('modal-active');
         });
-    
+
         // Hide modal
         closeModal.addEventListener('click', () => {
             rateUsModal.classList.add('hidden');
             document.body.classList.remove('modal-active');
         });
-    
+
         // Select rating
         ratingStars.forEach(star => {
             star.addEventListener('click', () => {
@@ -244,7 +265,7 @@
                 }
             });
         });
-    
+
         // Submit form
         document.getElementById('rateUsForm').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -294,8 +315,8 @@
         });
     </script>
 
-    <div id="popup-form-container"
-        class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-10">
+    <div
+        id="popup-form-container"class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-30">
         <div id="form-container" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full max-w-md z-10"></div>
     </div>
     @section('content')
@@ -390,7 +411,7 @@
     </a>
 
 
-    <script>
+    {{-- <script>
         function showForm(category) {
             const popupContainer = document.getElementById('popup-form-container');
             const formContainer = document.getElementById('form-container');
@@ -400,38 +421,48 @@
                     &times;
                 </button>
                 <h3 class="text-xl font-bold mb-4">${category.charAt(0).toUpperCase() + category.slice(1)} Donation Form</h3>
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
-                        Name
-                    </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Enter your name">
-                </div>
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="mobile">
-                        Mobile
-                    </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="mobile" type="text" placeholder="Enter your mobile number">
-                </div>
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="address">
-                        Address
-                    </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="address" type="text" placeholder="Enter your address">
-                </div>
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="description">
-                        Description
-                    </label>
-                    <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="description" placeholder="Enter a description"></textarea>
-                </div>
-                <div class="flex items-center justify-between">
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
-                        Submit
-                    </button>
-                    <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="closeForm()">
-                        Close
-                    </button>
-                </div>
+                <form action="" id='donation-form'>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+                            Name
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name='name' id="name" type="text" placeholder="Enter your name">
+                    </div>
+                        <input class="hidden" name='donating_for' id="donating_for" type="hidden" value='${category.charAt(0).toUpperCase() + category.slice(1)}' >
+
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="mobile">
+                            Mobile
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name='mobile' id="mobile" type="tel" placeholder="Enter your mobile number">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="amount">
+                            Donation Amount
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name='amount' id="amount" type="number" placeholder="Enter Amount">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="address">
+                            Address
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name='address' id="address" type="text" placeholder="Enter your address">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
+                            Message
+                        </label>
+                        <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name='message' id="description" placeholder="Enter any message"></textarea>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                            Submit
+                        </button>
+                        <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="closeForm()">
+                            Close
+                        </button>
+                    </div>
+                </form>
             `;
 
             // Add enter transition class
@@ -478,10 +509,165 @@
             // Add any other logic for button2 click event here
         });
     });
+    </script> --}}
+
+    <script>
+        $(document).ready(function() {
+            // Insert needy details
+            $("#addNeedyData").submit(function(e) {
+                e.preventDefault();
+                let formData = new FormData(this);
+                $.ajax({
+                    type: "POST",
+                    url: "{{ route('needy.store') }}",
+                    data: formData,
+                    dataType: "JSON",
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    success: function(response) {
+                        swal("Success", response.message, "success");
+                        $("#addNeedyData").trigger("reset");
+                        window.open("/", "_self");
+                    },
+                    error: function(xhr) {
+                        $('.error-message').html('');
+                        if (xhr.status === 422) {
+                            var errors = xhr.responseJSON.errors;
+                            $('.error-message').html(''); // Clear previous error messages
+                            $.each(errors, function(key, value) {
+                                $('#error-' + key).html(value[0]).show();
+                            });
+                        } else {
+                            alert('An error occurred. Please try again.');
+                        }
+                    }
+                });
+            });
+            // Insert donation details
+            $(document).on('submit', '#donation-form', function(e) {
+                e.preventDefault();
+                let formData = new FormData(this);
+
+                $.ajax({
+                    type: "POST",
+                    url: "{{ route('donation.store') }}",
+                    data: formData,
+                    dataType: "JSON",
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    success: function(response) {
+                        swal("Success", response.message, "success");
+                        $("#donation-form").trigger("reset");
+                        window.open("/", "_self");
+                    },
+                    error: function(xhr) {
+                        $('.error-message').html('');
+                        if (xhr.status === 422) {
+                            var errors = xhr.responseJSON.errors;
+                            $('.error-message').html(''); // Clear previous error messages
+                            $.each(errors, function(key, value) {
+                                $('#error-' + key).html(value[0]).show();
+                            });
+                        } else {
+                            alert('An error occurred. Please try again.');
+                        }
+                    }
+                });
+            });
+
+
+            // Show Form Function
+            window.showForm = function(category) {
+                const popupContainer = document.getElementById('popup-form-container');
+                const formContainer = document.getElementById('form-container');
+
+                formContainer.innerHTML = `
+            <button class="absolute top-0 right-0 mt-2 mr-2 text-gray-500 hover:text-gray-700 text-xl" onclick="closeForm()" type="button">
+                &times;
+            </button>
+            <h3 class="text-xl font-bold mb-4">${category.charAt(0).toUpperCase() + category.slice(1)} Donation Form</h3>
+            <form id="donation-form">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="name" id="name" type="text" placeholder="Enter your name">
+                    <div class="text-red-500 text-xs italic error-message" id="error-name"></div>
+                </div>
+                <input class="hidden" name="donating_for" id="donating_for" type="hidden" value="${category.charAt(0).toUpperCase() + category.slice(1)}">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="mobile">Mobile</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="mobile" id="mobile" type="tel" placeholder="Enter your mobile number">
+                    <div class="text-red-500 text-xs italic error-message" id="error-mobile"></div>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="amount">Donation Amount</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="amount" id="amount" type="number" placeholder="Enter Amount">
+                    <div class="text-red-500 text-xs italic error-message" id="error-amount"></div>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="address">Address</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="address" id="address" type="text" placeholder="Enter your address">
+                    <div class="text-red-500 text-xs italic error-message" id="error-address"></div>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
+                    <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="message" id="message" placeholder="Enter any message"></textarea>
+                    <div class="text-red-500 text-xs italic error-message" id="error-message"></div>
+                </div>
+                 <div class="mb-4 flex justify-between items-center">
+                    <label class="flex items-center text-sm font-medium text-gray-700">
+                        <input type="checkbox" name="show_data" value='1' class="h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                        <span class="ml-2">Want to show your donation details publically</span>
+                    </label>
+                </div>
+                <div class="flex items-center justify-between">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                        Submit
+                    </button>
+                    <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="closeForm()">
+                        Close
+                    </button>
+                </div>
+            </form>
+        `;
+
+                // Add enter transition class
+                popupContainer.classList.remove('hidden', 'popup-exit-active');
+                popupContainer.classList.add('popup-enter');
+
+                // Trigger reflow for the transition to apply
+                void popupContainer.offsetWidth;
+
+                // Apply the active state
+                popupContainer.classList.add('popup-enter-active');
+            }
+
+            // Close Form Function
+            window.closeForm = function() {
+                const popupContainer = document.getElementById('popup-form-container');
+
+                // Add exit transition class
+                popupContainer.classList.remove('popup-enter-active');
+                popupContainer.classList.add('popup-exit');
+
+                // Trigger reflow for the transition to apply
+                void popupContainer.offsetWidth;
+
+                // Apply the active exit state
+                popupContainer.classList.add('popup-exit-active');
+
+                // Wait for the transition to finish before hiding the element
+                setTimeout(() => {
+                    popupContainer.classList.add('hidden');
+                    popupContainer.classList.remove('popup-exit', 'popup-exit-active');
+                }, 1000); // Match the duration of the transition
+            }
+        })
     </script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
 
 </body>
 

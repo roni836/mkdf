@@ -13,14 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('events', function (Blueprint $table) {
+        Schema::create('needies', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('mobile');
-            $table->string('event_type');
-            $table->string('address');
-            $table->integer('quantity');
-            $table->string('booking_date');
+            $table->string('needy_name');
+            $table->string('needy_mobile');
+            $table->string('location');
+            $table->string('help_type');
+            $table->string('isverified');
+            $table->string('status');
+            $table->string('image')->nullable();
+            $table->longText('message');
             $table->timestamps();
         });
     }
@@ -32,6 +36,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('events');
+        Schema::dropIfExists('needies');
     }
 };

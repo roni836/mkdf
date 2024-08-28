@@ -17,8 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('mobile');
-            $table->string('address');
-            $table->integer('quantity');
             $table->string('password')->nullable();
             $table->rememberToken();
             $table->timestamps();

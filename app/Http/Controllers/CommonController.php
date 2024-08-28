@@ -6,18 +6,17 @@ use App\Mail\EventMail;
 use App\Mail\FranchiseMail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
-use App\Models\Franchise;
-use App\Models\Blog;
-use App\Models\Rating;
 use App\Models\Event;
+use App\Models\Needy;
+use App\Models\Donation;
 use Validator;
 
 
 class CommonController extends Controller
 {
-    public function franchiseIndex()
+    public function needyIndex()
     {
-        $data = Franchise::orderBy('created_at', 'desc')->get();
+        $data = Needy::orderBy('created_at', 'desc')->get();
         if ($data->count() > 0) {
             return response()->json([
                 'status' => 200,
@@ -31,12 +30,12 @@ class CommonController extends Controller
         }
     }
 
-    public function franchiseStore(Request $request)
+    public function needyStore(Request $request)
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required|string',                   
             'mobile' => 'required|digits:10|regex:/^[0-9]{10}$/',                   
-            'email' => 'required|string',                   
+            'help_type' => 'required|string',                   
             'location' => 'required|string',                   
         ]);
 
@@ -47,21 +46,92 @@ class CommonController extends Controller
                 ], 422);
             }
         else {    
-            $data = Franchise::create([
+
+                // Handle the file upload
+            if ($request->hasFile('image')) {
+                $image = time() . "." . $request->image->extension();
+                $request->image->move(public_path("needy/image"), $image);
+            } else {
+               $image = NULL;
+            }
+
+            $data = Needy::create([
                 'name' => $request->name,                                       
                 'mobile' => $request->mobile,
                 'location'=>$request->location,                                       
-                'email'=>$request->email,                                       
-                'message'=>$request->message  
+                'needy_name'=>$request->needy_name,                                       
+                'needy_mobile'=>$request->needy_mobile,                                       
+                'help_type'=>$request->help_type,                                       
+                'message'=>$request->message,  
+                'image'=>$image  
             ]);
     
             if ($data) {
 
-                Mail::to('ronitsaha836@gmail.com')->send(new FranchiseMail($data));
+                // Mail::to('ronitsaha836@gmail.com')->send(new FranchiseMail($data));
 
                 return response()->json([
                     'status' => 200,
                     'message' => 'We Will Connect You Soon'
+                ]);
+            } else {
+                return response()->json([
+                    'status' => 500,
+                    'message' => "Unable to add your Request"
+                ], 500);
+            }
+        }
+    }
+    public function donationIndex()
+    {
+        $data = Donation::orderBy('created_at', 'desc')->get();
+        if ($data->count() > 0) {
+            return response()->json([
+                'status' => 200,
+                'data' => $data
+            ], 200);
+        } else {
+            return response()->json([
+                'status' => 404,
+                'data' => "No Records found"
+            ], 404);
+        }
+    }
+
+    public function donationStore(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string',                   
+            'mobile' => 'required|digits:10|regex:/^[0-9]{10}$/',                   
+            'donating_for' => 'required|string',                   
+            'amount' => 'required',                   
+        ]);
+
+            if ($validator->fails()) {
+                return response()->json([
+                    'status' => 422,
+                    'errors' => $validator->messages()
+                ], 422);
+            }
+        else {
+
+            $data = Donation::create([
+                'name' => $request->name,                                       
+                'mobile' => $request->mobile,                                      
+                'donating_for' => $request->donating_for,                                      
+                'amount' => $request->amount,                                      
+                'address' => $request->address,                                      
+                'message'=>$request->message,  
+                'show_data'=>$request->show_data,  
+            ]);
+    
+            if ($data) {
+
+                // Mail::to('ronitsaha836@gmail.com')->send(new FranchiseMail($data));
+
+                return response()->json([
+                    'status' => 200,
+                    'message' => 'Thanku For Your Donation'
                 ]);
             } else {
                 return response()->json([

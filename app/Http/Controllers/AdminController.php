@@ -10,8 +10,20 @@ class AdminController extends Controller
         return view('admin.dashboard');
     }
 
-    public function manageOrder(){
-        return view('admin.manageOrder');
+    public function manageNeedy(){
+        return view('admin.manageNeedy');
+    }
+
+    public function insertNeedy(){
+        return view('admin.insertNeedy');
+    }
+    
+    public function manageDonation(){
+        return view('admin.manageDonation');
+    }
+
+    public function insertDonation(){
+        return view('admin.insertDonation');
     }
 
     public function insertOrder(){
