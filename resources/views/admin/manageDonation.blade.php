@@ -1,7 +1,7 @@
 @extends('admin.adminBase')
 @section('content')
     <div class="flex-1 flex mt-20 items-center justify-between ">
-        <h1 class="text-lg font-semibold  py-2">Manage Needy (<span id="counting">0</span>)</h1>
+        <h1 class="text-lg font-semibold  py-2">Manage Donations (<span id="counting">0</span>)</h1>
         <a href={{url('/admin/manage-donation/insert')}} class="bg-indigo-500 hover:bg-indigo-800 text-white px-3 py-2 rounded mb-4">
             <i class="fas fa-plus"></i>Add New Donation</a>
     </div>

@@ -96,6 +96,7 @@ Route::get('/admin/login',[AdminController::class,'login'])->name('admin.login')
 Route::get('/admin',[AdminController::class,'manageNeedy']);
 Route::get('/admin/manage-needy/insert',[AdminController::class,'insertNeedy']);
 Route::get('/admin/manage-donation/insert',[AdminController::class,'insertDonation']);
+Route::get('/admin/manage-donation-page',[AdminController::class,'insertDonationPage']);
 Route::get('/admin/manage-donation',[AdminController::class,'manageDonation']);
 
 

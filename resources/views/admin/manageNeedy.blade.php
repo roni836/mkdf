@@ -3,7 +3,7 @@
     <div class="flex-1 flex mt-20 items-center justify-between ">
         <h1 class="text-lg font-semibold  py-2">Manage Needy (<span id="counting">0</span>)</h1>
         <a href={{url('/admin/manage-needy/insert')}} class="bg-indigo-500 hover:bg-indigo-800 text-white px-3 py-2 rounded mb-4">
-            <i class="fas fa-plus"></i>Add New Order</a>
+            <i class="fas fa-plus"></i>Add New Needy</a>
     </div>
     <div class=" ">
         <div class="relative  w-full shadow-md sm:rounded-lg">

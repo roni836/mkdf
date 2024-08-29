@@ -66,6 +66,9 @@ Route::get('/needy',[CommonController::class,'needyIndex'])->name('needy.index')
 Route::post('/donation',[CommonController::class,'donationStore'])->name('donation.store');
 Route::get('/donation',[CommonController::class,'donationIndex'])->name('donation.index');
 
+Route::post('/donation-concern',[CommonController::class,'donationConcernStore'])->name('donation.concern.store');
+Route::get('/donation-concern',[CommonController::class,'donationConcernIndex'])->name('donation.concern.index');
+
 // auth work
 
 // Route::post('login', [AuthController::class, 'login']);

@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Models\Event;
 use App\Models\Needy;
 use App\Models\Donation;
+use App\Models\DonationConcern;
 use Validator;
 
 
@@ -64,6 +65,95 @@ class CommonController extends Controller
                 'help_type'=>$request->help_type,                                       
                 'message'=>$request->message,  
                 'image'=>$image  
+            ]);
+    
+            if ($data) {
+
+                // Mail::to('ronitsaha836@gmail.com')->send(new FranchiseMail($data));
+
+                return response()->json([
+                    'status' => 200,
+                    'message' => 'We Will Connect You Soon'
+                ]);
+            } else {
+                return response()->json([
+                    'status' => 500,
+                    'message' => "Unable to add your Request"
+                ], 500);
+            }
+        }
+    }
+    public function donationConcernIndex()
+    {
+        $data = DonationConcern::orderBy('created_at', 'desc')->get();
+        if ($data->count() > 0) {
+            return response()->json([
+                'status' => 200,
+                'data' => $data
+            ], 200);
+        } else {
+            return response()->json([
+                'status' => 404,
+                'data' => "No Records found"
+            ], 404);
+        }
+    }
+
+    public function donationConcernStore(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string',                   
+            'father' => 'required|string',                   
+            'mobile' => 'required|digits:10|regex:/^[0-9]{10}$/',                   
+            'id_number' => 'required|string',                   
+            'amount' => 'required|string',                   
+            'heading' => 'required|string',                   
+            'description' => 'required|string',                   
+            'address' => 'required|string',                   
+        ]);
+
+            if ($validator->fails()) {
+                return response()->json([
+                    'status' => 422,
+                    'errors' => $validator->messages()
+                ], 422);
+            }
+        else {    
+
+                // Handle the file upload
+            if ($request->hasFile('id_proof')) {
+                $id_proof = time() . "." . $request->id_proof->extension();
+                $request->id_proof->move(public_path("donation-concern/id_proof"), $id_proof);
+            } else {
+               $id_proof = NULL;
+            }
+                // Handle the file upload
+            if ($request->hasFile('image')) {
+                $image = time() . "." . $request->image->extension();
+                $request->image->move(public_path("donation-concern/image"), $image);
+            } else {
+               $image = NULL;
+            }
+                // Handle the file upload
+            if ($request->hasFile('document')) {
+                $document = time() . "." . $request->document->extension();
+                $request->document->move(public_path("donation-concern/document"), $document);
+            } else {
+               $document = NULL;
+            }
+
+            $data = DonationConcern::create([
+                'name' => $request->name,                                       
+                'mobile' => $request->mobile,                                      
+                'description'=>$request->description,  
+                'heading'=>$request->heading,  
+                'address'=>$request->address,  
+                'father'=>$request->father,  
+                'id_number'=>$request->id_number,  
+                'amount'=>$request->amount,  
+                'image'=>$image,
+                'document'=>$document,  
+                'id_proof'=>$id_proof,  
             ]);
     
             if ($data) {

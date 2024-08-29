@@ -26,6 +26,10 @@ class AdminController extends Controller
         return view('admin.insertDonation');
     }
 
+    public function insertDonationPage(){
+        return view('admin.insert-donation-page');
+    }
+
     public function insertOrder(){
         return view('admin.insertOrder');
     }
