@@ -98,6 +98,8 @@ Route::get('/admin/manage-needy/insert',[AdminController::class,'insertNeedy']);
 Route::get('/admin/manage-donation/insert',[AdminController::class,'insertDonation']);
 Route::get('/admin/manage-donation-page',[AdminController::class,'insertDonationPage']);
 Route::get('/admin/manage-donation',[AdminController::class,'manageDonation']);
+Route::get('/admin/manage-donating-event/insert',[AdminController::class,'insertDonatingEvent']);
+Route::get('/admin/manage-donating-event',[AdminController::class,'manageDonatingEvent']);
 
 
 Route::group(['middleware' => ['auth', 'admin']], function() {

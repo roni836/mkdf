@@ -10,6 +10,7 @@ use App\Models\Event;
 use App\Models\Needy;
 use App\Models\Donation;
 use App\Models\DonationConcern;
+use App\Models\DonatingEvent;
 use Validator;
 
 
@@ -163,6 +164,85 @@ class CommonController extends Controller
                 return response()->json([
                     'status' => 200,
                     'message' => 'We Will Connect You Soon'
+                ]);
+            } else {
+                return response()->json([
+                    'status' => 500,
+                    'message' => "Unable to add your Request"
+                ], 500);
+            }
+        }
+    }
+    public function donatingEventIndex()
+    {
+        $data = DonatingEvent::orderBy('created_at', 'desc')->get();
+        if ($data->count() > 0) {
+            return response()->json([
+                'status' => 200,
+                'data' => $data
+            ], 200);
+        } else {
+            return response()->json([
+                'status' => 404,
+                'data' => "No Records found"
+            ], 404);
+        }
+    }
+
+    public function donatingEventHeading()
+    {
+        $data = DonatingEvent::where('status', 1)->get();
+        if ($data->count() > 0) {
+            return response()->json([
+                'status' => 200,
+                'data' => $data
+            ], 200);
+        } else {
+            return response()->json([
+                'status' => 404,
+                'data' => "No Records found"
+            ], 404);
+        }
+    }
+
+    public function donatingEventStore(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+
+            'title' => 'required|string',                                     
+            'description' => 'required|string',                   
+        ]);
+
+            if ($validator->fails()) {
+                return response()->json([
+                    'status' => 422,
+                    'errors' => $validator->messages()
+                ], 422);
+            }
+        else {    
+
+                // Handle the file upload
+            if ($request->hasFile('image')) {
+                $image = time() . "." . $request->image->extension();
+                $request->image->move(public_path("donating-event/image"), $image);
+            } else {
+               $image = NULL;
+            }
+
+            $data = DonatingEvent::create([
+                'title' => $request->title,                                      
+                'message' => $request->message,                                      
+                'description'=>$request->description,  
+                'image'=>$image,
+            ]);
+    
+            if ($data) {
+
+                // Mail::to('ronitsaha836@gmail.com')->send(new FranchiseMail($data));
+
+                return response()->json([
+                    'status' => 200,
+                    'message' => 'Data Added Successfully'
                 ]);
             } else {
                 return response()->json([

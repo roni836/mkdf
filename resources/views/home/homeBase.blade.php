@@ -167,8 +167,7 @@
         </button>
     </div>
 
-    <div id="rateUsModal"
-        class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 z-30 flex items-center justify-center modal">
+    <div id="rateUsModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 z-30 flex items-center justify-center modal">
         <div class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all max-w-lg w-full p-4">
             <div class="text-right">
                 <button id="closeModal" class="text-gray-500 text-4xl">&times;</button>
@@ -256,50 +255,50 @@
         });
 
         // Select rating
-        ratingStars.forEach(star => {
-            star.addEventListener('click', () => {
-                selectedRating = star.getAttribute('data-rating');
-                ratingStars.forEach(s => s.classList.remove('text-yellow-500'));
-                for (let i = 0; i < selectedRating; i++) {
-                    ratingStars[i].classList.add('text-yellow-500');
-                }
-            });
-        });
+        // ratingStars.forEach(star => {
+        //     star.addEventListener('click', () => {
+        //         selectedRating = star.getAttribute('data-rating');
+        //         ratingStars.forEach(s => s.classList.remove('text-yellow-500'));
+        //         for (let i = 0; i < selectedRating; i++) {
+        //             ratingStars[i].classList.add('text-yellow-500');
+        //         }
+        //     });
+        // });
 
         // Submit form
-        document.getElementById('rateUsForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            let formData = new FormData(this);
-            formData.append('rate', selectedRating);
-            $.ajax({
-                type: "POST",
-                url: "{{ route('rate.store') }}",
-                data: formData,
-                dataType: "JSON",
-                contentType: false,
-                cache: false,
-                processData: false,
-                success: function(response) {
-                    swal("Thanking So Much", response.message, "success");
-                    $("#rateUsForm").trigger("reset");
-                    setTimeout(function() {
-                        window.open("/", "_self");
-                    }, 4000);
-                },
-                error: function(xhr) {
-                    $('.error-message').html('');
-                    if (xhr.status === 422) {
-                        var errors = xhr.responseJSON.errors;
-                        $('.error-message').html(''); // Clear previous error messages
-                        $.each(errors, function(key, value) {
-                            $('#error-' + key).html(value[0]).show();
-                        });
-                    } else {
-                        alert('An error occurred. Please try again.');
-                    }
-                }
-            });
-        });
+        // document.getElementById('rateUsForm').addEventListener('submit', function(e) {
+        //     e.preventDefault();
+        //     let formData = new FormData(this);
+        //     formData.append('rate', selectedRating);
+        //     $.ajax({
+        //         type: "POST",
+        //         url: "{{ route('rate.store') }}",
+        //         data: formData,
+        //         dataType: "JSON",
+        //         contentType: false,
+        //         cache: false,
+        //         processData: false,
+        //         success: function(response) {
+        //             swal("Thanking So Much", response.message, "success");
+        //             $("#rateUsForm").trigger("reset");
+        //             setTimeout(function() {
+        //                 window.open("/", "_self");
+        //             }, 4000);
+        //         },
+        //         error: function(xhr) {
+        //             $('.error-message').html('');
+        //             if (xhr.status === 422) {
+        //                 var errors = xhr.responseJSON.errors;
+        //                 $('.error-message').html(''); // Clear previous error messages
+        //                 $.each(errors, function(key, value) {
+        //                     $('#error-' + key).html(value[0]).show();
+        //                 });
+        //             } else {
+        //                 alert('An error occurred. Please try again.');
+        //             }
+        //         }
+        //     });
+        // });
     </script>
 
     <script>
@@ -410,106 +409,6 @@
         </div>
     </a>
 
-
-    {{-- <script>
-        function showForm(category) {
-            const popupContainer = document.getElementById('popup-form-container');
-            const formContainer = document.getElementById('form-container');
-
-            formContainer.innerHTML = `
-                <button class="absolute top-0 right-0 mt-2 mr-2 text-gray-500 hover:text-gray-700 text-xl" onclick="closeForm()" type="button">
-                    &times;
-                </button>
-                <h3 class="text-xl font-bold mb-4">${category.charAt(0).toUpperCase() + category.slice(1)} Donation Form</h3>
-                <form action="" id='donation-form'>
-                    <div class="mb-4">
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
-                            Name
-                        </label>
-                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name='name' id="name" type="text" placeholder="Enter your name">
-                    </div>
-                        <input class="hidden" name='donating_for' id="donating_for" type="hidden" value='${category.charAt(0).toUpperCase() + category.slice(1)}' >
-
-                    <div class="mb-4">
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="mobile">
-                            Mobile
-                        </label>
-                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name='mobile' id="mobile" type="tel" placeholder="Enter your mobile number">
-                    </div>
-                    <div class="mb-4">
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="amount">
-                            Donation Amount
-                        </label>
-                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name='amount' id="amount" type="number" placeholder="Enter Amount">
-                    </div>
-                    <div class="mb-4">
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="address">
-                            Address
-                        </label>
-                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name='address' id="address" type="text" placeholder="Enter your address">
-                    </div>
-                    <div class="mb-4">
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
-                            Message
-                        </label>
-                        <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name='message' id="description" placeholder="Enter any message"></textarea>
-                    </div>
-                    <div class="flex items-center justify-between">
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
-                            Submit
-                        </button>
-                        <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="closeForm()">
-                            Close
-                        </button>
-                    </div>
-                </form>
-            `;
-
-            // Add enter transition class
-            popupContainer.classList.remove('hidden', 'popup-exit-active');
-            popupContainer.classList.add('popup-enter');
-
-            // Trigger reflow for the transition to apply
-            void popupContainer.offsetWidth;
-
-            // Apply the active state
-            popupContainer.classList.add('popup-enter-active');
-        }
-
-        function closeForm() {
-            const popupContainer = document.getElementById('popup-form-container');
-
-            // Add exit transition class
-            popupContainer.classList.remove('popup-enter-active');
-            popupContainer.classList.add('popup-exit');
-
-            // Trigger reflow for the transition to apply
-            void popupContainer.offsetWidth;
-
-            // Apply the active exit state
-            popupContainer.classList.add('popup-exit-active');
-
-            // Wait for the transition to finish before hiding the element
-            setTimeout(() => {
-                popupContainer.classList.add('hidden');
-                popupContainer.classList.remove('popup-exit', 'popup-exit-active');
-            }, 1000); // Match the duration of the transition
-        }
-
-        document.addEventListener('DOMContentLoaded', (event) => {
-        const button1 = document.getElementById('rateBtn');
-        const button2 = document.getElementById('rateUsButton');
-
-        button1.addEventListener('click', () => {
-            button2.click();  // Trigger click event on button2 when button1 is clicked
-        });
-
-        button2.addEventListener('click', () => {
-            console.log('Rate Us button  clicked!');
-            // Add any other logic for button2 click event here
-        });
-    });
-    </script> --}}
 
     <script>
         $(document).ready(function() {
