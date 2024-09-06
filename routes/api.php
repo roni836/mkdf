@@ -4,7 +4,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CommonController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\CareerController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\AuthController;
 
 /*
@@ -37,8 +39,11 @@ Route::get('/franchise-enquiry',[CommonController::class,'franchiseIndex'])->nam
 // Route::delete('/franchise-enquiry/forceDelete/{id}',[CommonController::class,'forceDelete']);
 // Route::patch('/franchise-enquiry/restore/{id}',[CommonController::class,'restore']);
 
-Route::post('/blog',[CommonController::class,'blogStore'])->name('blog.store');
-Route::get('/blog',[CommonController::class,'blogIndex'])->name('blog.index');
+Route::post('/photo',[GalleryController::class,'photoStore'])->name('photo.store');
+Route::get('/photo',[GalleryController::class,'photoIndex'])->name('photo.index');
+
+Route::post('/video',[GalleryController::class,'videoStore'])->name('video.store');
+Route::get('/video',[GalleryController::class,'videoIndex'])->name('video.index');
 // Route::get('/blog/view/{id}',[CommonController::class,'show']);
 // Route::put('/blog/edit/{id}',[CommonController::class,'update']);
 // Route::delete('/blog/delete/{id}',[CommonController::class,'destroy']);
@@ -46,8 +51,8 @@ Route::get('/blog',[CommonController::class,'blogIndex'])->name('blog.index');
 // Route::delete('/blog/forceDelete/{id}',[CommonController::class,'forceDelete']);
 // Route::patch('/blog/restore/{id}',[CommonController::class,'restore']);
 
-Route::post('/book-event',[CommonController::class,'eventBooking'])->name('book.event.store');
-Route::get('/book-event',[CommonController::class,'eventIndex'])->name('book.event.index');
+Route::post('/event',[EventController::class,'store'])->name('event.store');
+Route::get('/event',[EventController::class,'index'])->name('event.index');
 
 Route::post('/rating',[CommonController::class,'ratingStore'])->name('rate.store');
 Route::get('/rating',[CommonController::class,'ratingIndex'])->name('rate.index');

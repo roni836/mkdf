@@ -360,7 +360,7 @@
         </div>
 
         <!-- Stats Section -->
-        <section class="mb-20 bg-cover bg-center py-16"
+        {{-- <section class="mb-20 bg-cover bg-center py-16"
             style="background-image: url('{{ asset('images/breadcrum-image.jpg') }}');">
             <div class="bg-black bg-opacity-50 py-8">
                 <div class="grid grid-cols-4 gap-6 text-center text-white max-w-4xl mx-auto">
@@ -382,7 +382,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
     </div>
 
         <script>
@@ -391,7 +391,7 @@
                 let fetchYouTubeData = () => {
                     $.ajax({
                         type: "GET",
-                        url: "{{ route('blog.index') }}", // Replace with your route to fetch YouTube video data
+                        url: "{{ route('photo.index') }}", // Replace with your route to fetch YouTube video data
                         success: function(response) {
                             let card = $("#callingData");
                             card.empty();

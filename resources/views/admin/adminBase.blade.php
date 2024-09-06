@@ -158,7 +158,7 @@
                                     Events</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="{{url('/admin/manage-event')}}"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Event
                                     Page</a>
                             </li>
@@ -183,11 +183,11 @@
                         </button>
                         <ul id="dropdown-gallery" class="hidden py-2 space-y-2">
                             <li>
-                                <a href="#"
+                                <a href="{{url('admin/manage-photos')}}"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Photo</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="{{url('admin/manage-videos')}}"
                                     class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Video</a>
                             </li>
                         </ul>

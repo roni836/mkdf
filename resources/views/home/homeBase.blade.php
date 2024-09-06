@@ -58,12 +58,19 @@
 
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 w-full">
     <header class=" ">
         <div
             class="container mx-auto flex justify-center items-center p-2 shadow-md fixed top-0 z-20 bg-teal-600 max-w-full">
             <nav>
                 <ul class="flex space-x-4">
+                    <li><a href="{{ url('left-over-food') }}"
+                            class="text-white hover:text-black text-center text-sm font-semibold">Social Kitchen</a>
+                    </li>
+                    <span class="border-r"></span>
+                    <li><a href="{{ url('hindu-samman') }}"
+                            class="text-white hover:text-black text-center text-sm font-semibold">Hindu Samman </a></li>
+                    <span class="border-r"></span>
                     <li><a href="{{ url('left-over-medicine') }}"
                             class="text-white hover:text-black text-center text-sm font-semibold">Left
                             Over Medicine</a></li>
@@ -121,7 +128,7 @@
                 <a href="{{ url('event') }}" class=" hover:underline  uppercase font-semibold">
                     Career
                 </a>
-                <a href="{{ url('gallery') }}" class=" hover:underline  uppercase font-semibold">
+                <a href="{{ url('gallery-page') }}" class=" hover:underline  uppercase font-semibold">
                     Gallery
                 </a>
                 {{-- <button id="rateBtn" class="text-white hover:underline hover:text-yellow-200  uppercase">
@@ -167,7 +174,8 @@
         </button>
     </div>
 
-    <div id="rateUsModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 z-30 flex items-center justify-center modal">
+    <div id="rateUsModal"
+        class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 z-30 flex items-center justify-center modal">
         <div class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all max-w-lg w-full p-4">
             <div class="text-right">
                 <button id="closeModal" class="text-gray-500 text-4xl">&times;</button>
@@ -326,8 +334,8 @@
             <p>&copy; 2024 MKDF Foundation. All rights reserved.</p>
         </div>
     </footer> --}}
-    <footer class="w-full mt-10 px-5 mx-auto shadow-lg bg-gray-200">
-        <div class=" p-8 rounded-lg flex flex-col md:flex-row justify-between  px-16">
+    <footer class="w-full mt-10 px-5 mx-auto shadow-lg bg-gray-200 ">
+        <div class=" p-8 rounded-lg flex flex-col md:flex-row justify-between ">
             <div class="md:w-1/4 flex flex-col mb-8 md:mb-0">
                 <h1 class="text-2xl font-bold">MKDF</h1>
                 <p class="text-sm text-gray-500 mb-">दान मूर्त रूप है</p>

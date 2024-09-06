@@ -30,6 +30,22 @@ class AdminController extends Controller
         return view('admin.manageDonatingEvent');
     }
 
+    public function insertPhotos(){
+        return view('admin.insertPhotos');
+    }
+    
+    public function managePhotos(){
+        return view('admin.managePhotos');
+    }
+
+    public function insertVideos(){
+        return view('admin.insertVideos');
+    }
+    
+    public function manageVideos(){
+        return view('admin.manageVideos');
+    }
+
     public function insertDonatingEvent(){
         return view('admin.insertDonatingEvent');
     }
@@ -44,6 +60,14 @@ class AdminController extends Controller
 
     public function manageFranchise(){
         return view('admin.manageFranchise');
+    }
+
+    public function insertEvents(){
+        return view('admin.insertEvents');
+    }
+
+    public function manageEvents(){
+        return view('admin.manageEvents');
     }
 
     public function insertFranchise(){

@@ -58,12 +58,16 @@ Route::get('/medical-equipment', function () {
     return view('home.medical-equipment');
 });
 
-Route::get('/gallery', function () {
+Route::get('/gallery-page', function () {
     return view('home.gallery');
 });
 
 Route::get('/about-needy', function () {
     return view('home.about-needy');
+});
+
+Route::get('/hindu-samman', function () {
+    return view('home.hindu-samman');
 });
 
 // Route::get('/',[HomeController::class,'index'])->name('home');
@@ -84,8 +88,6 @@ Route::get('/admin/manage-franchise',[AdminController::class,'manageFranchise'])
 Route::get('/admin/manage-franchise/insert',[AdminController::class,'insertFranchise']);
 Route::get('/admin/manage-event',[AdminController::class,'manageEvent']);
 Route::get('/admin/manage-event/insert',[AdminController::class,'insertEvent']);
-Route::get('/admin/manage-blog',[AdminController::class,'manageBlog']);
-Route::get('/admin/manage-blog/insert',[AdminController::class,'insertBlog']);
 Route::get('/admin/manage-career',[AdminController::class,'manageCareer']);
 Route::get('/admin/manage-career/insert',[AdminController::class,'insertCareer']);
 Route::get('/admin/manage-job-form',[AdminController::class,'manageJobForm']);
@@ -100,10 +102,16 @@ Route::get('/admin/manage-donation-page',[AdminController::class,'insertDonation
 Route::get('/admin/manage-donation',[AdminController::class,'manageDonation']);
 Route::get('/admin/manage-donating-event/insert',[AdminController::class,'insertDonatingEvent']);
 Route::get('/admin/manage-donating-event',[AdminController::class,'manageDonatingEvent']);
+Route::get('/admin/manage-photos',[AdminController::class,'managePhotos']);
+Route::get('/admin/manage-photos/insert',[AdminController::class,'insertPhotos']);
+Route::get('/admin/manage-videos',[AdminController::class,'manageVideos']);
+Route::get('/admin/manage-videos/insert',[AdminController::class,'insertVideos']);
+Route::get('/admin/manage-event',[AdminController::class,'manageEvents']);
+Route::get('/admin/manage-event/insert',[AdminController::class,'insertEvents']);
+
 
 
 Route::group(['middleware' => ['auth', 'admin']], function() {
     // Route::get('/admin', [AdminController::class, 'index'])->name('admin.dashboard');
     // Other admin routes
 });
-
