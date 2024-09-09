@@ -413,7 +413,7 @@
 
     <a href="https://wa.me/9128528958" target="_blank" class="fixed bottom-10 right-10 z-20">
         <div class="bg-green-500 rounded-full p-5 shadow-lg text-white hover:text-gray-100 hover:bg-green-600">
-            <i class="fa-brands fa-whatsapp fa-2xl "></i>
+            <i class="fa-brands fa-whatsapp fa-2xl  " style="line-height: 1;"></i>
         </div>
     </a>
 
