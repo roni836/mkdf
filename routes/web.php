@@ -58,10 +58,6 @@ Route::get('/medical-equipment', function () {
     return view('home.medical-equipment');
 });
 
-Route::get('/gallery-page', function () {
-    return view('home.gallery');
-});
-
 Route::get('/about-needy', function () {
     return view('home.about-needy');
 });
@@ -71,14 +67,9 @@ Route::get('/hindu-samman', function () {
 });
 
 // Route::get('/',[HomeController::class,'index'])->name('home');
-Route::get('/order-now',[HomeController::class,'orderPage']);
-Route::get('/blog-page',[HomeController::class,'blog']);
-Route::get('/whyus',[HomeController::class,'whyUs']);
-Route::get('/brand-story',[HomeController::class,'brandStory']);
-Route::get('/franchise-query',[HomeController::class,'franchiseQuery']);
-Route::get('/book-event',[HomeController::class,'bookEvent']);
-Route::get('/cart-locator',[HomeController::class,'cartLocator']);
-Route::get('/career-page',[HomeController::class,'career']);
+Route::get('/gallery-page',[HomeController::class,'photo']);
+Route::get('/video-index',[HomeController::class,'videoIndex'])->name('video.index.all');
+
 Route::get('/career-applied/{id}',[HomeController::class,'appliedCareer']);
 
 
