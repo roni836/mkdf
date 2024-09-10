@@ -69,6 +69,7 @@ Route::get('/hindu-samman', function () {
 // Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/gallery-page',[HomeController::class,'photo']);
 Route::get('/video-index',[HomeController::class,'videoIndex'])->name('video.index.all');
+Route::get('/donation-index',[HomeController::class,'donationIndex'])->name('donation.index.all');
 
 Route::get('/career-applied/{id}',[HomeController::class,'appliedCareer']);
 

@@ -15,6 +15,7 @@
                         <th class="border-b border-gray-200 px-3 py-2 text-sm">Organised By</th>
                         <th class="border-b border-gray-200 px-3 py-2 text-sm">Title</th>
                         <th class="border-b border-gray-200 px-3 py-2 text-sm">Link</th>
+                        <th class="border-b border-gray-200 px-3 py-2 text-sm">Status</th>
                         <th class="border-b border-gray-200 px-3 py-2 text-sm">Actions</th>
                     </tr>
                 </thead>

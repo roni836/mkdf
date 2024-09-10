@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Gallery;
 use App\Models\Video;
+use App\Models\Donation;
 
 use Illuminate\Http\Request;
 
@@ -34,6 +35,23 @@ class HomeController extends Controller
             ], 404);
         }
     }
+
+    public function donationIndex()
+    {
+        $data = Donation::orderBy('created_at', 'desc')->where('status',1)->get();
+        if ($data->count() > 0) {
+            return response()->json([
+                'status' => 200,
+                'data' => $data
+            ], 200);
+        } else {
+            return response()->json([
+                'status' => 404,
+                'data' => "No Records found"
+            ], 404);
+        }
+    }
+
 
     public function orderPage(){
         return view('home.orderNow');
