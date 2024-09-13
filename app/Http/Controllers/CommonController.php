@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 use App\Models\Event;
 use App\Models\Needy;
+use App\Models\News;
 use App\Models\Donation;
 use App\Models\DonationConcern;
 use App\Models\DonatingEvent;
@@ -173,9 +174,71 @@ class CommonController extends Controller
             }
         }
     }
+
     public function donatingEventIndex()
     {
         $data = DonatingEvent::orderBy('created_at', 'desc')->get();
+        if ($data->count() > 0) {
+            return response()->json([
+                'status' => 200,
+                'data' => $data
+            ], 200);
+        } else {
+            return response()->json([
+                'status' => 404,
+                'data' => "No Records found"
+            ], 404);
+        }
+    }
+
+    public function newsStore(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'title' => 'required|string',                   
+            'link' => 'required',                   
+        ]);
+
+            if ($validator->fails()) {
+                return response()->json([
+                    'status' => 422,
+                    'errors' => $validator->messages()
+                ], 422);
+            }
+        else {    
+                // Handle the file upload
+            if ($request->hasFile('image')) {
+                $image = time() . "." . $request->image->extension();
+                $request->image->move(public_path("news/image"), $image);
+            } else {
+               $image = NULL;
+            }
+
+            $data = News::create([
+                'title' => $request->title,                                       
+                'description' => $request->description,                                       
+                'link' => $request->link,                                       
+                'image'=>$image, 
+            ]);
+    
+            if ($data) {
+
+                // Mail::to('ronitsaha836@gmail.com')->send(new FranchiseMail($data));
+
+                return response()->json([
+                    'status' => 200,
+                    'message' => 'We Will Connect You Soon'
+                ]);
+            } else {
+                return response()->json([
+                    'status' => 500,
+                    'message' => "Unable to add your Request"
+                ], 500);
+            }
+        }
+    }
+    public function newsIndex()
+    {
+        $data = News::orderBy('created_at', 'desc')->get();
         if ($data->count() > 0) {
             return response()->json([
                 'status' => 200,

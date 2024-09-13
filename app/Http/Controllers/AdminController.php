@@ -54,6 +54,10 @@ class AdminController extends Controller
         return view('admin.insert-donation-page');
     }
 
+    public function manageDonationPage(){
+        return view('admin.manage-donation-page');
+    }
+
     public function insertOrder(){
         return view('admin.insertOrder');
     }
@@ -68,6 +72,14 @@ class AdminController extends Controller
 
     public function manageEvents(){
         return view('admin.manageEvents');
+    }
+
+    public function insertNews(){
+        return view('admin.insertNews');
+    }
+
+    public function manageNews(){
+        return view('admin.manageNews');
     }
 
     public function insertFranchise(){

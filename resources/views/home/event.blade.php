@@ -52,7 +52,7 @@
                     <p class="text-gray-500 mb-2">01 May 2025</p>
                     <p class="text-gray-600">
                         Nulla molestie et nisi nec scelerisque. Mauris felis erat, sodales in pellentesque sit amet,
-                        elementum ac mi. Nulla volutpat id lorem id tempor.
+                        elementum ac mi. Nulla volutpat id lorem id temp.
                     </p>
                 </div>
                 <div class="self-center">

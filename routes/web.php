@@ -18,11 +18,11 @@ use App\Http\Controllers\AdminController;
 Route::get('/', function () {
     return view('home.index');
 });
-Route::get('/our-work', function () {
-    return view('home.our-work');
+Route::get('/our-story', function () {
+    return view('home.our-story');
 });
-Route::get('/what-we-do', function () {
-    return view('home.what-we-do');
+Route::get('/volunteer', function () {
+    return view('home.volunteer');
 });
 Route::get('/about', function () {
     return view('home.about');
@@ -70,6 +70,7 @@ Route::get('/hindu-samman', function () {
 Route::get('/gallery-page',[HomeController::class,'photo']);
 Route::get('/video-index',[HomeController::class,'videoIndex'])->name('video.index.all');
 Route::get('/donation-index',[HomeController::class,'donationIndex'])->name('donation.index.all');
+Route::get('/news-index',[HomeController::class,'newsHomeIndex'])->name('news.home.all');
 
 Route::get('/career-applied/{id}',[HomeController::class,'appliedCareer']);
 
@@ -90,7 +91,8 @@ Route::get('/admin/login',[AdminController::class,'login'])->name('admin.login')
 Route::get('/admin',[AdminController::class,'manageNeedy']);
 Route::get('/admin/manage-needy/insert',[AdminController::class,'insertNeedy']);
 Route::get('/admin/manage-donation/insert',[AdminController::class,'insertDonation']);
-Route::get('/admin/manage-donation-page',[AdminController::class,'insertDonationPage']);
+Route::get('/admin/manage-donation-page/insert',[AdminController::class,'insertDonationPage']);
+Route::get('/admin/manage-donation-page',[AdminController::class,'manageDonationPage']);
 Route::get('/admin/manage-donation',[AdminController::class,'manageDonation']);
 Route::get('/admin/manage-donating-event/insert',[AdminController::class,'insertDonatingEvent']);
 Route::get('/admin/manage-donating-event',[AdminController::class,'manageDonatingEvent']);
@@ -100,6 +102,8 @@ Route::get('/admin/manage-videos',[AdminController::class,'manageVideos']);
 Route::get('/admin/manage-videos/insert',[AdminController::class,'insertVideos']);
 Route::get('/admin/manage-event',[AdminController::class,'manageEvents']);
 Route::get('/admin/manage-event/insert',[AdminController::class,'insertEvents']);
+Route::get('/admin/manage-news',[AdminController::class,'manageNews']);
+Route::get('/admin/manage-news/insert',[AdminController::class,'insertNews']);
 
 
 

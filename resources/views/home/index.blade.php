@@ -1,6 +1,217 @@
 @extends('home.homeBase')
 @section('content')
     <!-- Hero Section -->
+
+
+
+    <div id="controls-carousel" class="relative w-full z-0" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative h-56 overflow-hidden rounded-lg md:h-96 md:mt-[8rem]">
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+
+                <div class=" flex mt-6 absolute  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                    <div class="w-1/2">
+                        <div class="relative">
+                            <img src="/images/tem1.webp" alt="Ancient Temples" class="w-full rounded shadow">
+                            <div class="absolute bottom-0 left-0 bg-red-600 text-white p-4 w-full text-center">
+                                <span class="font-bold text-lg">Donate Now</span> to rebuild our Perishing Ancient
+                                Temples
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-1/2 pl-6">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4"> Renovate Ancient Temples to Protect Sanatana
+                            Dharma.
+                            Donate to preserve our Sacred Religious Heritage </h2>
+                        <p class="text-gray-600">Event: Save Ancient Temples</p>
+                        <p class="text-red-500 mt-2">Bookings Closing in <span class="font-bold">3 months</span></p>
+                        <div class="mt-4">
+                            <button class="bg-orange-500 text-white px-4 py-2 rounded shadow">
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+
+                <div class=" flex mt-6 absolute  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                    <div class="w-1/2">
+                        <div class="relative">
+                            <img src="/images/tem1.webp" alt="Ancient Temples" class="w-full rounded shadow">
+                            <div class="absolute bottom-0 left-0 bg-red-600 text-white p-4 w-full text-center">
+                                <span class="font-bold text-lg">Donate Now</span> to rebuild our Perishing Ancient
+                                Temples
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-1/2 pl-6">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4"> Renovate Ancient Temples to Protect Sanatana
+                            Dharma.
+                            Donate to preserve our Sacred Religious Heritage </h2>
+                        <p class="text-gray-600">Event: Save Ancient Temples</p>
+                        <p class="text-red-500 mt-2">Bookings Closing in <span class="font-bold">3 months</span></p>
+                        <div class="mt-4">
+                            <button class="bg-orange-500 text-white px-4 py-2 rounded shadow">
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+
+                <div class=" flex mt-6 absolute  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                    <div class="w-1/2">
+                        <div class="relative">
+                            <img src="/images/tem1.webp" alt="Ancient Temples" class="w-full rounded shadow">
+                            <div class="absolute bottom-0 left-0 bg-red-600 text-white p-4 w-full text-center">
+                                <span class="font-bold text-lg">Donate Now</span> to rebuild our Perishing Ancient
+                                Temples
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-1/2 pl-6">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4"> Renovate Ancient Temples to Protect Sanatana
+                            Dharma.
+                            Donate to preserve our Sacred Religious Heritage </h2>
+                        <p class="text-gray-600">Event: Save Ancient Temples</p>
+                        <p class="text-red-500 mt-2">Bookings Closing in <span class="font-bold">3 months</span></p>
+                        <div class="mt-4">
+                            <button class="bg-orange-500 text-white px-4 py-2 rounded shadow">
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+
+                <div class=" flex mt-6 absolute  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                    <div class="w-1/2">
+                        <div class="relative">
+                            <img src="/images/tem1.webp" alt="Ancient Temples" class="w-full rounded shadow">
+                            <div class="absolute bottom-0 left-0 bg-red-600 text-white p-4 w-full text-center">
+                                <span class="font-bold text-lg">Donate Now</span> to rebuild our Perishing Ancient
+                                Temples
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-1/2 pl-6">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4"> Renovate Ancient Temples to Protect Sanatana
+                            Dharma.
+                            Donate to preserve our Sacred Religious Heritage </h2>
+                        <p class="text-gray-600">Event: Save Ancient Temples</p>
+                        <p class="text-red-500 mt-2">Bookings Closing in <span class="font-bold">3 months</span></p>
+                        <div class="mt-4">
+                            <button class="bg-orange-500 text-white px-4 py-2 rounded shadow">
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Slider controls -->
+        <button type="button"
+            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev>
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M5 1 1 5l4 4" />
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button"
+            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next>
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 9 4-4-4-4" />
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
+    </div>
+
+    {{-- <div id="controls-carousel" class="relative w-full z-0" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative h-96 overflow-hidden rounded-lg md:h-96 md:mt-[8rem]">
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <section class=" absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                    <img src="{{ asset('logo/cimg1.jpg') }}" alt="Hero Image" class="w-full h-[500px] object-cover">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white">
+                        <h1 class="text-4xl font-bold">Bringing Smiles Through Education & Empowerment</h1>
+                        <a href="#" class="mt-4 bg-green-500 text-white py-2 px-4 rounded">Know More</a>
+                    </div>
+                </section>
+            </div>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <section class=" z-0 absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                    <img src="{{ asset('logo/cimg1.jpg') }}" alt="Hero Image" class="w-full h-[500px] object-cover">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white">
+                        <h1 class="text-4xl font-bold">Bringing Smiles Through Education & Empowerment</h1>
+                        <a href="#" class="mt-4 bg-green-500 text-white py-2 px-4 rounded">Know More</a>
+                    </div>
+                </section>
+            </div>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <section class=" z-0 absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                    <img src="{{ asset('logo/cimg1.jpg') }}" alt="Hero Image" class="w-full h-[500px] object-cover">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white">
+                        <h1 class="text-4xl font-bold">Bringing Smiles Through Education & Empowerment</h1>
+                        <a href="#" class="mt-4 bg-green-500 text-white py-2 px-4 rounded">Know More</a>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+        <!-- Slider controls -->
+        <button type="button"
+            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev>
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M5 1 1 5l4 4" />
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button"
+            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next>
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 9 4-4-4-4" />
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
+    </div> --}}
+    {{-- 
     <section class="relative  mt-[7.5rem] z-0">
         <img src="{{ asset('logo/cimg1.jpg') }}" alt="Hero Image" class="w-full h-[500px] object-cover">
         <div
@@ -8,10 +219,12 @@
             <h1 class="text-4xl font-bold">Bringing Smiles Through Education & Empowerment</h1>
             <a href="#" class="mt-4 bg-green-500 text-white py-2 px-4 rounded">Know More</a>
         </div>
-    </section>
+    </section> --}}
 
 
-    <div class="max-w-6xl mx-auto py-12">
+    <div class="max-w-6xl mx-auto py-12 mt-20">
+        <h2 class="text-3xl font-bold text-center text-blue-700 mb-8 uppercase">OUR Programmes</h2>
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="headingDonatingEvent">
 
             {{-- <!-- Card 1 -->
@@ -46,6 +259,8 @@
 
         </div>
     </div>
+
+
 
     <!-- Popup Modal -->
     <div id="donating-event"
@@ -90,7 +305,8 @@
                             Person :</label>
                         <input
                             class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-1/3"value='5'
-                            min="5" name="no_of_person" id="no_of_person" type="number" placeholder="No. of Person">
+                            min="5" name="no_of_person" id="no_of_person" type="number"
+                            placeholder="No. of Person">
                         <div class="text-red-500 text-xs italic error-message" id="error-no-of-person"></div>
                     </div>
                     <input type="hidden" name="message" value="" id="message">
@@ -151,7 +367,7 @@
     </div>
 
     <!-- Our Programmes Section -->
-    <section class="container mx-auto my-12 px-12 mt-20">
+    {{-- <section class="container mx-auto my-12 px-12 mt-20">
         <h2 class="text-4xl font-bold text-center mb-8">Our Programmes</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="flex items-center">
@@ -200,7 +416,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
     <div class="max-w-6xl mx-auto py-12">
@@ -530,44 +746,46 @@
         <div class="relative">
             <div class="container mx-auto px-4 py-8 mt-20 ">
                 <h1 class="text-4xl font-bold text-center text-blue-900 mb-8">Latest Updates</h1>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3" id="callingNewsData">
                     <!-- Update 1 -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <img src="https://www.akshayapatra.org/includefiles/news/News_Droupadi-Murmu_600x400_22.jpg"
-                            alt="Update 1 Image" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <p class="text-blue-700 font-semibold">June, 4 2024</p>
-                            <h2 class="text-xl font-bold text-gray-900 mb-2">Cargill and Akshaya Patra paint 1000
-                                blackboards;
-                                set new Asia record</h2>
-                            <a href="#" class="text-blue-500 hover:underline">Read More</a>
+                    {{-- <a href="#" class="block">
+                        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                            <img src="https://www.akshayapatra.org/includefiles/news/News_Droupadi-Murmu_600x400_22.jpg"
+                                alt="Update 1 Image" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <p class="text-blue-700 font-semibold">June 4, 2024</p>
+                                <h2 class="text-xl font-bold text-gray-900 mb-2">Cargill and Akshaya Patra paint 1000 blackboards;
+                                    set new Asia record</h2>
+                                <span class="text-blue-500 hover:underline">Read More</span>
+                            </div>
                         </div>
-                    </div>
+                    </a>
+                    <a href="#" class="block">
+                        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                            <img src="https://www.akshayapatra.org/includefiles/news/News_Droupadi-Murmu_600x400_22.jpg"
+                                alt="Update 1 Image" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <p class="text-blue-700 font-semibold">June 4, 2024</p>
+                                <h2 class="text-xl font-bold text-gray-900 mb-2">Cargill and Akshaya Patra paint 1000 blackboards;
+                                    set new Asia record</h2>
+                                <span class="text-blue-500 hover:underline">Read More</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="block">
+                        <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                            <img src="https://www.akshayapatra.org/includefiles/news/News_Droupadi-Murmu_600x400_22.jpg"
+                                alt="Update 1 Image" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <p class="text-blue-700 font-semibold">June 4, 2024</p>
+                                <h2 class="text-xl font-bold text-gray-900 mb-2">Cargill and Akshaya Patra paint 1000 blackboards;
+                                    set new Asia record</h2>
+                                <span class="text-blue-500 hover:underline">Read More</span>
+                            </div>
+                        </div>
+                    </a> --}}
 
-                    <!-- Update 2 -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <img src="https://www.akshayapatra.org/includefiles/news/News_Millets_600x400_111.jpg"
-                            alt="Update 2 Image" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <p class="text-blue-700 font-semibold">April, 18 2024</p>
-                            <h2 class="text-xl font-bold text-gray-900 mb-2">Akshaya Patra’s 4 Billion Meals Milestone
-                                Commemorated at the UN Headquarters, New York</h2>
-                            <a href="#" class="text-blue-500 hover:underline">Read More</a>
-                        </div>
-                    </div>
-
-                    <!-- Update 3 -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <img src="https://www.akshayapatra.org/includefiles/news/News_Millets_600x400_111.jpg"
-                            alt="Update 3 Image" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <p class="text-blue-700 font-semibold">February, 19 2024</p>
-                            <h2 class="text-xl font-bold text-gray-900 mb-2">Akshaya Patra’s 68th Kitchen Inaugurated
-                                in
-                                Panvel, Maharashtra</h2>
-                            <a href="#" class="text-blue-500 hover:underline">Read More</a>
-                        </div>
-                    </div>
+                    
                 </div>
 
             </div>
@@ -736,45 +954,6 @@
                 });
             });
 
-            // for adding price 
-
-            // document.addEventListener('DOMContentLoaded', function() {
-            //     const foodMenu = document.getElementById('food_menu');
-            //     const sweetsCheckbox = document.getElementById('sweets');
-            //     const noOfPerson = document.getElementById('no_of_person');
-            //     const amountInput = document.getElementById('amount');
-
-            //     function calculateMinimumDonation() {
-            //         const foodPrice = parseInt(foodMenu.value);
-            //         const sweetsPrice = sweetsCheckbox.checked ? parseInt(sweetsCheckbox.value) : 0;
-            //         const persons = parseInt(noOfPerson.value) || 0;
-
-            //         const minDonation = (foodPrice + sweetsPrice) * persons;
-
-            //         // Set the minimum amount in the input field
-            //         amountInput.min = minDonation;
-            //         amountInput.placeholder = `Minimum: ${minDonation}`;
-
-            //         // If the input is less than the minimum donation, set it to the minimum
-            //         if (amountInput.value < minDonation) {
-            //             amountInput.value = minDonation;
-            //         }
-            //     }
-
-            //     // Event listeners for dynamic updates
-            //     foodMenu.addEventListener('change', calculateMinimumDonation);
-            //     sweetsCheckbox.addEventListener('change', calculateMinimumDonation);
-            //     noOfPerson.addEventListener('input', calculateMinimumDonation);
-
-            //     // Ensure the amount input cannot be lower than the minimum donation
-            //     amountInput.addEventListener('input', function() {
-            //         if (parseInt(amountInput.value) < parseInt(amountInput.min)) {
-            //             amountInput.value = amountInput.min;
-            //         }
-            //     });
-            // });
-
-
             document.addEventListener('DOMContentLoaded', function() {
                 const foodMenu = document.getElementById('food_menu');
                 const sweetsCheckbox = document.getElementById('sweets');
@@ -793,6 +972,52 @@
                 foodMenu.addEventListener('change', calculateTotalAmount);
                 sweetsCheckbox.addEventListener('change', calculateTotalAmount);
                 noOfPerson.addEventListener('input', calculateTotalAmount);
+            });
+        </script>
+        <script>
+            $(document).ready(function() {
+                // Function to fetch and display appointment
+                let callingData = () => {
+                    $.ajax({
+                        type: "GET",
+                        url: "{{ route('news.home.all') }}",
+                        success: function(response) {
+                            let table = $("#callingNewsData");
+                            table.empty();
+                            let data = response.data;
+
+                            let len = data.length;
+                            $("#counting").html(len);
+
+                            data.forEach((data, key) => {
+                                  // Format created date
+                                let date = new Date(data.created_at);
+                                let formattedDate = date.toLocaleDateString('en-US', {
+                                    year: 'numeric',
+                                    month: 'long',
+                                    day: 'numeric'
+                                });
+                                table.append(`
+                                 <a href="${data.link}" target='_blank' class="block">
+                                    <div class="bg-white h-96 shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                                        <img src="/news/image/${data.image}"
+                                            alt="${data.title}" class="w-full h-52 object-cover">
+                                        <div class="p-4">
+                                            <p class="text-blue-700 font-semibold">${formattedDate}</p>
+                                            <h2 class="text-xl font-bold text-gray-900 mb-2">${data.title.substring(0, 100)}</h2>
+                                            <span class="text-blue-500 hover:underline">Visit now</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                `);
+                            });
+                        },
+                        error: function(xhr, status, error) {
+                            console.error('Error:', error);
+                        }
+                    });
+                }
+                callingData();
             });
         </script>
     </section>

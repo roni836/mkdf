@@ -12,13 +12,22 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
 
     <style>
-        /* Fade-in and slide-up effect for the popup */
+
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
         .popup-enter {
             opacity: 0;
             transform: translateX(150px);
@@ -53,6 +62,13 @@
         .vertical-text {
             writing-mode: vertical-rl;
             text-orientation: mixed;
+        }
+
+        .dancing-script-text{
+            font-family: "Dancing Script", cursive;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
         }
     </style>
 
@@ -94,9 +110,7 @@
                 </ul>
             </nav>
         </div>
-    </header>
-
-    <header class=" ">
+   
         <div
             class="container w-full mx-auto flex justify-between items-center fixed top-10 z-20 p-3 shadow-lg max-w-full bg-white">
             <!-- Logo -->
@@ -113,11 +127,11 @@
                 <a href="{{ url('about') }}" class=" hover:underline  uppercase font-semibold">
                     ABOUT US
                 </a>
-                <a href="/what-we-do" class=" hover:underline  uppercase font-semibold">
+                <a href="/volunteer" class=" hover:underline  uppercase font-semibold">
                     Volunteer
                 </a>
-                <a href="/our-work" class=" hover:underline  uppercase font-semibold">
-                    Our Team
+                <a href="/our-story" class=" hover:underline  uppercase font-semibold">
+                    Our Story
                 </a>
                 <a href="/donar" class=" hover:underline  uppercase font-semibold">
                     Donar

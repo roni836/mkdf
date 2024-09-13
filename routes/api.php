@@ -74,6 +74,9 @@ Route::get('/donation',[CommonController::class,'donationIndex'])->name('donatio
 Route::post('/donating-event',[CommonController::class,'donatingEventStore'])->name('donating-event.store');
 Route::get('/donating-event',[CommonController::class,'donatingEventIndex'])->name('donating-event.index');
 
+Route::post('/news',[CommonController::class,'newsStore'])->name('news.store');
+Route::get('/news',[CommonController::class,'newsIndex'])->name('news.index');
+
 Route::post('/donation-concern',[CommonController::class,'donationConcernStore'])->name('donation.concern.store');
 Route::get('/donation-concern',[CommonController::class,'donationConcernIndex'])->name('donation.concern.index');
 Route::get('/heading-donation-concern',[CommonController::class,'donatingEventHeading'])->name('heading-donating-event.index');
