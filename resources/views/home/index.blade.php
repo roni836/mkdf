@@ -785,7 +785,7 @@
                         </div>
                     </a> --}}
 
-                    
+
                 </div>
 
             </div>
@@ -990,7 +990,7 @@
                             $("#counting").html(len);
 
                             data.forEach((data, key) => {
-                                  // Format created date
+                                // Format created date
                                 let date = new Date(data.created_at);
                                 let formattedDate = date.toLocaleDateString('en-US', {
                                     year: 'numeric',

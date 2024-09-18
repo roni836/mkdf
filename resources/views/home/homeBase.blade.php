@@ -91,10 +91,10 @@
                             class="text-white hover:text-black text-center text-sm font-semibold">Left
                             Over Medicine</a></li>
                     <span class="border-r"></span>
-                    <li><a href="{{ url('left-over-food') }}"
+                    {{-- <li><a href="{{ url('left-over-food') }}"
                             class="text-white hover:text-black text-center text-sm font-semibold">Left
                             over Food</a></li>
-                    <span class="border-r"></span>
+                    <span class="border-r"></span> --}}
                     <li><a href="/" class="text-white hover:text-black text-center text-sm font-semibold">Unused
                             Books</a>
                     </li>
@@ -124,23 +124,24 @@
                 <a href="/" class=" hover:underline  uppercase font-semibold">
                     HOME
                 </a>
-                <a href="{{ url('about') }}" class=" hover:underline  uppercase font-semibold">
-                    ABOUT US
+                <a href="/donar" class=" hover:underline  uppercase font-semibold">
+                    Donar
                 </a>
-                <a href="/volunteer" class=" hover:underline  uppercase font-semibold">
-                    Volunteer
+                <a href="/team" class=" hover:underline  uppercase font-semibold">
+                    Our Team
                 </a>
                 <a href="/our-story" class=" hover:underline  uppercase font-semibold">
                     Our Story
                 </a>
-                <a href="/donar" class=" hover:underline  uppercase font-semibold">
-                    Donar
-                </a>
+                
                 <a href="{{ url('event') }}" class=" hover:underline  uppercase font-semibold">
                     Events
                 </a>
                 <a href="{{ url('event') }}" class=" hover:underline  uppercase font-semibold">
                     Career
+                </a>
+                <a href="{{ url('about') }}" class=" hover:underline  uppercase font-semibold">
+                    ABOUT US
                 </a>
                 <a href="{{ url('gallery-page') }}" class=" hover:underline  uppercase font-semibold">
                     Gallery

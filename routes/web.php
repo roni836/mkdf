@@ -21,8 +21,8 @@ Route::get('/', function () {
 Route::get('/our-story', function () {
     return view('home.our-story');
 });
-Route::get('/volunteer', function () {
-    return view('home.volunteer');
+Route::get('/team', function () {
+    return view('home.team');
 });
 Route::get('/about', function () {
     return view('home.about');
