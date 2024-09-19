@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Str;
 use App\Mail\EventMail;
 use App\Mail\FranchiseMail;
 use Illuminate\Support\Facades\Mail;
@@ -145,6 +146,8 @@ class CommonController extends Controller
                $document = NULL;
             }
 
+            $slug = Str::slug($request->heading, '-');
+
             $data = DonationConcern::create([
                 'name' => $request->name,                                       
                 'mobile' => $request->mobile,                                      
@@ -154,9 +157,11 @@ class CommonController extends Controller
                 'father'=>$request->father,  
                 'id_number'=>$request->id_number,  
                 'amount'=>$request->amount,  
+                'status'=>$request->status,  
                 'image'=>$image,
                 'document'=>$document,  
                 'id_proof'=>$id_proof,  
+                'slug'=>$slug,  
             ]);
     
             if ($data) {

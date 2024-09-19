@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string('status');
             $table->string('image');
             $table->string('document');
+            $table->string('slug');
             $table->string('heading');
             $table->longText('description');
             $table->timestamps();

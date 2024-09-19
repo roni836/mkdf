@@ -10,15 +10,12 @@
         <div class="mt-6 flex flex-col md:flex-row bg-white shadow-lg rounded-lg">
             <div class="md:w-2/3 p-6">
                 <div>
-                    <h2 class="text-xl font-bold">Help 12-Year-Old Suharta Sen Experience A Cancer-Free Life Ahead.</h2>
+                    <h2 class="text-xl font-bold">{{$data->heading}}</h2>
                     <p class="mt-4 text-gray-700 mb-4">
-                        I am Shila Rani Sen, and I am raising funds for my son, Suharta Sen, who is battling Hodgkin's
-                        lymphoma. Suharta, who is only twelve years old, is a bright and courageous child who has been
-                        diagnosed with classical Hodgkin lymphoma stage IV with a mediastinal mass.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat dolore, quo itaque officia reprehenderit, eaque non ratione culpa obcaecati quia illum cum, atque facilis corrupti consectetur architecto velit quam? Aliquam, error autem optio iure commodi exercitationem et ipsam impedit iusto ad non itaque tempora quasi! Necessitatibus sed quidem repellendus eos eaque doloribus molestiae iusto, mollitia veniam, quas, harum ipsa nisi neque saepe cupiditate dolore consequatur delectus quae 
+                        {{$data->description}}
                     </p>
                 </div>
-                <img src="images/nimg.png" alt="Suharta Sen" class="rounded-lg mb-4">
+                <img src="/donation-concern/image/{{$data->image}}" alt="{{$data->name}}" class="rounded-lg mb-4">
                
                 <div class="w-full mx-auto">
                     <div class="max-w-6xl mx-auto bg-white  rounded-lg mt-6">
@@ -46,8 +43,7 @@
                             Thank you.
                         </p>
 
-                        <div class="mb-4 mt-5">
-                            {{-- <h2 class="text-xl font-semibold mb-2">Medical Documents</h2> --}}
+                        {{-- <div class="mb-4 mt-5">
                             <div class="relative bg-gray-200  rounded-lg">
                                 <img src="/images/donate-bg.png" alt="Medical Documents"
                                     class="object-cover h-40 w-full rounded-lg">
@@ -58,17 +54,47 @@
                                     <button class="mt-4 px-4 py-2 bg-green-500 rounded hover:bg-green-600">View Now <i class="fa-solid fa-eye"></i></button>
                                 </div>
                             </div>
+                        </div> --}}
+                        <div class="mb-4 mt-5">
+                            <div class="relative bg-gray-200 rounded-lg">
+                                <img src="/images/donate-bg.png" alt="Medical Documents" class="object-cover h-40 w-full rounded-lg">
+                                @if($data->isVerified = 1)
+                                <div class="absolute top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex flex-col items-center justify-center text-white rounded-lg">
+                                    <h3 class="text-2xl font-semibold">Medical Document Verified <i class="fa-solid fa-circle-check ml-2"></i></h3>
+                                    <p class="mt-2">See how the funds will be utilised for this campaign</p>
+                                    <button class="mt-4 px-4 py-2 bg-green-500 rounded hover:bg-green-600" onclick="window.open('/donation-concern/document/{{$data->document}}', '_blank')">
+                                        View Now <i class="fa-solid fa-eye"></i>
+                                    </button>
+                                </div>
+                                @else
+                                <div class="absolute top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex flex-col items-center justify-center text-white rounded-lg">
+                                    <h3 class="text-2xl font-semibold">Medical Document Not Verified</h3>
+                                    <p class="mt-2">This campaign is awaiting verification</p>
+                                </div>
+                                @endif
+                            </div>
                         </div>
+                        
 
                         <div class="flex justify-between mt-6">
-                            <button class="flex items-center px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">
+                            {{-- <button class="flex items-center px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">
                                 <i class="fa-brands fa-whatsapp mr-2"></i>
                                 Share
                             </button>
                             <button class="flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
                                 <i class="fa-brands fa-square-facebook mr-2"></i>
                                 Share
+                            </button> --}}
+                            <button class="flex items-center px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600" onclick="shareOnWhatsApp()">
+                                <i class="fa-brands fa-whatsapp mr-2"></i>
+                                Share
                             </button>
+                            
+                            <button class="flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" onclick="shareOnFacebook()">
+                                <i class="fa-brands fa-square-facebook mr-2"></i>
+                                Share
+                            </button>
+                            
                             <button class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Contribute Now</button>
                         </div>
 
@@ -210,7 +236,7 @@
             <div class="md:w-1/3  p-6 rounded-lg mt-5">
 
                 <div class="text-center mb-6">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-2">₹ 10,14,678</h2>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-2">₹ {{$data->amount}}</h2>
                     <p class="text-gray-600">raised of ₹ 15,00,000 goal</p>
                     <!-- Progress Bar -->
                     <div class="w-full bg-gray-200 rounded-full h-2.5 mt-4">
@@ -326,4 +352,19 @@
 
         </div>
     </div>
+    <script>
+        function shareOnWhatsApp() {
+            const message = encodeURIComponent("Check out this amazing campaign!"); // Customize this message
+            const url = encodeURIComponent(window.location.href); // Share the current page URL
+            const whatsappUrl = `https://api.whatsapp.com/send?text=${message} ${url}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.href); // Share the current page URL
+            const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+            window.open(facebookUrl, '_blank');
+        }
+    </script>
+    
 @endsection

@@ -34,87 +34,6 @@
                     </div>
                 </div>
             </div> --}}
-            {{-- <div class="hidden duration-700 ease-in-out" data-carousel-item>
-
-                <div class=" flex mt-6 absolute  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-                    <div class="w-1/2">
-                        <div class="relative">
-                            <img src="/images/tem1.webp" alt="Ancient Temples" class="w-full rounded shadow">
-                            <div class="absolute bottom-0 left-0 bg-red-600 text-white p-4 w-full text-center">
-                                <span class="font-bold text-lg">Donate Now</span> to rebuild our Perishing Ancient
-                                Temples
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="w-1/2 pl-6">
-                        <h2 class="text-2xl font-bold text-gray-800 mb-4"> Renovate Ancient Temples to Protect Sanatana
-                            Dharma.
-                            Donate to preserve our Sacred Religious Heritage </h2>
-                        <p class="text-gray-600">Event: Save Ancient Temples</p>
-                        <p class="text-red-500 mt-2">Bookings Closing in <span class="font-bold">3 months</span></p>
-                        <div class="mt-4">
-                            <button class="bg-orange-500 text-white px-4 py-2 rounded shadow">
-                                Book Now
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-
-                <div class=" flex mt-6 absolute  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-                    <div class="w-1/2">
-                        <div class="relative">
-                            <img src="/images/tem1.webp" alt="Ancient Temples" class="w-full rounded shadow">
-                            <div class="absolute bottom-0 left-0 bg-red-600 text-white p-4 w-full text-center">
-                                <span class="font-bold text-lg">Donate Now</span> to rebuild our Perishing Ancient
-                                Temples
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="w-1/2 pl-6">
-                        <h2 class="text-2xl font-bold text-gray-800 mb-4"> Renovate Ancient Temples to Protect Sanatana
-                            Dharma.
-                            Donate to preserve our Sacred Religious Heritage </h2>
-                        <p class="text-gray-600">Event: Save Ancient Temples</p>
-                        <p class="text-red-500 mt-2">Bookings Closing in <span class="font-bold">3 months</span></p>
-                        <div class="mt-4">
-                            <button class="bg-orange-500 text-white px-4 py-2 rounded shadow">
-                                Book Now
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-
-                <div class=" flex mt-6 absolute  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-                    <div class="w-1/2">
-                        <div class="relative">
-                            <img src="/images/tem1.webp" alt="Ancient Temples" class="w-full rounded shadow">
-                            <div class="absolute bottom-0 left-0 bg-red-600 text-white p-4 w-full text-center">
-                                <span class="font-bold text-lg">Donate Now</span> to rebuild our Perishing Ancient
-                                Temples
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="w-1/2 pl-6">
-                        <h2 class="text-2xl font-bold text-gray-800 mb-4"> Renovate Ancient Temples to Protect Sanatana
-                            Dharma.
-                            Donate to preserve our Sacred Religious Heritage </h2>
-                        <p class="text-gray-600">Event: Save Ancient Temples</p>
-                        <p class="text-red-500 mt-2">Bookings Closing in <span class="font-bold">3 months</span></p>
-                        <div class="mt-4">
-                            <button class="bg-orange-500 text-white px-4 py-2 rounded shadow">
-                                Book Now
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
 
         </div>
         <!-- Slider controls -->
@@ -461,8 +380,8 @@
         </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-10">
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-10" id="callingDonationConcern">
+        {{--<div class="bg-white shadow-md rounded-lg overflow-hidden">
             <img src="images/don6.webp" alt="Provide Food to Hungry" class="w-full h-48 object-cover">
             <div class="p-4">
                 <h2 class="text-xl font-bold mb-2">Provide Food to Hungry</h2>
@@ -525,7 +444,7 @@
                 <p class="text-gray-700 mb-4">With just Rs.400/- you can provide a blanket to a homeless.</p>
                 <a href="#" class="text-red-500 font-semibold">Donate Now</a>
             </div>
-        </div>
+        </div> --}}
     </div>
 
     <div class="container mx-auto px-12 py-8">
@@ -1067,5 +986,38 @@
                 callingData();
             });
         </script>
+         <script>
+            $(document).ready(function() {
+                // Function to fetch and display appointment
+                let callingData = () => {
+                    $.ajax({
+                        type: "GET",
+                        url: "{{ route('home.donation.concern') }}",
+                        success: function(response) {
+                            let table = $("#callingDonationConcern");
+                            table.empty();
+                            let data = response.data;
+                            data.forEach((data) => {
+                                table.append(`
+                                 <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                                    <img src="/donation-concern/image/${data.image}" alt="Provide Food to Hungry" class="w-full h-48 object-cover">
+                                    <div class="p-4">
+                                        <h2 class="text-xl font-bold mb-2">${data.heading}</h2>
+                                        <p class="text-gray-700 mb-4">With just Rs.${data.amount} you can provide food to 50 persons.</p>
+                                        <a href="/about-needy/${data.slug}" class="text-red-500 font-semibold">Donate Now</a>
+                                    </div>
+                                </div>
+                                `);
+                            });
+                        },
+                        error: function(xhr, status, error) {
+                            console.error('Error:', error);
+                        }
+                    });
+                }
+                callingData();
+            });
+        </script>
+
     </section>
 @endsection

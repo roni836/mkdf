@@ -84,6 +84,7 @@ Route::get('/heading-user',[HomeController::class,'homeHeadingIndex'])->name('ho
 
 Route::post('/donation-concern',[CommonController::class,'donationConcernStore'])->name('donation.concern.store');
 Route::get('/donation-concern',[CommonController::class,'donationConcernIndex'])->name('donation.concern.index');
+Route::get('/home-donation-concern',[HomeController::class,'homeDonationConcern'])->name('home.donation.concern');
 Route::get('/heading-donation-concern',[CommonController::class,'donatingEventHeading'])->name('heading-donating-event.index');
 
 // auth work

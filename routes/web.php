@@ -58,10 +58,6 @@ Route::get('/medical-equipment', function () {
     return view('home.medical-equipment');
 });
 
-Route::get('/about-needy', function () {
-    return view('home.about-needy');
-});
-
 Route::get('/hindu-samman', function () {
     return view('home.hindu-samman');
 });
@@ -73,6 +69,8 @@ Route::get('/donation-index',[HomeController::class,'donationIndex'])->name('don
 Route::get('/news-index',[HomeController::class,'newsHomeIndex'])->name('news.home.all');
 
 Route::get('/career-applied/{id}',[HomeController::class,'appliedCareer']);
+Route::get('/about-needy/{slug}',[HomeController::class,'aboutNeedyPage'])->name('home.about.needy');
+
 
 
 Route::get('/admin/dashboard',[AdminController::class,'dashboard']);
@@ -91,8 +89,8 @@ Route::get('/admin/login',[AdminController::class,'login'])->name('admin.login')
 Route::get('/admin',[AdminController::class,'manageNeedy']);
 Route::get('/admin/manage-needy/insert',[AdminController::class,'insertNeedy']);
 Route::get('/admin/manage-donation/insert',[AdminController::class,'insertDonation']);
-Route::get('/admin/manage-donation-page/insert',[AdminController::class,'insertDonationPage']);
-Route::get('/admin/manage-donation-page',[AdminController::class,'manageDonationPage']);
+Route::get('/admin/manage-donation-page/insert',[AdminController::class,'insertDonationConcern']);
+Route::get('/admin/manage-donation-page',[AdminController::class,'manageDonationConcern']);
 Route::get('/admin/manage-donation',[AdminController::class,'manageDonation']);
 Route::get('/admin/manage-donating-event/insert',[AdminController::class,'insertDonatingEvent']);
 Route::get('/admin/manage-donating-event',[AdminController::class,'manageDonatingEvent']);

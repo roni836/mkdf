@@ -6,6 +6,7 @@ use App\Models\Video;
 use App\Models\News;
 use App\Models\Heading;
 use App\Models\Donation;
+use App\Models\DonationConcern;
 
 use Illuminate\Http\Request;
 
@@ -83,6 +84,27 @@ class HomeController extends Controller
                 'data' => "No Records found"
             ], 404);
         }
+    }
+    public function homeDonationConcern()
+    {
+        $data = DonationConcern::where('status',1)->orderBy('created_at', 'desc')->get();
+        if ($data->count() > 0) {
+            return response()->json([
+                'status' => 200,
+                'data' => $data
+            ], 200);
+        } else {
+            return response()->json([
+                'status' => 404,
+                'data' => "No Records found"
+            ], 404);
+        }
+    }
+
+    public function aboutNeedyPage($slug)
+    {
+        $data = DonationConcern::where('slug',$slug)->first();
+        return view('home.about-needy',['data'=>$data]);
     }
 
 

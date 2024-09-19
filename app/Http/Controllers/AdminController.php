@@ -50,12 +50,12 @@ class AdminController extends Controller
         return view('admin.insertDonatingEvent');
     }
 
-    public function insertDonationPage(){
-        return view('admin.insert-donation-page');
+    public function insertDonationConcern(){
+        return view('admin.insertDonationConcern');
     }
 
-    public function manageDonationPage(){
-        return view('admin.manage-donation-page');
+    public function manageDonationConcern(){
+        return view('admin.manageDonationConcern');
     }
 
     public function insertOrder(){
