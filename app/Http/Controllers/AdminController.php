@@ -86,6 +86,14 @@ class AdminController extends Controller
         return view('admin.insertFranchise');
     }
 
+    public function manageHeading(){
+        return view('admin.manageHeading');
+    }
+
+    public function insertHeading(){
+        return view('admin.insertHeading');
+    }
+
     public function login(){
         return view('admin.auth.login');
     }

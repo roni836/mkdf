@@ -7,6 +7,7 @@ use App\Mail\FranchiseMail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 use App\Models\Event;
+use App\Models\Heading;
 use App\Models\Needy;
 use App\Models\News;
 use App\Models\Donation;
@@ -597,40 +598,71 @@ class CommonController extends Controller
         }
     }
 
-    // public function update(Request $request, int $id)
-    // {
-    //     $validator = Validator::make($request->all(), [
-    //         'name' => 'required|string',
-    //         'features' => 'required|string|min:3',
-    //         'price' => 'required|string',   
-            
-    //     ]);
+    public function headingIndex()
+    {
+        $data = Heading::orderBy('created_at', 'desc')->get();
+        if ($data->count() > 0) {
+            return response()->json([
+                'status' => 200,
+                'data' => $data
+            ], 200);
+        } else {
+            return response()->json([
+                'status' => 404,
+                'data' => "No Records found"
+            ], 404);
+        }
+    }
 
-    //     if ($validator->fails()) {
-    //         return response()->json([
-    //             'status' => 422,
-    //             'error' => $validator->messages()
-    //         ], 422);
-    //     } else {
-    //         $hirePlan = HirePlan::find($id);
-    //         if ($hirePlan) {
-    //             $hirePlan->update([
-    //                 'name' => $request->name,
-    //                 'features' => $request->features,
-    //                 'price' => $request->price,                      
-    //             ]);
+    public function headingStore(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'title' => 'required|string',
+            'closing_date' => 'required',
+            'amount' => 'required|string',
+            'description' => 'required|string',
+            'image' => 'required|image|max:10240',
+        ]);
 
-    //             return response()->json([
-    //                 'status' => 200,
-    //                 'message' => "Hiring Plan Updated Successfully"
-    //             ], 200);
-    //         } else {
-    //             return response()->json([
-    //                 'status' => 500,
-    //                 'message' => "No Plan Found"
-    //             ], 500);
-    //         }
-    //     }
-    // }
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => 422,
+                'errors' => $validator->messages()
+            ], 422);
+        }
+
+        // Handle the file upload
+        if ($request->hasFile('image')) {
+            $image = time() . "." . $request->image->extension();
+            $request->image->move(public_path("heading/image"), $image);
+        } else {
+            return response()->json([
+                'status' => 422,
+                'errors' => ['image' => 'Image is required.']
+            ], 422);
+        }
+
+        // Create the blog post
+        $data = Heading::create([
+            'title' => $request->title,
+            'closing_date' => $request->closing_date,
+            'description' => $request->description,            
+            'status' => $request->status,            
+            'amount' => $request->amount,            
+            'image' => $image
+        ]);
+
+        if ($data) {
+            return response()->json([
+                'status' => 200,
+                'message' => 'Data Added Successfully'
+            ]);
+        } else {
+            return response()->json([
+                'status' => 500,
+                'message' => "Unable to add your Request"
+            ], 500);
+        }
+    }
 
 }

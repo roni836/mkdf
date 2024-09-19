@@ -104,6 +104,8 @@ Route::get('/admin/manage-event',[AdminController::class,'manageEvents']);
 Route::get('/admin/manage-event/insert',[AdminController::class,'insertEvents']);
 Route::get('/admin/manage-news',[AdminController::class,'manageNews']);
 Route::get('/admin/manage-news/insert',[AdminController::class,'insertNews']);
+Route::get('/admin/manage-heading',[AdminController::class,'manageHeading']);
+Route::get('/admin/manage-heading/insert',[AdminController::class,'insertHeading']);
 
 
 

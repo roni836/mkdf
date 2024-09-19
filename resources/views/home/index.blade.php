@@ -6,9 +6,35 @@
 
     <div id="controls-carousel" class="relative w-full z-0" data-carousel="slide">
         <!-- Carousel wrapper -->
-        <div class="relative h-56 overflow-hidden rounded-lg md:h-96 md:mt-[8rem]">
+        <div class="relative h-56 overflow-hidden rounded-lg md:h-96 md:mt-[8rem]" id="callingHeading">
             <!-- Item 1 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            {{-- <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <div class=" flex mt-6 absolute  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                    <div class="w-1/2">
+                        <div class="relative">
+                            <img src="/images/tem1.webp" alt="Ancient Temples" class="w-full rounded shadow">
+                            <div class="absolute bottom-0 left-0 bg-red-600 text-white p-4 w-full text-center">
+                                <span class="font-bold text-lg">Donate Now</span> to rebuild our Perishing Ancient
+                                Temples
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-1/2 pl-6">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4"> Renovate Ancient Temples to Protect Sanatana
+                            Dharma.
+                            Donate to preserve our Sacred Religious Heritage </h2>
+                        <p class="text-gray-600">Event: Save Ancient Temples</p>
+                        <p class="text-red-500 mt-2">Bookings Closing in <span class="font-bold">3 months</span></p>
+                        <div class="mt-4">
+                            <button class="bg-orange-500 text-white px-4 py-2 rounded shadow">
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div> --}}
+            {{-- <div class="hidden duration-700 ease-in-out" data-carousel-item>
 
                 <div class=" flex mt-6 absolute  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
                     <div class="w-1/2">
@@ -88,34 +114,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-
-                <div class=" flex mt-6 absolute  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-                    <div class="w-1/2">
-                        <div class="relative">
-                            <img src="/images/tem1.webp" alt="Ancient Temples" class="w-full rounded shadow">
-                            <div class="absolute bottom-0 left-0 bg-red-600 text-white p-4 w-full text-center">
-                                <span class="font-bold text-lg">Donate Now</span> to rebuild our Perishing Ancient
-                                Temples
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="w-1/2 pl-6">
-                        <h2 class="text-2xl font-bold text-gray-800 mb-4"> Renovate Ancient Temples to Protect Sanatana
-                            Dharma.
-                            Donate to preserve our Sacred Religious Heritage </h2>
-                        <p class="text-gray-600">Event: Save Ancient Temples</p>
-                        <p class="text-red-500 mt-2">Bookings Closing in <span class="font-bold">3 months</span></p>
-                        <div class="mt-4">
-                            <button class="bg-orange-500 text-white px-4 py-2 rounded shadow">
-                                Book Now
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </div> --}}
 
         </div>
         <!-- Slider controls -->
@@ -1009,6 +1008,54 @@
                                         </div>
                                     </div>
                                 </a>
+                                `);
+                            });
+                        },
+                        error: function(xhr, status, error) {
+                            console.error('Error:', error);
+                        }
+                    });
+                }
+                callingData();
+            });
+        </script>
+          <script>
+            $(document).ready(function() {
+                // Function to fetch and display appointment
+                let callingData = () => {
+                    $.ajax({
+                        type: "GET",
+                        url: "{{ route('home.heading.index') }}",
+                        success: function(response) {
+                            let table = $("#callingHeading");
+                            table.empty();
+                            let data = response.data;
+                            data.forEach((data) => {
+                                table.append(`
+                                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                    <div class=" flex mt-6 absolute  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                                        <div class="w-1/2">
+                                            <div class="relative">
+                                                <img src="/heading/image/${data.image}" alt="${data.title}" class="w-full rounded shadow">
+                                                <div class="absolute bottom-0 left-0 bg-red-600 text-white p-4 w-full text-center">
+                                                    <span class="font-bold text-lg">Donate Now</span> to rebuild our Perishing Ancient
+                                                    Temples
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="w-1/2 pl-6 mt-20">
+                                            <h2 class="text-2xl font-bold text-gray-800 mb-4">${data.title} </h2>
+                                            <p class="text-gray-600">${data.description}</p>
+                                            <p class="text-red-500 mt-2">Bookings Closing in <span class="font-bold">${data.closing_date}</span></p>
+                                            <div class="mt-4">
+                                                <button class="bg-orange-500 text-white px-4 py-2 rounded shadow">
+                                                    Donate Rs.${data.amount} Now
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 `);
                             });
                         },

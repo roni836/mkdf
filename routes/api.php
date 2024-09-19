@@ -7,6 +7,7 @@ use App\Http\Controllers\CommonController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 
 /*
@@ -76,6 +77,10 @@ Route::get('/donating-event',[CommonController::class,'donatingEventIndex'])->na
 
 Route::post('/news',[CommonController::class,'newsStore'])->name('news.store');
 Route::get('/news',[CommonController::class,'newsIndex'])->name('news.index');
+
+Route::post('/heading',[CommonController::class,'headingStore'])->name('admin.heading.store');
+Route::get('/heading',[CommonController::class,'headingIndex'])->name('admin.heading.index');
+Route::get('/heading-user',[HomeController::class,'homeHeadingIndex'])->name('home.heading.index');
 
 Route::post('/donation-concern',[CommonController::class,'donationConcernStore'])->name('donation.concern.store');
 Route::get('/donation-concern',[CommonController::class,'donationConcernIndex'])->name('donation.concern.index');

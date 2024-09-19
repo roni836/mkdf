@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Gallery;
 use App\Models\Video;
 use App\Models\News;
+use App\Models\Heading;
 use App\Models\Donation;
 
 use Illuminate\Http\Request;
@@ -56,6 +57,21 @@ class HomeController extends Controller
     public function newsHomeIndex()
     {
         $data = News::where('status',1)->orderBy('created_at', 'desc')->get();
+        if ($data->count() > 0) {
+            return response()->json([
+                'status' => 200,
+                'data' => $data
+            ], 200);
+        } else {
+            return response()->json([
+                'status' => 404,
+                'data' => "No Records found"
+            ], 404);
+        }
+    }
+    public function homeHeadingIndex()
+    {
+        $data = Heading::where('status',1)->get();
         if ($data->count() > 0) {
             return response()->json([
                 'status' => 200,
