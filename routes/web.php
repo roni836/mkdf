@@ -71,7 +71,7 @@ Route::get('/news-index',[HomeController::class,'newsHomeIndex'])->name('news.ho
 Route::get('/career-applied/{id}',[HomeController::class,'appliedCareer']);
 Route::get('/about-needy/{slug}',[HomeController::class,'aboutNeedyPage'])->name('home.about.needy');
 
-
+Route::get('career-page',[HomeController::class,'careerPage']);
 
 Route::get('/admin/dashboard',[AdminController::class,'dashboard']);
 Route::get('/admin/manage-order/insert',[AdminController::class,'insertOrder']);

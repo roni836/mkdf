@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mkdf</title>
+    <title>@yield('title') | {{ env('APP_NAME') }}</title>
     @vite('resources/css/app.css')
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -137,7 +137,7 @@
                 <a href="{{ url('event') }}" class=" hover:underline  uppercase font-semibold">
                     Events
                 </a>
-                <a href="{{ url('event') }}" class=" hover:underline  uppercase font-semibold">
+                <a href="{{ url('career-page') }}" class=" hover:underline  uppercase font-semibold">
                     Career
                 </a>
                 <a href="{{ url('about') }}" class=" hover:underline  uppercase font-semibold">
@@ -341,8 +341,8 @@
         id="popup-form-container"class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-30">
         <div id="form-container" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full max-w-md z-10"></div>
     </div>
-    @section('content')
-    @show
+    @yield('content')
+@show
 
     {{-- <footer class="bg-blue-600 text-white py-6 mt-12">
         <div class="container mx-auto text-center">

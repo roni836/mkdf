@@ -112,7 +112,7 @@ class HomeController extends Controller
         return view('home.orderNow');
     }
 
-    public function career(){
+    public function careerPage(){
         return view('home.career');
     }
     

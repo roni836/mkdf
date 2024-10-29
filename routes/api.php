@@ -62,7 +62,12 @@ Route::get('/rating/view/{id}',[CommonController::class,'showRating']);
 
 Route::post('/career',[CareerController::class,'careerStore'])->name('career.store');
 Route::get('/career',[CareerController::class,'careerIndex'])->name('career.index');
-
+Route::get('/career/view/{id}',[CareerController::class,'careerShow']);
+Route::put('/career/edit/{id}',[CareerController::class,'careerUpdate']);
+Route::delete('/career/delete/{id}',[CareerController::class,'careerDestroy']);
+Route::get('/career/trash',[CareerController::class,'trash']);
+Route::delete('/career/forceDelete/{id}',[CareerController::class,'forceDelete']);
+Route::patch('/career/restore/{id}',[CareerController::class,'restore']);
 Route::post('/job-applied',[CareerController::class,'jobAppliedStore'])->name('job.applied.store');
 Route::get('/job-applied',[CareerController::class,'jobAppliedIndex'])->name('job.applied.index');
 

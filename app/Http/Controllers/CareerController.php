@@ -105,7 +105,7 @@ class CareerController extends Controller
     public function jobAppliedIndex()
     {
         $data = JobForm::with("career")->orderBy('created_at', 'desc')->get();
-        dd($data);
+        // dd($data);
         if ($data->count() > 0) {
             return response()->json([
                 'status' => 200,

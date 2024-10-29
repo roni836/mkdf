@@ -6,9 +6,9 @@
 
     <div id="controls-carousel" class="relative w-full z-0" data-carousel="slide">
         <!-- Carousel wrapper -->
-        <div class="relative h-56 overflow-hidden rounded-lg md:h-96 md:mt-[8rem]" id="callingHeading">
+        <div class="relative h-56 overflow-hidden rounded-lg md:h-96 md:mt-[8rem]" id="callingHeadin">
             <!-- Item 1 -->
-            {{-- <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <div class=" flex mt-6 absolute  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
                     <div class="w-1/2">
                         <div class="relative">
@@ -33,7 +33,7 @@
                         </div>
                     </div>
                 </div>
-            </div> --}}
+            </div>
 
         </div>
         <!-- Slider controls -->

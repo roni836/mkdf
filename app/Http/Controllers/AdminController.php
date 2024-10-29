@@ -82,6 +82,18 @@ class AdminController extends Controller
         return view('admin.manageNews');
     }
 
+    public function insertCareer(){
+        return view('admin.insertCareer');
+    }
+
+    public function manageCareer(){
+        return view('admin.manageCareer');
+    }
+
+    public function manageJobForm(){
+        return view('admin.manageJobForm');
+    }
+
     public function insertFranchise(){
         return view('admin.insertFranchise');
     }
