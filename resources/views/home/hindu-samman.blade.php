@@ -279,6 +279,88 @@
             </div>
         </div>
 
-
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Main Content -->
+            <div class="lg:col-span-3">
+                <h1 class="text-2xl font-bold text-gray-900 mb-6">
+                    At <span class="text-purple-600">Hindu Samman Foundation</span>, we are committed to the respectful
+                    disposal of religious wastes.
+                </h1>
+                <p class="mb-4">
+                    We understand the sanctity and significance of Hindu scriptures, photos of Devi Devatas, and
+                    festival-related items. Our aim is to protect their sanctity while raising awareness among the
+                    general masses about the importance of proper disposal.
+                </p>
+                <p class="mb-4">
+                    When it comes to used, torn, or broken (khandit) Hindu scriptures, we handle them with utmost
+                    reverence. We organize collection drives and collaborate with local communities to ensure their
+                    proper disposal. Our dedicated team ensures that these scriptures are respectfully cremated or
+                    immersed in sacred rivers according to established traditions and customs.
+                </p>
+    
+                <!-- Image and Second Paragraph -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <img src="/images/hin1.webp" alt="Religious Waste" class="w-full h-auto object-cover rounded shadow">
+                    <p>
+                        Similarly, we address the issue of photos of Devi Devatas and other divine beings that are often
+                        found discarded in inappropriate places. We educate people about the significance of these
+                        images and the need for their proper disposal. We encourage individuals to bring such photos to
+                        us, and we ensure they are respectfully immersed or disposed of in a designated manner.
+                    </p>
+                </div>
+    
+                <p class="mb-4">
+                    During festivals, we actively promote responsible waste management. We raise awareness among
+                    devotees about the proper disposal of festival-related items, such as decorations, flowers, and
+                    offerings. We collaborate with local authorities to set up designated collection points and
+                    facilitate their proper disposal through environmentally friendly methods.
+                </p>
+            </div>
+    
+            <!-- Sidebar (Widgets/Links) -->
+            <div class="lg:col-span-1 space-y-4">
+                <a href="#" class="block p-4 bg-white shadow hover:bg-gray-50 rounded transition duration-150">
+                    <div class="flex items-center space-x-4">
+                        <img src="/images/sid5.webp" alt="Icon 1" class="w-12 h-12 object-cover rounded">
+                        <div>
+                            <h2 class="text-lg font-semibold text-gray-900">Spiritual Unity: Empowering Dharma Seekers
+                            </h2>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="block p-4 bg-white shadow hover:bg-gray-50 rounded transition duration-150">
+                    <div class="flex items-center space-x-4">
+                        <img src="/images/sid4.webp" alt="Icon 2" class="w-12 h-12 object-cover rounded">
+                        <div>
+                            <h2 class="text-lg font-semibold text-gray-900">Empowering Spiritual Communities</h2>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="block p-4 bg-white shadow hover:bg-gray-50 rounded transition duration-150">
+                    <div class="flex items-center space-x-4">
+                        <img src="/images/sid3.webp" alt="Icon 3" class="w-12 h-12 object-cover rounded">
+                        <div>
+                            <h2 class="text-lg font-semibold text-gray-900">Empowering General Hindus</h2>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="block p-4 bg-white shadow hover:bg-gray-50 rounded transition duration-150">
+                    <div class="flex items-center space-x-4">
+                        <img src="/images/sid2.webp" alt="Icon 4" class="w-12 h-12 object-cover rounded">
+                        <div>
+                            <h2 class="text-lg font-semibold text-gray-900">Global Support for Persecuted Hindus</h2>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="block p-4 bg-white shadow hover:bg-gray-50 rounded transition duration-150">
+                    <div class="flex items-center space-x-4">
+                        <img src="/images/sid.webp" alt="Icon 5" class="w-12 h-12 object-cover rounded">
+                        <div>
+                            <h2 class="text-lg font-semibold text-gray-900">Restoring Self-Respect and Empowerment</h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
 @endsection

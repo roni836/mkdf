@@ -21,8 +21,8 @@ return new class extends Migration
             $table->string('needy_mobile');
             $table->string('location');
             $table->string('help_type');
-            $table->string('isverified');
-            $table->string('status');
+            $table->string('isverified')->nullable();;
+            $table->string('status')->nullable();;
             $table->string('image')->nullable();
             $table->longText('message');
             $table->timestamps();

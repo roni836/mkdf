@@ -670,4 +670,44 @@ class CommonController extends Controller
         }
     }
 
+    public function updateHeadingStatus(Request $request, int $id){
+        $job = Heading::find($id);
+            if($job){
+            $data = $job->update([
+                'status' => $request->status,   
+            ]);
+            // dd($data);
+            if($data){
+                return response()->json([
+                    'status' => 200,
+                    'message' => "Updated Successfully"
+                ], 200);
+            }
+        }
+        return response()->json([
+            'status' => 400,
+            'message' => "Error Updating Job Status"
+        ], 400);
+    }
+
+    public function updateDonatingEventStatus(Request $request, int $id){
+        $job = DonatingEvent::find($id);
+            if($job){
+            $data = $job->update([
+                'status' => $request->status,   
+            ]);
+            // dd($data);
+            if($data){
+                return response()->json([
+                    'status' => 200,
+                    'message' => "Updated Successfully"
+                ], 200);
+            }
+        }
+        return response()->json([
+            'status' => 400,
+            'message' => "Error Updating Job Status"
+        ], 400);
+    }
+
 }

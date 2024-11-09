@@ -175,26 +175,42 @@
         </div>
     </section>
 
-    <!-- Values Section -->
-    <section class="bg-gray-50 py-16">
-        <div class="container mx-auto px-4 text-center">
-            <h3 class="text-3xl font-semibold text-gray-800 mb-12">Our Core Values</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-6 bg-white rounded-lg shadow">
-                    <h4 class="text-2xl font-semibold mb-4 text-blue-600">Integrity</h4>
-                    <p>We uphold the highest standards of integrity in all our actions.</p>
-                </div>
-                <div class="p-6 bg-white rounded-lg shadow">
-                    <h4 class="text-2xl font-semibold mb-4 text-blue-600">Innovation</h4>
-                    <p>We innovate and push boundaries to bring better solutions to our clients.</p>
-                </div>
-                <div class="p-6 bg-white rounded-lg shadow">
-                    <h4 class="text-2xl font-semibold mb-4 text-blue-600">Customer Focus</h4>
-                    <p>We put our clients at the heart of everything we do.</p>
-                </div>
+    <div class="bg-white mt-20">
+        <h2 class="text-2xl font-bold mb-6 px-10 py-12">SHORT STORY BEHIND MKDF FOUNDATION</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="text-left px-10">
+                <p class="mb-4">Sometimes when you are dealing with a serious problem you watch the world wandering
+                    happily
+                    by and want to either a) cry b) <em>drown your sorrows</em> c) <em>say some rude words</em> or d)
+                    <em>all of the above</em>, because it seems you are the only one in this sorry situation. Well, you are
+                    not. Although there will be ups and downs you will come out the other side.
+                </p>
+                <p class="mb-4">In 2006 Arjunuday was born as a sibling to a healthy sister Lavanya. Tulika and Rahul
+                    Verma
+                    planned a second baby to give company to their daughter. It was a full term pregnancy without any
+                    complications.</p>
+                <p class="mb-4">The minute Arjunuday was born, the doctors found multiple congenital defects that
+                    shattered
+                    the dreams of the parents. They were devastated and could not understand why they were being punished in
+                    this way. They had no choice but to accept the inevitable reality and decided to give him the best
+                    possible medical care.</p>
+            </div>
+            <div class="text-left px-10">
+                <p class="mb-4">Perhaps this is a penalty he has to pay for being born in a third world country. Yes,
+                    when
+                    Arjunuday was only one hour old he had a price tag on his life. If parents paid the price, they can have
+                    him, if not he has to go back to where he came from.</p>
+                <p class="mb-4">Tulika and Rahul went through phases of self-pity, denial, mutual accusations and anger
+                    towards the society, which was indifferent to their problems.</p>
+                <p class="mb-4">After 9 correction surgeries and 11 hospital stays, Now Arjunuday is just another child
+                    of
+                    his age but he cannot have voluntary bowel movements and requires an artificial mechanism to empty his
+                    colon, a daily enema.</p>
+                <p class="mb-4">Today, Rahul runs the foundation with the help of a dedicated team and Tulika continues
+                    her job to support the family.</p>
             </div>
         </div>
-    </section>
+    </div>
 
 
 

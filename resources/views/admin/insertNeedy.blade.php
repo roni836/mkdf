@@ -19,16 +19,21 @@
                 <p id="error-mobile" class="text-red-500 text-xs font-semibold error-message"></p>
             </div>
             <div>
-                <label for="address" class="block text-sm font-medium text-gray-700">Delivery Address</label>
-                <textarea id="address" name="address" rows="2" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
-                <p id="error-address" class="text-red-500 text-xs font-semibold error-message"></p>
+                <label for="address" class="block text-sm font-medium text-gray-700">Loaction</label>
+                <textarea id="location" name="location" rows="2" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
+                <p id="error-location" class="text-red-500 text-xs font-semibold error-message"></p>
             </div>
             <div>
+                <label for="help_type" class="block text-sm font-medium text-gray-700">Help Type</label>
+                <textarea id="help_type" name="help_type" rows="2" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
+                <p id="error-help_type" class="text-red-500 text-xs font-semibold error-message"></p>
+            </div>
+            {{-- <div>
                 <label for="quantity" class="block text-sm font-medium text-gray-700">Quantity (Minimum 10 Plates & 1 Plate = 2 piece idli)</label>
                 <input type="number" id="quantity" name="quantity" min="1"
                     class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                 <p id="error-quantity" class="text-red-500 text-xs font-semibold error-message"></p>
-            </div>
+            </div> --}}
             <div class="flex justify-between items-center">
                 <label class="flex items-center text-sm font-medium text-gray-700">
                     <input type="checkbox" name="terms" class="h-4 w-4 text-indigo-600 border-gray-300 rounded">

@@ -140,8 +140,8 @@
     </section> --}}
 
 
-    <div class="max-w-6xl mx-auto py-12 mt-20">
-        <h2 class="text-3xl font-bold text-center text-blue-700 mb-8 uppercase">OUR Programmes</h2>
+    <div class="w-full mx-auto py-12 pt-20 bg-white">
+        <h2 class="text-3xl font-bold text-center text-blue-700 mb-8 uppercase">Make your Special day more special.</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="headingDonatingEvent">
 
@@ -379,6 +379,8 @@
 
         </div>
     </div>
+
+    <h2 class="text-3xl font-bold text-center text-blue-700 mb-8">Trending Fundraisers</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-10" id="callingDonationConcern">
         {{--<div class="bg-white shadow-md rounded-lg overflow-hidden">
@@ -795,9 +797,9 @@
 
                             data.forEach((data) => {
                                 table.append(`
-                            <div class="bg-white shadow-lg rounded-lg p-6 text-center" >
+                            <div class="bg-white  p-6 text-center" >
                                 <img src="/donating-event/image/${data.image}" alt="${data.image}"
-                                    class="mx-auto mb-4 w-32 h-32 rounded-full object-cover">
+                                    class="mx-auto mb-4 w-48 h-48 rounded-full object-cover">
                                 <h3 class="text-2xl font-bold text-blue-700">${data.title}</h3>
                                 <p class="text-base font-medium text-red-600 mt-2">${data.description}.</p>
                                 <a href="#" class="text-blue-500 font-semibold mt-2 block donate-btn" data-category="${data.message}">Donate Now</a>
@@ -999,14 +1001,16 @@
                             let data = response.data;
                             data.forEach((data) => {
                                 table.append(`
-                                 <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                                    <img src="/donation-concern/image/${data.image}" alt="Provide Food to Hungry" class="w-full h-48 object-cover">
+                                
+                                 <div class="bg-white shadow-md ">
+                                    <img src="/donation-concern/image/${data.image}" alt="Provide Food to Hungry" class="w-full h-48 object-cover px-16 py-8">
                                     <div class="p-4">
-                                        <h2 class="text-xl font-bold mb-2">${data.heading}</h2>
-                                        <p class="text-gray-700 mb-4">With just Rs.${data.amount} you can provide food to 50 persons.</p>
-                                        <a href="/about-needy/${data.slug}" class="text-red-500 font-semibold">Donate Now</a>
+                                        <h2 class="text-xl font-bold mb-2 text-center">${data.heading}</h2>
+                                        <p class="text-gray-700 mb-4">With just Rs.${data.amount} you can provide food to 50 persons.  <a href="{{url('/about-needy/${data.slug}')}}" class="text-red-500 font-semibold">Donate Now</a></p>
+                                       
                                     </div>
                                 </div>
+                               
                                 `);
                             });
                         },

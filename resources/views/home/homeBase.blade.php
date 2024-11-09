@@ -95,16 +95,16 @@
                             class="text-white hover:text-black text-center text-sm font-semibold">Left
                             over Food</a></li>
                     <span class="border-r"></span> --}}
-                    <li><a href="/" class="text-white hover:text-black text-center text-sm font-semibold">Unused
+                    {{-- <li><a href="/" class="text-white hover:text-black text-center text-sm font-semibold">Unused
                             Books</a>
-                    </li>
-                    <span class="border-r"></span>
+                    </li> --}}
+                    {{-- <span class="border-r"></span> --}}
                     <li><a href="{{ url('medical-equipment') }}"
                             class="text-white hover:text-black text-center text-sm font-semibold">Medical Equipments or
                             Medicine</a></li>
                     <span class="border-r"></span>
                     <li><a href="{{ url('time-contribution') }}"
-                            class="text-white hover:text-black text-center text-sm font-semibold">Time Contribution</a>
+                            class="text-white hover:text-black text-center text-sm font-semibold">Become a Volunteer</a>
                     </li>
                     <span class="border-r"></span>
                 </ul>
@@ -131,7 +131,7 @@
                     Our Team
                 </a>
                 <a href="/our-story" class=" hover:underline  uppercase font-semibold">
-                    Our Story
+                    Impact Story
                 </a>
                 
                 <a href="{{ url('event') }}" class=" hover:underline  uppercase font-semibold">
@@ -185,7 +185,7 @@
     <div class="fixed top-1/2 left-0 transform -translate-y-1/2 z-20">
         <button id="rateUsButton"
             class="bg-teal-400 hover:bg-teal-500 hover:text-white text-black font-semibold px-2 py-6 rounded-l-lg shadow vertical-text">
-            Need Help ?
+            Help Someone ?
         </button>
     </div>
 

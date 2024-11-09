@@ -8,6 +8,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\AuthController;
 
 /*
@@ -108,4 +109,13 @@ Route::group(['middleware'=>'api'],function($routes){
     Route::post('/login',[AuthController::class,'login']);
     Route::post('/profile',[AuthController::class,'profile']);
 });
+
+
+Route::put('/career/status/{id}',[CareerController::class,'updateStatus']);
+Route::put('/gallery/status/{id}',[GalleryController::class,'updatePhotoStatus']);
+Route::put('/video/status/{id}',[GalleryController::class,'updateVideoStatus']);
+Route::put('/news/status/{id}',[NewsController::class,'updateStatus']);
+Route::put('/heading/status/{id}',[CommonController::class,'updateHeadingStatus']);
+Route::put('/event/status/{id}',[EventController::class,'updateStatus']);
+Route::put('/donating-event/status/{id}',[CommonController::class,'updateDonatingEventStatus']);
 
