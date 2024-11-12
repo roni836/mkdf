@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\StoryController;
 use App\Http\Controllers\AdminController;
 
 /*
@@ -64,6 +65,7 @@ Route::get('/hindu-samman', function () {
 
 // Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/gallery-page',[HomeController::class,'photo']);
+Route::get('/our-story/slug',[StoryController::class,'detailStory']);
 Route::get('/video-index',[HomeController::class,'videoIndex'])->name('video.index.all');
 Route::get('/donation-index',[HomeController::class,'donationIndex'])->name('donation.index.all');
 Route::get('/news-index',[HomeController::class,'newsHomeIndex'])->name('news.home.all');

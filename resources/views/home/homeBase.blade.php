@@ -74,7 +74,7 @@
 
 </head>
 
-<body class="bg-gray-100 w-full">
+<body class="bg-blue-50 w-full">
     <header class=" ">
         <div
             class="container mx-auto flex justify-center items-center p-2 shadow-md fixed top-0 z-20 bg-teal-600 max-w-full">

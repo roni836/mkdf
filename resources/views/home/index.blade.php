@@ -140,7 +140,7 @@
     </section> --}}
 
 
-    <div class="w-full mx-auto py-12 pt-20 bg-white">
+    <div class="w-full mx-auto py-12 pt-20 ">
         <h2 class="text-3xl font-bold text-center text-blue-700 mb-8 uppercase">Make your Special day more special.</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="headingDonatingEvent">
@@ -223,8 +223,7 @@
                             Person :</label>
                         <input
                             class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-1/3"value='5'
-                            min="5" name="no_of_person" id="no_of_person" type="number"
-                            placeholder="No. of Person">
+                            min="5" name="no_of_person" id="no_of_person" type="number" placeholder="No. of Person">
                         <div class="text-red-500 text-xs italic error-message" id="error-no-of-person"></div>
                     </div>
                     <input type="hidden" name="message" value="" id="message">
@@ -284,167 +283,44 @@
         </div>
     </div>
 
-    <!-- Our Programmes Section -->
-    {{-- <section class="container mx-auto my-12 px-12 mt-20">
-        <h2 class="text-4xl font-bold text-center mb-8">Our Programmes</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="flex items-center">
-                <img src="{{ asset('images/pimg.jpg') }}" alt="Education" class="w-20 h-20 mr-4 object-cover">
-                <div><a href="">
-                        <h3 class="text-3xl font-semibold hover:underline text-orange-400">Medicine</h3>
-                    </a>
-                    <p class="text-gray-700">Left over medicine to cure and holistic development.</p>
+    
+
+
+
+
+    <h2 class="text-3xl font-bold text-center text-blue-700 mb-8 pt-10">Trending Fundraisers</h2>
+
+    <div class="grid grid-cols-4 space-x-4 p-8 bg-blue-50 mx-10" id="callingDonationConcern">
+        {{-- <div class="max-w-sm bg-white rounded-lg shadow-md overflow-hidden" >
+            <img class="w-full h-48 object-cover" src="https://via.placeholder.com/300x200" alt="Image Description">
+
+            <div class="p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-2">
+                    A Few Days Into This World And My Baby Girl Is Fighting For Survival!
+                </h2>
+                <p class="text-sm text-gray-500 mb-4">by Darshan Harshad Vyas</p>
+
+                <div class="flex items-center text-gray-700 mb-4">
+                    <span class="text-lg font-semibold">₹9,58,507</span>
+                    <span class="text-sm ml-2">raised out of ₹13,86,024</span>
                 </div>
-            </div>
-            <div class="flex items-center">
-                <img src="{{ asset('images/pimg-1.jpg') }}" alt="Healthcare" class="w-20 h-20 mr-4 object-cover">
-                <div>
-                    <a href="">
-                        <h3 class="text-3xl font-semibold hover:underline text-blue-400">Competitive Books</h3>
-                    </a>
-                    <p class="text-gray-700">Taking healthcare services to doorsteps of hard to reach communities</p>
+                <div class="relative h-2 bg-gray-200 rounded-full overflow-hidden">
+                    <div class="absolute top-0 left-0 h-full bg-blue-500" style="width: 70%;"></div>
                 </div>
-            </div>
-            <div class="flex items-center">
-                <img src="{{ asset('images/pimg2.jpg') }}" alt="Women Empowerment" class="w-20 h-20 mr-4 object-cover">
-                <div>
-                    <a href="">
-                        <h3 class="text-3xl font-semibold hover:underline text-green-500">People Feeding</h3>
-                    </a>
-                    <p class="text-gray-700">Left over foods for donation support for underprivileged youth</p>
+
+                <div class="flex justify-between items-center text-gray-600 mt-4">
+                    <div class="flex items-center space-x-1">
+                        <span class="text-sm font-medium">51 Days Left</span>
+                    </div>
+                    <div class="flex items-center space-x-1">
+                        <span class="text-sm font-medium">475 Supporters</span>
+                    </div>
                 </div>
-            </div>
-            <div class="flex items-center">
-                <img src="{{ asset('images/pimg3.jpg') }}" alt="Livelihood" class="w-20 h-20 mr-4 object-cover">
-                <div>
-                    <a href="">
-                        <h3 class="text-3xl font-semibold hover:underline text-yellow-400">Donation in Kind</h3>
-                    </a>
-                    <p class="text-gray-700">Skill training and placement support for underprivileged youth</p>
+
+                <div class="mt-4 flex space-x-2">
+                    <button class="flex-1 bg-blue-100 text-blue-500 font-medium py-2 rounded-lg">Share</button>
+                    <button class="flex-1 bg-blue-500 text-white font-medium py-2 rounded-lg">Donate</button>
                 </div>
-            </div>
-            <div class="flex items-center">
-                <img src="{{ asset('images/pimg4.jpg') }}" alt="Empowering Grassroots"
-                    class="w-20 h-20 mr-4 object-cover">
-                <div>
-                    <a href="">
-                        <h3 class="text-3xl font-semibold hover:underline text-pink-400">Donate Grocerine</h3>
-                    </a>
-                    <p class="text-gray-700">Helping community-based organizations become locally sustainable</p>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-
-
-    <div class="max-w-6xl mx-auto py-12">
-        <h2 class="text-3xl font-bold text-center text-blue-700 mb-8">OUR IMPACT</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
-                <img src="images/impact1.webp" alt="Icon 1" class="mx-auto mb-4 w-16 h-16">
-                <h3 class="text-3xl font-bold text-pink-600">100K+</h3>
-                <p class="text-lg font-semibold text-gray-700">Youth Volunteers Trained</p>
-            </div>
-
-            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
-                <img src="images/impact2.webp" alt="Icon 2" class="mx-auto mb-4 w-16 h-16">
-                <h3 class="text-3xl font-bold text-pink-600">22</h3>
-                <p class="text-lg font-semibold text-gray-700">Social Innovations</p>
-            </div>
-
-            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
-                <img src="images/impact3.webp" alt="Icon 3" class="mx-auto mb-4 w-16 h-16">
-                <h3 class="text-3xl font-bold text-pink-600">2.5M+</h3>
-                <p class="text-lg font-semibold text-gray-700">Beneficiaries Served</p>
-            </div>
-
-            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
-                <img src="images/impact4.webp" alt="Icon 4" class="mx-auto mb-4 w-16 h-16">
-                <h3 class="text-3xl font-bold text-pink-600">19</h3>
-                <p class="text-lg font-semibold text-gray-700">Mega Events Organised</p>
-            </div>
-
-            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
-                <img src="images/impact5.webp" alt="Icon 5" class="mx-auto mb-4 w-16 h-16">
-                <h3 class="text-3xl font-bold text-pink-600">$4M+</h3>
-                <p class="text-lg font-semibold text-gray-700">Financial Support Delivered</p>
-            </div>
-
-            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
-                <img src="images/impact6.webp" alt="Icon 6" class="mx-auto mb-4 w-16 h-16">
-                <h3 class="text-3xl font-bold text-pink-600">$75M+</h3>
-                <p class="text-lg font-semibold text-gray-700">In Kind Support Delivered</p>
-            </div>
-
-        </div>
-    </div>
-
-    <h2 class="text-3xl font-bold text-center text-blue-700 mb-8">Trending Fundraisers</h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-10" id="callingDonationConcern">
-        {{--<div class="bg-white shadow-md rounded-lg overflow-hidden">
-            <img src="images/don6.webp" alt="Provide Food to Hungry" class="w-full h-48 object-cover">
-            <div class="p-4">
-                <h2 class="text-xl font-bold mb-2">Provide Food to Hungry</h2>
-                <p class="text-gray-700 mb-4">With just Rs.550/- you can provide food to 50 persons.</p>
-                <a href="/about-needy" class="text-red-500 font-semibold">Donate Now</a>
-            </div>
-        </div>
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
-            <img src="images/don4.webp" alt="Donate Hygiene Kit" class="w-full h-48 object-cover">
-            <div class="p-4">
-                <h2 class="text-xl font-bold mb-2">Donate Hygiene Kit</h2>
-                <p class="text-gray-700 mb-4">With just Rs.500/- you can provide a hygiene kit to a woman.</p>
-                <a href="/about-needy" class="text-red-500 font-semibold">Donate Now</a>
-            </div>
-        </div>
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
-            <img src="images/don7.webp" alt="Donate Educational Kit" class="w-full h-48 object-cover">
-            <div class="p-4">
-                <h2 class="text-xl font-bold mb-2">Donate Educational Kit</h2>
-                <p class="text-gray-700 mb-4">With just Rs.750/- you can provide an educational kit to a child.</p>
-                <a href="#" class="text-red-500 font-semibold">Donate Now</a>
-            </div>
-        </div>
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
-            <img src="images/don8.webp" alt="Donate A Warm Blanket" class="w-full h-48 object-cover">
-            <div class="p-4">
-                <h2 class="text-xl font-bold mb-2">Donate A Warm Blanket</h2>
-                <p class="text-gray-700 mb-4">With just Rs.400/- you can provide a blanket to a homeless.</p>
-                <a href="#" class="text-red-500 font-semibold">Donate Now</a>
-            </div>
-        </div>
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
-            <img src="images/don6.webp" alt="Provide Food to Hungry" class="w-full h-48 object-cover">
-            <div class="p-4">
-                <h2 class="text-xl font-bold mb-2">Provide Food to Hungry</h2>
-                <p class="text-gray-700 mb-4">With just Rs.550/- you can provide food to 50 persons.</p>
-                <a href="#" class="text-red-500 font-semibold">Donate Now</a>
-            </div>
-        </div>
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
-            <img src="images/don4.webp" alt="Donate Hygiene Kit" class="w-full h-48 object-cover">
-            <div class="p-4">
-                <h2 class="text-xl font-bold mb-2">Donate Hygiene Kit</h2>
-                <p class="text-gray-700 mb-4">With just Rs.500/- you can provide a hygiene kit to a woman.</p>
-                <a href="#" class="text-red-500 font-semibold">Donate Now</a>
-            </div>
-        </div>
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
-            <img src="images/don7.webp" alt="Donate Educational Kit" class="w-full h-48 object-cover">
-            <div class="p-4">
-                <h2 class="text-xl font-bold mb-2">Donate Educational Kit</h2>
-                <p class="text-gray-700 mb-4">With just Rs.750/- you can provide an educational kit to a child.</p>
-                <a href="#" class="text-red-500 font-semibold">Donate Now</a>
-            </div>
-        </div>
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
-            <img src="images/don8.webp" alt="Donate A Warm Blanket" class="w-full h-48 object-cover">
-            <div class="p-4">
-                <h2 class="text-xl font-bold mb-2">Donate A Warm Blanket</h2>
-                <p class="text-gray-700 mb-4">With just Rs.400/- you can provide a blanket to a homeless.</p>
-                <a href="#" class="text-red-500 font-semibold">Donate Now</a>
             </div>
         </div> --}}
     </div>
@@ -524,6 +400,49 @@
                 </div>
             </div>
             <!-- Event Item -->
+        </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto py-12">
+        <h2 class="text-3xl font-bold text-center text-blue-700 mb-8">OUR IMPACT</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+                <img src="images/impact1.webp" alt="Icon 1" class="mx-auto mb-4 w-16 h-16">
+                <h3 class="text-3xl font-bold text-pink-600">100K+</h3>
+                <p class="text-lg font-semibold text-gray-700">Youth Volunteers Trained</p>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+                <img src="images/impact2.webp" alt="Icon 2" class="mx-auto mb-4 w-16 h-16">
+                <h3 class="text-3xl font-bold text-pink-600">22</h3>
+                <p class="text-lg font-semibold text-gray-700">Social Innovations</p>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+                <img src="images/impact3.webp" alt="Icon 3" class="mx-auto mb-4 w-16 h-16">
+                <h3 class="text-3xl font-bold text-pink-600">2.5M+</h3>
+                <p class="text-lg font-semibold text-gray-700">Beneficiaries Served</p>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+                <img src="images/impact4.webp" alt="Icon 4" class="mx-auto mb-4 w-16 h-16">
+                <h3 class="text-3xl font-bold text-pink-600">19</h3>
+                <p class="text-lg font-semibold text-gray-700">Mega Events Organised</p>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+                <img src="images/impact5.webp" alt="Icon 5" class="mx-auto mb-4 w-16 h-16">
+                <h3 class="text-3xl font-bold text-pink-600">$4M+</h3>
+                <p class="text-lg font-semibold text-gray-700">Financial Support Delivered</p>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+                <img src="images/impact6.webp" alt="Icon 6" class="mx-auto mb-4 w-16 h-16">
+                <h3 class="text-3xl font-bold text-pink-600">$75M+</h3>
+                <p class="text-lg font-semibold text-gray-700">In Kind Support Delivered</p>
+            </div>
+
         </div>
     </div>
 
@@ -797,14 +716,14 @@
 
                             data.forEach((data) => {
                                 table.append(`
-                            <div class="bg-white  p-6 text-center" >
-                                <img src="/donating-event/image/${data.image}" alt="${data.image}"
-                                    class="mx-auto mb-4 w-48 h-48 rounded-full object-cover">
-                                <h3 class="text-2xl font-bold text-blue-700">${data.title}</h3>
-                                <p class="text-base font-medium text-red-600 mt-2">${data.description}.</p>
-                                <a href="#" class="text-blue-500 font-semibold mt-2 block donate-btn" data-category="${data.message}">Donate Now</a>
-                            </div>
-                        `);
+                                    <div class="bg-white  p-6 text-center" >
+                                        <img src="/donating-event/image/${data.image}" alt="${data.image}"
+                                            class="mx-auto mb-4 w-48 h-48 rounded-full object-cover">
+                                        <h3 class="text-2xl font-bold text-blue-700">${data.title}</h3>
+                                        <p class="text-base font-medium text-red-600 mt-2">${data.description}.</p>
+                                        <a href="#" class="text-blue-500 font-semibold mt-2 block donate-btn" data-category="${data.message}">Donate Now</a>
+                                    </div>
+                                `);
                             });
 
                             // Attach click event listeners to newly created donate buttons
@@ -940,7 +859,7 @@
                 callingData();
             });
         </script>
-          <script>
+        <script>
             $(document).ready(function() {
                 // Function to fetch and display appointment
                 let callingData = () => {
@@ -988,7 +907,7 @@
                 callingData();
             });
         </script>
-         <script>
+        <script>
             $(document).ready(function() {
                 // Function to fetch and display appointment
                 let callingData = () => {
@@ -1001,16 +920,40 @@
                             let data = response.data;
                             data.forEach((data) => {
                                 table.append(`
-                                
-                                 <div class="bg-white shadow-md ">
-                                    <img src="/donation-concern/image/${data.image}" alt="Provide Food to Hungry" class="w-full h-48 object-cover px-16 py-8">
-                                    <div class="p-4">
-                                        <h2 class="text-xl font-bold mb-2 text-center">${data.heading}</h2>
-                                        <p class="text-gray-700 mb-4">With just Rs.${data.amount} you can provide food to 50 persons.  <a href="{{url('/about-needy/${data.slug}')}}" class="text-red-500 font-semibold">Donate Now</a></p>
-                                       
+                                    <div class="max-w-sm bg-white rounded-lg shadow-md overflow-hidden" >
+                                        <img class="w-full h-48 object-cover" src="{{asset('/donation-concern/image/${data.image}')}}" alt="Image Description">
+
+                                        <div class="p-6">
+                                            <h2 class="text-xl font-semibold text-gray-800 mb-2">
+                                                ${data.heading}
+                                            </h2>
+                                            <p class="text-sm text-gray-500 mb-4">by Darshan Harshad Vyas</p>
+
+                                            <div class="flex items-center text-gray-700 mb-4">
+                                                <span class="text-lg font-semibold">₹${data.amount}</span>
+                                                <span class="text-sm ml-2">raised out of ₹${data.amount}</span>
+                                            </div>
+                                            <div class="relative h-2 bg-gray-200 rounded-full overflow-hidden">
+                                                <div class="absolute top-0 left-0 h-full bg-blue-500" style="width: 70%;"></div>
+                                            </div>
+
+                                            <div class="flex justify-between items-center text-gray-600 mt-4">
+                                                <div class="flex items-center space-x-1">
+                                                    <span class="text-sm font-medium">51 Days Left</span>
+                                                </div>
+                                                <div class="flex items-center space-x-1">
+                                                    <span class="text-sm font-medium">475 Supporters</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="mt-4 flex space-x-2">
+                                                <button class="flex-1 hover:bg-blue-300 hover:text-white bg-blue-100 text-blue-500 font-medium py-2 rounded-lg">Share</button>
+                                                <a href="{{ url('/about-needy/${data.slug}') }}" class="flex-1 text-center hover:bg-blue-700 bg-blue-500 text-white font-medium py-2 rounded-lg">
+                                                    Donate
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                               
                                 `);
                             });
                         },

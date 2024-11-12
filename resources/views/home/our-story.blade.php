@@ -23,7 +23,7 @@
                                 </div>
                                 
                             </div>
-                            <a href="#" class="text-blue-700 rounded-lg mt-4 inline-block px-2 py-1  border border-gray-400 hover:bg-gray-800 hover:text-white">+ Read
+                            <a href="{{url('/our-story/slug')}}" class="text-blue-700 rounded-lg mt-4 inline-block px-2 py-1  border border-gray-400 hover:bg-gray-800 hover:text-white">+ Read
                                 More</a>
                         </div>
                     </div>
