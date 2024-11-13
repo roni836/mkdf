@@ -9,6 +9,7 @@ use App\Http\Controllers\CareerController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\StoryController;
 use App\Http\Controllers\AuthController;
 
 /*
@@ -88,6 +89,10 @@ Route::post('/heading',[CommonController::class,'headingStore'])->name('admin.he
 Route::get('/heading',[CommonController::class,'headingIndex'])->name('admin.heading.index');
 Route::get('/heading-user',[HomeController::class,'homeHeadingIndex'])->name('home.heading.index');
 
+Route::post('/story',[StoryController::class,'store'])->name('story.store');
+Route::get('/story',[StoryController::class,'index'])->name('story.index');
+Route::get('/story-user',[StoryController::class,'homeIndex'])->name('home.story');
+
 Route::post('/donation-concern',[CommonController::class,'donationConcernStore'])->name('donation.concern.store');
 Route::get('/donation-concern',[CommonController::class,'donationConcernIndex'])->name('donation.concern.index');
 Route::get('/home-donation-concern',[HomeController::class,'homeDonationConcern'])->name('home.donation.concern');
@@ -118,4 +123,5 @@ Route::put('/news/status/{id}',[NewsController::class,'updateStatus']);
 Route::put('/heading/status/{id}',[CommonController::class,'updateHeadingStatus']);
 Route::put('/event/status/{id}',[EventController::class,'updateStatus']);
 Route::put('/donating-event/status/{id}',[CommonController::class,'updateDonatingEventStatus']);
+Route::put('/story/status/{id}',[StoryController::class,'updateStatus']);
 

@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('stories', function (Blueprint $table) {
             $table->id();
-            $table->string('image')->nullable();
-            $table->string('organised_by')->nullable();
-            $table->string('link')->nullable();
-            $table->longText('description');
             $table->string('title');
+            $table->string('image')->nullable();
+            $table->string('date');
+            $table->string('slug');
+            $table->longText('story');
             $table->string('status')->nullable();
             $table->timestamps();
         });

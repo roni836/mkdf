@@ -106,6 +106,14 @@ class AdminController extends Controller
         return view('admin.insertHeading');
     }
 
+    public function manageStory(){
+        return view('admin.manageStory');
+    }
+
+    public function insertStory(){
+        return view('admin.insertStory');
+    }
+
     public function login(){
         return view('admin.auth.login');
     }

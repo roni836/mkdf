@@ -65,7 +65,7 @@ Route::get('/hindu-samman', function () {
 
 // Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/gallery-page',[HomeController::class,'photo']);
-Route::get('/our-story/slug',[StoryController::class,'detailStory']);
+Route::get('/our-story/{slug}',[StoryController::class,'detailStory']);
 Route::get('/video-index',[HomeController::class,'videoIndex'])->name('video.index.all');
 Route::get('/donation-index',[HomeController::class,'donationIndex'])->name('donation.index.all');
 Route::get('/news-index',[HomeController::class,'newsHomeIndex'])->name('news.home.all');
@@ -106,6 +106,8 @@ Route::get('/admin/manage-news',[AdminController::class,'manageNews']);
 Route::get('/admin/manage-news/insert',[AdminController::class,'insertNews']);
 Route::get('/admin/manage-heading',[AdminController::class,'manageHeading']);
 Route::get('/admin/manage-heading/insert',[AdminController::class,'insertHeading']);
+Route::get('/admin/manage-story',[AdminController::class,'manageStory']);
+Route::get('/admin/manage-story/insert',[AdminController::class,'insertStory']);
 
 
 
