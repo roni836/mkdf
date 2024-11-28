@@ -28,7 +28,6 @@ class GalleryController extends Controller
     public function photoStore(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'title' => 'required|string',
             'image' => 'required|image|max:10240',
         ]);
 
@@ -53,9 +52,6 @@ class GalleryController extends Controller
         // Create the blog post
         $blog = Gallery::create([
             'title' => $request->title,
-            'link' => $request->link,
-            'organised_by' => $request->organised_by,
-            'description' => $request->description,
             'image' => $image
         ]);
 

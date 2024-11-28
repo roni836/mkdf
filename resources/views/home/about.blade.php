@@ -1,19 +1,19 @@
 @extends('home.homeBase')
 @section('content')
-    <style>
-        .faq-item {
-            cursor: pointer;
-            color: blue;
-        }
+<style>
+    .faq-item {
+        cursor: pointer;
+        color: teal;
+    }
 
-        .faq-answer {
-            display: none;
-        }
+    .faq-answer {
+        display: none;
+    }
 
-        .faq-item.active .faq-answer {
-            display: block;
-        }
-    </style>
+    .faq-item.active .faq-answer {
+        display: block;
+    }
+</style>
 
     {{-- <div class="relative">
     <!-- Background Image -->
@@ -86,7 +86,7 @@
         </div>
     </div> --}}
 
-    <section class="bg-blue-600 text-white py-16 mt-[7rem]">
+    <section class="bg-teal-600 text-white py-16 mt-[7rem]">
         <div class="container mx-auto text-center">
             <h2 class="text-4xl font-bold">About Our Company</h2>
             <p class="mt-4 text-lg">We are passionate about delivering the best services to our clients.</p>
@@ -214,49 +214,84 @@
 
 
 
-    <div class="max-w-7xl mx-auto bg-white p-10 rounded-lg shadow-lg mt-20 mb-20">
-        <h2 class="text-2xl font-bold mb-4">FAQ Answered by Roni Saha, Founder, MKdf Foundation</h2>
-
+    <div class="mx-12 bg-white p-10 rounded-lg shadow-lg mt-20 mb-20">
+        <h2 class="text-2xl font-bold mb-4">FAQ Answered by Rahul Verma, Founder, Uday Foundation</h2>
+    
         <div class="faq-item border-b border-gray-300 py-4">
-            <div class="faq-question text-lg p-2 font-medium text-blue-600">
+            <div class="faq-question text-lg p-2 font-medium text-teal-600">
                 <span class="mr-4">+</span>Please articulate the core idea of your work?
             </div>
-            <div class="faq-answer ml-10 mt-2 text-gray-700">
+            <div class="faq-answer mt-2 text-gray-700">
                 The core idea of our work is to...
             </div>
         </div>
-
+    
         <div class="faq-item border-b border-gray-300 py-4">
-            <div class="faq-question text-lg p-2 font-medium text-blue-600">
-                <span class="mr-4">+</span>What is the main social problem this idea is attempting to solve? What is
-                the
+            <div class="faq-question text-lg p-2 font-medium text-teal-600">
+                <span class="mr-4">+</span>What is the main social problem this idea is attempting to solve? What is the
                 impact of the problem and why does it persist?
             </div>
-            <div class="faq-answer ml-10 mt-2 text-gray-700">
+            <div class="faq-answer mt-2 text-gray-700">
                 The main social problem we are addressing is...
             </div>
         </div>
-
+    
         <div class="faq-item border-b border-gray-300 py-4">
-            <div class="faq-question text-lg p-2 font-medium text-blue-600">
+            <div class="faq-question text-lg p-2 font-medium text-teal-600">
                 <span class="mr-4">+</span>What is the scale of the impact of your work to date?
             </div>
-            <div class="faq-answer ml-10 mt-2 text-gray-700">
+            <div class="faq-answer mt-2 text-gray-700">
                 The scale of our impact to date includes...
             </div>
         </div>
-
+    
         <div class="faq-item border-b border-gray-300 py-4">
-            <div class="faq-question text-lg p-2 font-medium text-blue-600">
+            <div class="faq-question text-lg p-2 font-medium text-teal-600">
                 <span class="mr-4">+</span>Why are you personally dedicated to the issue?
             </div>
-            <div class="faq-answer ml-10 mt-2 text-gray-700">
+            <div class="faq-answer mt-2 text-gray-700">
                 I am personally dedicated to this issue because...
             </div>
         </div>
-
+        <div class="faq-item border-b border-gray-300 py-4">
+            <div class="faq-question text-lg p-2 font-medium text-teal-600">
+                <span class="mr-4">+</span>Please articulate the core idea of your work?
+            </div>
+            <div class="faq-answer mt-2 text-gray-700">
+                The core idea of our work is to...
+            </div>
+        </div>
+    
+        <div class="faq-item border-b border-gray-300 py-4">
+            <div class="faq-question text-lg p-2 font-medium text-teal-600">
+                <span class="mr-4">+</span>What is the main social problem this idea is attempting to solve? What is the
+                impact of the problem and why does it persist?
+            </div>
+            <div class="faq-answer mt-2 text-gray-700">
+                The main social problem we are addressing is...
+            </div>
+        </div>
+    
+        <div class="faq-item border-b border-gray-300 py-4">
+            <div class="faq-question text-lg p-2 font-medium text-teal-600">
+                <span class="mr-4">+</span>What is the scale of the impact of your work to date?
+            </div>
+            <div class="faq-answer mt-2 text-gray-700">
+                The scale of our impact to date includes...
+            </div>
+        </div>
+    
+        <div class="faq-item border-b border-gray-300 py-4">
+            <div class="faq-question text-lg p-2 font-medium text-teal-600">
+                <span class="mr-4">+</span>Why are you personally dedicated to the issue?
+            </div>
+            <div class="faq-answer mt-2 text-gray-700">
+                I am personally dedicated to this issue because...
+            </div>
+        </div>
+    
     </div>
-
+    
     <script>
         document.querySelectorAll('.faq-item').forEach(item => {
             item.addEventListener('click', () => {

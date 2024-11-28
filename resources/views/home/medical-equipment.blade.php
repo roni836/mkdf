@@ -4,7 +4,7 @@
 <style>
     .faq-item {
         cursor: pointer;
-        color: blue;
+        color: teal;
     }
 
     .faq-answer {

@@ -5,35 +5,18 @@
             <h2 class="text-2xl font-bold mb-6 text-center">Adding Photos Form</h2>
             <form action="#" method="POST" class="space-y-4 " id="addData">
                 <div>
-                    <label for="title" class="block text-sm font-medium text-gray-700">Blog Title</label>
-                    <input type="text" id="title" name="title"
-                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                    <p id="error-title" class="text-red-500 text-xs font-semibold error-message"></p>
-                </div>
-                <div>
-                    <label for="title" class="block text-sm font-medium text-gray-700">Organised By</label>
-                    <input type="text" id="organised_by" name="organised_by"
-                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                    <p id="error-title" class="text-red-500 text-xs font-semibold error-message"></p>
-                </div>
-                <div>
-                    <label for="image" class="block text-sm font-medium text-gray-700">Blog Image</label>
+                    <label for="image" class="block text-sm font-medium text-gray-700">Image</label>
                     <input type="file" id="image" name="image"
                         class="mt-1 block w-full px-3 py-2 rounded-md  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                     <p id="error-image" class="text-red-500 text-xs font-semibold error-message"></p>
                 </div>
                 <div>
-                    <label for="link" class="block text-sm font-medium text-gray-700">Web Link</label>
-                    <input type="url" id="link" name="link"
+                    <label for="title" class="block text-sm font-medium text-gray-700">Title (optional)</label>
+                    <input type="text" id="title" name="title"
                         class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    <p id="error-title" class="text-red-500 text-xs font-semibold error-message"></p>
                 </div>
-                <div>
-                    <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
-                    <textarea id="description" name="description" rows="2"
-                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
-                    <p id="error-address" class="text-red-500 text-xs font-semibold error-message"></p>
-                </div>
-
+               
                 <div>
                     <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Add Photo Now</button>
                 </div>

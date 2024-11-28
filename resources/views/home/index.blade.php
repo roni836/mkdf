@@ -141,7 +141,7 @@
 
 
     <div class="w-full mx-auto py-12 pt-20 ">
-        <h2 class="text-3xl font-bold text-center text-blue-700 mb-8 uppercase">Make your Special day more special.</h2>
+        <h2 class="text-3xl font-bold text-center text-teal-700 mb-8 uppercase">Make your Special day more special.</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="headingDonatingEvent">
 
@@ -288,7 +288,7 @@
 
 
 
-    <h2 class="text-3xl font-bold text-center text-blue-700 mb-8 pt-10">Trending Fundraisers</h2>
+    <h2 class="text-3xl font-bold text-center text-teal-700 mb-8 pt-10">Trending Fundraisers</h2>
 
     <div class="grid grid-cols-4 space-x-4 p-8 bg-blue-50 mx-10" id="callingDonationConcern">
         {{-- <div class="max-w-sm bg-white rounded-lg shadow-md overflow-hidden" >
@@ -333,7 +333,7 @@
         </p>
 
         <!-- Event Section -->
-        <div class="bg-blue-900 text-white p-4 mb-8">
+        <div class="bg-teal-800 text-white p-4 mb-8">
             <div class="flex justify-between items-center">
                 <h3 class="text-lg font-semibold">EVENTS</h3>
                 <h3 class="text-lg font-semibold uppercase">Upcoming Events</h3>
@@ -350,7 +350,7 @@
         </div>
 
         <!-- Events List -->
-        <div class="bg-white shadow-md rounded-lg">
+        <div class="bg-white shadow-md rounded-lg" id="callingData">
             <!-- Event Item -->
             <div class="flex p-4 border-b border-gray-200">
                 <img src="{{ asset('images/pimg2.jpg') }}" alt="Event 1" class="w-24 h-24 rounded-lg mr-4">
@@ -404,7 +404,7 @@
     </div>
 
     <div class="max-w-6xl mx-auto py-12">
-        <h2 class="text-3xl font-bold text-center text-blue-700 mb-8">OUR IMPACT</h2>
+        <h2 class="text-3xl font-bold text-center text-teal-700 mb-8">OUR IMPACT</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
             <div class="bg-white shadow-lg rounded-lg p-6 text-center">
@@ -526,7 +526,7 @@
         </div> --}}
 
         <div class="bg-[#2980b9] mt-10">
-            <div class="max-w-5xl mx-auto text-white px-16 py-10 rounded-lg relative">
+            <div class="max-w-5xl mx-auto text-white px-16 py-10 rounded-lg relative bg-[#2980b9] mt-10">
                 <h2 class="text-4xl font-semibold text-center mb-10 text-gray-300">Our Biggest Contributors</h2>
 
                 <!-- Carousel Container -->
@@ -876,7 +876,7 @@
                                     <div class=" flex mt-6 absolute  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
                                         <div class="w-1/2">
                                             <div class="relative">
-                                                <img src="/heading/image/${data.image}" alt="${data.title}" class="w-full rounded shadow">
+                                                <img src="{{url('/heading/image/${data.image}')}}" alt="${data.title}" class="w-full rounded shadow">
                                                 <div class="absolute bottom-0 left-0 bg-red-600 text-white p-4 w-full text-center">
                                                     <span class="font-bold text-lg">Donate Now</span> to rebuild our Perishing Ancient
                                                     Temples
@@ -934,7 +934,7 @@
                                                 <span class="text-sm ml-2">raised out of ₹${data.amount}</span>
                                             </div>
                                             <div class="relative h-2 bg-gray-200 rounded-full overflow-hidden">
-                                                <div class="absolute top-0 left-0 h-full bg-blue-500" style="width: 70%;"></div>
+                                                <div class="absolute top-0 left-0 h-full bg-teal-500" style="width: 70%;"></div>
                                             </div>
 
                                             <div class="flex justify-between items-center text-gray-600 mt-4">
@@ -947,8 +947,8 @@
                                             </div>
 
                                             <div class="mt-4 flex space-x-2">
-                                                <button class="flex-1 hover:bg-blue-300 hover:text-white bg-blue-100 text-blue-500 font-medium py-2 rounded-lg">Share</button>
-                                                <a href="{{ url('/about-needy/${data.slug}') }}" class="flex-1 text-center hover:bg-blue-700 bg-blue-500 text-white font-medium py-2 rounded-lg">
+                                                <button class="flex-1 hover:bg-teal-600 hover:text-white bg-teal-400 text-black-500 font-medium py-2 rounded-lg">Share</button>
+                                                <a href="{{ url('/about-needy/${data.slug}') }}" class="flex-1 text-center hover:bg-teal-400 hover:text-black bg-teal-600 text-white font-medium py-2 rounded-lg">
                                                     Donate
                                                 </a>
                                             </div>
@@ -967,4 +967,55 @@
         </script>
 
     </section>
+
+    <script>
+        $(document).ready(function() {
+            let sortOrder = 'asc'; // Default sort order
+
+            let callingData = () => {
+                $.ajax({
+                    type: "GET",
+                    url: "{{ route('event.index') }}",
+                    success: function(response) {
+                        let table = $("#callingData");
+                        table.empty();
+                        let data = response.data;
+
+                        data.forEach((data, key) => {
+                            const createdAt = new Date(data.created_at);
+                            const options = {
+                                day: '2-digit',
+                                month: 'short',
+                                year: 'numeric'
+                            };
+                            const formattedDate = createdAt.toLocaleDateString('en-US',
+                                options);
+
+                            table.append(`
+                             <div class="flex p-4 border-b border-gray-200">
+                                <img src="{{ asset('/gallery/image/${data.image}') }}" alt="${data.title}" class="w-24 h-24 rounded-lg mr-4">
+                                <div class="flex-1">
+                                    <h4 class="text-xl font-bold mb-1">Live testimonials</h4>
+                                    <p class="text-gray-500 mb-2">${formattedDate}</p>
+                                    <p class="text-gray-600">
+                                      ${data.description}
+                                    </p>
+                                </div>
+                                <div class="self-center">
+                                    <button class="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600">VIEW DETAILS</button>
+                                </div>
+                            </div>
+                    `);
+                        });
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Error:', error);
+                    }
+                });
+            };
+
+            // Initial data fetch
+            callingData();
+        });
+    </script>
 @endsection

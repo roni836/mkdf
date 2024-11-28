@@ -132,12 +132,12 @@
     </div>
 </section> --}}
 
-<div class="bg-gray-100 py-10 mt-[5rem]">
+<div class=" py-10 ">
     <div class="text-center">
         {{-- <h3 class="text-lg font-light uppercase text-gray-600 tracking-wider">Team</h3> --}}
         <h1 class="text-4xl font-extrabold mt-2 mb-4 dancing-script-text">" A team with whom we are growing "</h1>
-        <p class="text-gray-600 mb-10 font-semibold mt-8">Our Mobile application developers use modern technology to create applications
-            for Our Mobile application developers use modern technology to create applications.</p>
+        {{-- <p class="text-gray-600 mb-10 font-semibold mt-8">Our Mobile application developers use modern technology to create applications
+            for Our Mobile application developers use modern technology to create applications.</p> --}}
     </div>
 
     <div class="grid grid-cols-5 gap-5 mx-20 mt-14">

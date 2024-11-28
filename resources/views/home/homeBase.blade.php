@@ -153,8 +153,11 @@
             </nav>
             {{-- <a href="" class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded ">Donate Now</a> --}}
             <a href="javascript:void(0)" id="donate-btn"
-                class="bg-orange-500 hover:bg-orange-600 text-white py-3 px-5 font-bold text-xl mr-16 hover:outline-blue-600">Donate
-                Now</a>
+            class="relative inline-block bg-gradient-to-r from-orange-400 to-orange-600 text-white font-bold text-xl py-3 px-6 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform  focus:ring-4 focus:ring-orange-300 focus:outline-none hover:from-orange-500 hover:to-orange-700">
+            <span class="relative z-10">Donate Now</span>
+            <span class="absolute inset-0 bg-orange-500 opacity-0 rounded-lg transition-opacity duration-300 hover:opacity-30"></span>
+        </a>
+        
         </div>
 
     </header>
@@ -427,9 +430,26 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/9128528958" target="_blank" class="fixed bottom-10 right-10 z-20">
+    {{-- <a href="https://wa.me/9128528958" target="_blank" class="fixed bottom-10 right-10 z-20">
         <div class="bg-green-500 rounded-full p-5 shadow-lg text-white hover:text-gray-100 hover:bg-green-600">
             <i class="fa-brands fa-whatsapp fa-2xl  " style="line-height: 1;"></i>
+        </div>
+    </a> --}}
+
+    <a href="https://api.whatsapp.com/send?phone=+919128528958&text={{ urlencode('Hello,
+    
+    I am interested in geeting this job.') }}"
+        target="_blank" class="fixed md:bottom-10 bottom-20 right-2 md:right-10 z-20 group">
+        <div
+            class="flex items-center bg-green-500 rounded-full p-2 shadow-lg text-white hover:bg-green-600 transition-all duration-300">
+            <div
+                class="flex items-center justify-center w-12 h-12 bg-green-500 rounded-full group-hover:w-auto group-hover:px-4 transition-all duration-500">
+                <i class="fa-brands fa-whatsapp fa-2xl"></i>
+            </div>
+            <span
+                class="whatsapp-text ml-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 transform translate-x-5 hidden group-hover:inline-block">
+                WhatsApp Us
+            </span>
         </div>
     </a>
 

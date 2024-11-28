@@ -12,9 +12,7 @@
                     <tr>
                         <th class="border-b border-gray-200 px-3 py-2 text-sm">S No.</th>
                         <th class="border-b border-gray-200 px-3 py-2 text-sm">Image</th>
-                        <th class="border-b border-gray-200 px-3 py-2 text-sm">Organised By</th>
                         <th class="border-b border-gray-200 px-3 py-2 text-sm">Title</th>
-                        <th class="border-b border-gray-200 px-3 py-2 text-sm">Link</th>
                         <th class="border-b border-gray-200 px-3 py-2 text-sm">Status</th>
                         <th class="border-b border-gray-200 px-3 py-2 text-sm">Actions</th>
                     </tr>
@@ -104,9 +102,7 @@
                                             <img src="/gallery/image/${data.image}" alt="Blog 1" class="h-16 w-20 object-cover rounded-lg mx-auto">
                                         </div>
                                     </td> 
-                                    <td class="border-b border-gray-200 px-3 text-center py-2 text-sm">${data.organised_by}</td> 
                                     <td class="border-b border-gray-200 px-3 text-center py-2 text-sm">${data.title.substring(0, 30)}</td> 
-                                    <td class="border-b border-gray-200 px-3 text-center py-2 text-sm"><a href="${data.link}" target="_blank" rel="noopener noreferrer">${data.link.substring(0, 35)} </a></td>    
                                     <td class="text-sm border-b border-gray-200 p-2" style="text-align:center;">
                                         <label class="inline-flex items-center mb-5 cursor-pointer">
                                             <input type="checkbox" class="sr-only peer status-toggle" data-id="${data.id}" ${data.status == 1 ? 'checked' : ''}>
