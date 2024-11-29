@@ -106,6 +106,8 @@ Route::get('/admin/manage-news',[AdminController::class,'manageNews']);
 Route::get('/admin/manage-news/insert',[AdminController::class,'insertNews']);
 Route::get('/admin/manage-heading',[AdminController::class,'manageHeading']);
 Route::get('/admin/manage-heading/insert',[AdminController::class,'insertHeading']);
+Route::get('/admin/manage-hindusamman',[AdminController::class,'manageHinduSamman']);
+Route::get('/admin/manage-hindusamman/insert',[AdminController::class,'insertHinduSamman']);
 Route::get('/admin/manage-story',[AdminController::class,'manageStory']);
 Route::get('/admin/manage-story/insert',[AdminController::class,'insertStory']);
 

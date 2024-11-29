@@ -106,6 +106,14 @@ class AdminController extends Controller
         return view('admin.insertHeading');
     }
 
+    public function manageHinduSamman(){
+        return view('admin.manageHinduSamman');
+    }
+
+    public function insertHinduSamman(){
+        return view('admin.insertHinduSamman');
+    }
+
     public function manageStory(){
         return view('admin.manageStory');
     }

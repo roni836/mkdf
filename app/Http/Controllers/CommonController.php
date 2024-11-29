@@ -654,6 +654,7 @@ class CommonController extends Controller
             'description' => $request->description,            
             'status' => $request->status,            
             'amount' => $request->amount,            
+            'type' => $request->type,            
             'image' => $image
         ]);
 

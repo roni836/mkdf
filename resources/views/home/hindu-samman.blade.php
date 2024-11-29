@@ -1,30 +1,13 @@
 @extends('home.homeBase')
 @section('content')
     <div class=" mx-10 p-4  mt-[8.5rem]">
-        <!-- Header -->
-        {{-- <header class="flex items-center justify-between bg-yellow-50 p-4 rounded">
-            <div class="flex items-center">
-                <img src="/images/tem1." alt="Logo"  height="100px">
-                <h1 class="text-xl font-bold text-red-600 ml-4">Renovate Ancient Temples to Protect Sanatana Dharma</h1>
-            </div>
-            <div>
-                <button class="bg-red-500 text-white px-4 py-2 rounded shadow">
-                    Donate Now
-                </button>
-            </div>
-        </header> --}}
-
-        <!-- Main Container -->
-        
-
-        <!-- Main Content -->
-
 
         <div id="controls-carousel" class="relative w-full z-0" data-carousel="slide">
             <!-- Carousel wrapper -->
-            <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+            <div class="relative h-56 overflow-hidden rounded-lg md:h-96" id="callingBanner">
                 <!-- Item 1 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+
+                {{-- <div class="hidden duration-700 ease-in-out" data-carousel-item>
 
                     <div class=" flex mt-6 absolute  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
                         <div class="w-1/2">
@@ -51,87 +34,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-
-                    <div class=" flex mt-6 absolute  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-                        <div class="w-1/2">
-                            <div class="relative">
-                                <img src="/images/tem1.webp" alt="Ancient Temples" class="w-full rounded shadow">
-                                <div class="absolute bottom-0 left-0 bg-red-600 text-white p-4 w-full text-center">
-                                    <span class="font-bold text-lg">Donate Now</span> to rebuild our Perishing Ancient
-                                    Temples
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="w-1/2 pl-6">
-                            <h2 class="text-2xl font-bold text-gray-800 mb-4"> Renovate Ancient Temples to Protect Sanatana
-                                Dharma.
-                                Donate to preserve our Sacred Religious Heritage </h2>
-                            <p class="text-gray-600">Event: Save Ancient Temples</p>
-                            <p class="text-red-500 mt-2">Bookings Closing in <span class="font-bold">3 months</span></p>
-                            <div class="mt-4">
-                                <button class="bg-orange-500 text-white px-4 py-2 rounded shadow">
-                                    Book Now
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-
-                    <div class=" flex mt-6 absolute  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-                        <div class="w-1/2">
-                            <div class="relative">
-                                <img src="/images/tem1.webp" alt="Ancient Temples" class="w-full rounded shadow">
-                                <div class="absolute bottom-0 left-0 bg-red-600 text-white p-4 w-full text-center">
-                                    <span class="font-bold text-lg">Donate Now</span> to rebuild our Perishing Ancient
-                                    Temples
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="w-1/2 pl-6">
-                            <h2 class="text-2xl font-bold text-gray-800 mb-4"> Renovate Ancient Temples to Protect Sanatana
-                                Dharma.
-                                Donate to preserve our Sacred Religious Heritage </h2>
-                            <p class="text-gray-600">Event: Save Ancient Temples</p>
-                            <p class="text-red-500 mt-2">Bookings Closing in <span class="font-bold">3 months</span></p>
-                            <div class="mt-4">
-                                <button class="bg-orange-500 text-white px-4 py-2 rounded shadow">
-                                    Book Now
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-
-                    <div class=" flex mt-6 absolute  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-                        <div class="w-1/2">
-                            <div class="relative">
-                                <img src="/images/tem1.webp" alt="Ancient Temples" class="w-full rounded shadow">
-                                <div class="absolute bottom-0 left-0 bg-red-600 text-white p-4 w-full text-center">
-                                    <span class="font-bold text-lg">Donate Now</span> to rebuild our Perishing Ancient
-                                    Temples
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="w-1/2 pl-6">
-                            <h2 class="text-2xl font-bold text-gray-800 mb-4"> Renovate Ancient Temples to Protect Sanatana
-                                Dharma.
-                                Donate to preserve our Sacred Religious Heritage </h2>
-                            <p class="text-gray-600">Event: Save Ancient Temples</p>
-                            <p class="text-red-500 mt-2">Bookings Closing in <span class="font-bold">3 months</span></p>
-                            <div class="mt-4">
-                                <button class="bg-orange-500 text-white px-4 py-2 rounded shadow">
-                                    Book Now
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                 --}}
 
             </div>
             <!-- Slider controls -->
@@ -297,7 +200,7 @@
                     proper disposal. Our dedicated team ensures that these scriptures are respectfully cremated or
                     immersed in sacred rivers according to established traditions and customs.
                 </p>
-    
+
                 <!-- Image and Second Paragraph -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                     <img src="/images/hin1.webp" alt="Religious Waste" class="w-full h-auto object-cover rounded shadow">
@@ -308,7 +211,7 @@
                         us, and we ensure they are respectfully immersed or disposed of in a designated manner.
                     </p>
                 </div>
-    
+
                 <p class="mb-4">
                     During festivals, we actively promote responsible waste management. We raise awareness among
                     devotees about the proper disposal of festival-related items, such as decorations, flowers, and
@@ -316,7 +219,7 @@
                     facilitate their proper disposal through environmentally friendly methods.
                 </p>
             </div>
-    
+
             <!-- Sidebar (Widgets/Links) -->
             <div class="lg:col-span-1 space-y-4">
                 <a href="#" class="block p-4 bg-white shadow hover:bg-gray-50 rounded transition duration-150">
@@ -363,4 +266,55 @@
             </div>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function() {
+            // Function to fetch and display appointment
+            let callingData = () => {
+                $.ajax({
+                    type: "GET",
+                    url: "{{ route('home.heading.index') }}",
+                    success: function(response) {
+                        let table = $("#callingBanner");
+                        table.empty();
+                        let data = response.data;
+                        let filteredData = data.filter(item => item.type === 2);
+                        filteredData.forEach((data) => {
+                            table.append(`
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <div class=" flex mt-6 absolute  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                                    <div class="w-1/2">
+                                        <div class="relative">
+                                            <img src="{{ url('/heading/image/${data.image}') }}" alt="Ancient Temples" class="w-full rounded shadow">
+                                            <div class="absolute bottom-0 left-0 bg-red-600 text-white p-4 w-full text-center">
+                                                <span class="font-bold text-lg">Donate Now</span> to rebuild our Donate Rs.${data.amount} Now
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-1/2 pl-6 mt-20">
+                                        <div class=h-[16rem]>
+                                            <h2 class="text-2xl font-bold text-gray-800 mb-4"> ${data.title} </h2>
+                                            <p class="text-gray-600">${data.description}</p>
+                                            <p class="text-red-500 mt-2">Bookings Closing in <span class="font-bold">${data.closing_date}</span></p>
+                                        </div>
+                                        <div class="mt-4">
+                                            <button class="bg-orange-500 text-white px-4 py-2 rounded shadow">
+                                                Book Now
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            `);
+                        });
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Error:', error);
+                    }
+                });
+            }
+            callingData();
+        });
+    </script>
 @endsection

@@ -19,7 +19,7 @@
             </div>
             <div>
                 <select name="type" id="type" class="mt-1  w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm hidden">
-                    <option value="1" selected>Home Page</option>
+                    <option value="2" selected>Home Page</option>
                 </select>
             </div>
             <div>

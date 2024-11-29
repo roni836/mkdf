@@ -21,11 +21,13 @@
                     </div>
 
                     <div class="w-1/2 pl-6">
-                        <h2 class="text-2xl font-bold text-gray-800 mb-4"> Renovate Ancient Temples to Protect Sanatana
-                            Dharma.
-                            Donate to preserve our Sacred Religious Heritage </h2>
-                        <p class="text-gray-600">Event: Save Ancient Temples</p>
-                        <p class="text-red-500 mt-2">Bookings Closing in <span class="font-bold">3 months</span></p>
+                        <div class="h-[16rem]">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-4"> Renovate Ancient Temples to Protect Sanatana
+                                Dharma.
+                                Donate to preserve our Sacred Religious Heritage </h2>
+                            <p class="text-gray-600">Event: Save Ancient Temples</p>
+                            <p class="text-red-500 mt-2">Bookings Closing in <span class="font-bold">3 months</span></p>
+                        </div>
                         <div class="mt-4">
                             <button class="bg-orange-500 text-white px-4 py-2 rounded shadow">
                                 Book Now
@@ -283,7 +285,7 @@
         </div>
     </div>
 
-    
+
 
 
 
@@ -870,13 +872,14 @@
                             let table = $("#callingHeading");
                             table.empty();
                             let data = response.data;
-                            data.forEach((data) => {
+                            let filteredData = data.filter(item => item.type === 1);
+                            filteredData.forEach((data) => {
                                 table.append(`
                                  <div class="hidden duration-700 ease-in-out" data-carousel-item>
                                     <div class=" flex mt-6 absolute  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
                                         <div class="w-1/2">
                                             <div class="relative">
-                                                <img src="{{url('/heading/image/${data.image}')}}" alt="${data.title}" class="w-full rounded shadow">
+                                                <img src="{{ url('/heading/image/${data.image}') }}" alt="${data.title}" class="w-full rounded shadow">
                                                 <div class="absolute bottom-0 left-0 bg-red-600 text-white p-4 w-full text-center">
                                                     <span class="font-bold text-lg">Donate Now</span> to rebuild our Perishing Ancient
                                                     Temples
@@ -885,9 +888,11 @@
                                         </div>
 
                                         <div class="w-1/2 pl-6 mt-20">
-                                            <h2 class="text-2xl font-bold text-gray-800 mb-4">${data.title} </h2>
+                                            <div class="h-[16rem]">
+                                                <h2 class="text-2xl font-bold text-gray-800 mb-4">${data.title} </h2>
                                             <p class="text-gray-600">${data.description}</p>
                                             <p class="text-red-500 mt-2">Bookings Closing in <span class="font-bold">${data.closing_date}</span></p>
+                                            </div>
                                             <div class="mt-4">
                                                 <button class="bg-orange-500 text-white px-4 py-2 rounded shadow">
                                                     Donate Rs.${data.amount} Now
@@ -921,7 +926,7 @@
                             data.forEach((data) => {
                                 table.append(`
                                     <div class="max-w-sm bg-white rounded-lg shadow-md overflow-hidden" >
-                                        <img class="w-full h-48 object-cover" src="{{asset('/donation-concern/image/${data.image}')}}" alt="Image Description">
+                                        <img class="w-full h-48 object-cover" src="{{ asset('/donation-concern/image/${data.image}') }}" alt="Image Description">
 
                                         <div class="p-6">
                                             <h2 class="text-xl font-semibold text-gray-800 mb-2">

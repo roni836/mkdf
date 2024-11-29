@@ -1,16 +1,16 @@
 @extends('admin.adminBase')
 @section('content')
     <div class="flex-1 flex mt-20 items-center justify-between ">
-        <h1 class="text-lg font-semibold  py-2">Manage Heading (<span id="counting">0</span>)</h1>
-        <a href="/admin/manage-heading/insert" class="bg-indigo-500 hover:bg-indigo-800 text-white px-3 py-2 rounded mb-4">
-            <i class="fas fa-plus"></i>Add New Heading</a>
+        <h1 class="text-lg font-semibold  py-2">Manage Banner (<span id="counting">0</span>)</h1>
+        <a href="/admin/manage-hindusamman/insert" class="bg-indigo-500 hover:bg-indigo-800 text-white px-3 py-2 rounded mb-4">
+            <i class="fas fa-plus"></i>Add New Banner</a>
     </div>
     <div class="overflow-x-auto">
         <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table class="min-w-full bg-white border border-gray-200">
                 <thead class="bg-gray-100">
                     <tr>
-                        <th class="border-b border-gray-200 px-3 py-2 text-sm">Id</th>
+                        <th class="border-b border-gray-200 px-3 py-2 text-sm">S. no.</th>
                         <th class="border-b border-gray-200 px-3 py-2 text-sm">Title</th>
                         <th class="border-b border-gray-200 px-3 py-2 text-sm">Amount</th>
                         <th class="border-b border-gray-200 px-3 py-2 text-sm">Status</th>
@@ -89,16 +89,16 @@
                         table.empty();
                         let data = response.data;
 
-                        let filteredData = data.filter(item => item.type === 1);
+                        let filteredData = data.filter(item => item.type === 2);
 
                         // Update appointment count
                         let len = filteredData.length;
                         $("#counting").html(len);
 
-                        filteredData.forEach((data,k) => {
+                        filteredData.forEach((data,key) => {
                             table.append(`
                                 <tr class="mt-5">
-                                    <td class="border-b border-gray-200 px-3 text-center py-2 text-sm">${k+1}</td> 
+                                    <td class="border-b border-gray-200 px-3 text-center py-2 text-sm">${key+1}</td> 
                                     <td class="border-b border-gray-200 px-3 text-center py-2 text-sm">${data.title}</td> 
                                     <td class="border-b border-gray-200 px-3 text-center py-2 text-sm">${data.amount}</td> 
                                     <td class="text-sm border-b border-gray-200 p-2" style="text-align:center;">
